@@ -9,6 +9,18 @@
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Sun, 05 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://LeiBuDao.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About My Blog</title>
+      <link>https://LeiBuDao.github.io/about-myblog/</link>
+      <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://LeiBuDao.github.io/about-myblog/</guid>
+      <description>👋 Hi, I’m @RUNXU , a SEU student majoring in software engineering.
+  👀 This is my blog made with @hugo.
+  🌱 This blog mainly contains some learning materials I summarized during my study in software engineering of SouthEast University.
+  👯 The university time is short, please conscientiously consolidate the foundation, learn the knowledge of basic courses, and cultivate your computer thinking and literacy.</description>
+    </item>
+    
+    <item>
       <title>Leetcode 刷题笔记</title>
       <link>https://LeiBuDao.github.io/posts/leetcode/</link>
       <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
@@ -21,15 +33,12 @@
     </item>
     
     <item>
-      <title>About My Blog</title>
-      <link>https://LeiBuDao.github.io/about-myblog/</link>
-      <pubDate>Fri, 04 Jan 2002 00:00:00 +0000</pubDate>
+      <title></title>
+      <link>https://LeiBuDao.github.io/contact-me/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://LeiBuDao.github.io/about-myblog/</guid>
-      <description>👋 Hi, I’m @RUNXU , a SEU student majoring in software engineering.
-  👀 This is my blog made with @hugo.
-  🌱 This blog mainly contains some learning materials I summarized during my study in software engineering of SouthEast University.
-  👯 The university time is short, please conscientiously consolidate the foundation, learn the knowledge of basic courses, and cultivate your computer thinking and literacy.</description>
+      <guid>https://LeiBuDao.github.io/contact-me/</guid>
+      <description>To Contact Me QQmail: 319701058@qq.com Gmail: leibudao@gmail.com Telegram: @leibudao </description>
     </item>
     
   </channel>
