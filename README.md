@@ -1,1 +1,1 @@
- [blog](https://www.leibudao.github.io)
+ [blog](https://leibudao.github.io)
