@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Run</title>
-    <link>https://LeiBuDao.github.io/</link>
-    <description>Recent content on Run</description>
+    <title>datastructure on Run</title>
+    <link>https://LeiBuDao.github.io/tags/datastructure/</link>
+    <description>Recent content in datastructure on Run</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 05 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://LeiBuDao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://LeiBuDao.github.io/tags/datastructure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Leetcode 刷题笔记</title>
       <link>https://LeiBuDao.github.io/posts/leetcode/</link>
@@ -18,18 +18,6 @@
   示例 2：   输入：nums = [3,2,4], target = 6， 输出：[1,2]
   示例 3：   输入：nums = [3,3], target = 6， 输出：[0,1]
   * 解法一 暴力法，二重循环  复杂度：暴力算法时间复杂度O（n²），空间复杂度O（1）。  * 解法二 排序+双指针  思想：用一个pair数组vec储存nums的内容（first）以及下标（second）。根据first中从小到大排序，最后利用双指针遍历数组进行匹配，返回对应的second中的内容，即数组下标。 复杂度：这里先将数组排序好O（nlogn），再利用双指针法遍历一遍O（n）得到结果。 为了保存下标信息另开了一个数组。时间复杂度O（nlogn），空间复杂度O（n）。    class Solution {public:static bool cmp(const pair&amp;lt;int,int&amp;gt;a,const pair&amp;lt;int,int&amp;gt;b){return a.</description>
-    </item>
-    
-    <item>
-      <title>About My Blog</title>
-      <link>https://LeiBuDao.github.io/about-myblog/</link>
-      <pubDate>Fri, 04 Jan 2002 00:00:00 +0000</pubDate>
-      
-      <guid>https://LeiBuDao.github.io/about-myblog/</guid>
-      <description>👋 Hi, I’m @RUNXU , a SEU student majoring in software engineering.
-  👀 This is my blog made with @hugo.
-  🌱 This blog mainly contains some learning materials I summarized during my study in software engineering of SouthEast University.
-  👯 The university time is short, please conscientiously consolidate the foundation, learn the knowledge of basic courses, and cultivate your computer thinking and literacy.</description>
     </item>
     
   </channel>

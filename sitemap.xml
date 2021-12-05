@@ -2,63 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://LeiBuDao.github.io/tags/demo/</loc>
-    <lastmod>2018-12-24T12:29:41+08:00</lastmod>
+    <loc>https://LeiBuDao.github.io/tags/algoritjm/</loc>
+    <lastmod>2021-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://LeiBuDao.github.io/tags/image/</loc>
-    <lastmod>2018-12-24T12:29:41+08:00</lastmod>
+    <loc>https://LeiBuDao.github.io/tags/datastructure/</loc>
+    <lastmod>2021-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://LeiBuDao.github.io/tags/leetcode/</loc>
+    <lastmod>2021-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://LeiBuDao.github.io/posts/leetcode/</loc>
+    <lastmod>2021-12-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://LeiBuDao.github.io/posts/</loc>
-    <lastmod>2018-12-24T12:29:41+08:00</lastmod>
+    <lastmod>2021-12-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://LeiBuDao.github.io/</loc>
-    <lastmod>2018-12-24T12:29:41+08:00</lastmod>
+    <lastmod>2021-12-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://LeiBuDao.github.io/tags/</loc>
-    <lastmod>2018-12-24T12:29:41+08:00</lastmod>
+    <lastmod>2021-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://LeiBuDao.github.io/posts/the-figure-shortcode/</loc>
-    <lastmod>2018-12-24T12:29:41+08:00</lastmod>
-  </url><url>
-    <loc>https://LeiBuDao.github.io/posts/post-with-featured-image/</loc>
-    <lastmod>2018-10-01T16:15:09+08:00</lastmod>
-  </url><url>
-    <loc>https://LeiBuDao.github.io/tags/typography/</loc>
-    <lastmod>2018-09-29T11:36:33+08:00</lastmod>
-  </url><url>
-    <loc>https://LeiBuDao.github.io/posts/typography/</loc>
-    <lastmod>2018-09-29T11:36:33+08:00</lastmod>
-  </url><url>
-    <loc>https://LeiBuDao.github.io/about-hugo/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://LeiBuDao.github.io/posts/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://LeiBuDao.github.io/tags/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://LeiBuDao.github.io/posts/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://LeiBuDao.github.io/tags/go/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://LeiBuDao.github.io/tags/golang/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://LeiBuDao.github.io/tags/hugo/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://LeiBuDao.github.io/tags/templates/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://LeiBuDao.github.io/tags/themes/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://LeiBuDao.github.io/posts/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://LeiBuDao.github.io/posts/creating-a-new-theme/</loc>
+    <loc>https://LeiBuDao.github.io/about-myblog/</loc>
+    <lastmod>2002-01-04T00:00:00+00:00</lastmod>
   </url>
 </urlset>
