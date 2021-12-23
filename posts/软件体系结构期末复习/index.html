@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="111214">
+	<meta name="msapplication-TileColor" content="111214">
+<meta itemprop="name" content="">
+<meta itemprop="description" content="软件体系结构期末复习 第二章 1、概述  组成派关注于软件本身，将软件架构看做组件和交互的集合。 决策派关注于架构中的实体(人)，将软件架构视为一系列重要设计决策的集合。  2、组成派定义 依据：软件架构主要反映系统由哪些部分组成，以及这些部分是如何组成的，强调系统的整体结构和配置。
+（1）1992 —Dewane Perry &amp; Alexander Wolf
+​ 软件架构 = {元素、组成、原理}
+  架构元素：处理元素、数据元素、连接元素
+  架构组成：
+  加权的属性：约束架构的选择
+  关系：约束架构元素的放置
+    架构原理：捕获在选择架构风格、架构元素和架构形式的选择动机。
+  （2）Mary Shaw &amp; David Carlan
+软件架构包括组件、连接件和约束三大要素。
+ 组件：可以是一组代码，也可以是独立的程序。 连接件：可以是过程调用、管道和消息等，用于表示组件间的相互关系。 约束：组件连接时的条件。  （3）2011年 ISO/IEC/IEEE标准
+软件架构是某一系统的基本组织结构，其内容包括软件组件、组件间的联系、组件与其环境间的关系，以及指导上述内容设计与演化的原理。
+3、决策派定义 依据：软件架构是软件设计的一部分，软件设计实际上是开发人员意志和决策在软件开发过程中的体现，强调设计决策，更加注重架构风格和模式选择。
+4、参考定义框架 组件（Component）、连接件（Connector）、配置（Configuration）、端口（Port）、角色（Role）
+ 组件：具有某种功能的可重用的软件模块单元。 连接件：表示了组件之间的交互。 配置：表示了组件和连接件的拓扑逻辑和约束。 端口：组件的接口由一组端口组成，每个端口表示了组件和外部环境的交汇点。 角色：连接件的接口由一组角色组成，连接件的每个角色定义了该连接件表示的交互的参与者。  二元连接件有两个角色 有的连接件有多于两个的角色    第三章 至今没有一种建模方法能够满足软件架构建模的所有要求。">
+
+<meta itemprop="wordCount" content="277">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="" />
+<meta property="og:description" content="软件体系结构期末复习 第二章 1、概述  组成派关注于软件本身，将软件架构看做组件和交互的集合。 决策派关注于架构中的实体(人)，将软件架构视为一系列重要设计决策的集合。  2、组成派定义 依据：软件架构主要反映系统由哪些部分组成，以及这些部分是如何组成的，强调系统的整体结构和配置。
+（1）1992 —Dewane Perry &amp; Alexander Wolf
+​ 软件架构 = {元素、组成、原理}
+  架构元素：处理元素、数据元素、连接元素
+  架构组成：
+  加权的属性：约束架构的选择
+  关系：约束架构元素的放置
+    架构原理：捕获在选择架构风格、架构元素和架构形式的选择动机。
+  （2）Mary Shaw &amp; David Carlan
+软件架构包括组件、连接件和约束三大要素。
+ 组件：可以是一组代码，也可以是独立的程序。 连接件：可以是过程调用、管道和消息等，用于表示组件间的相互关系。 约束：组件连接时的条件。  （3）2011年 ISO/IEC/IEEE标准
+软件架构是某一系统的基本组织结构，其内容包括软件组件、组件间的联系、组件与其环境间的关系，以及指导上述内容设计与演化的原理。
+3、决策派定义 依据：软件架构是软件设计的一部分，软件设计实际上是开发人员意志和决策在软件开发过程中的体现，强调设计决策，更加注重架构风格和模式选择。
+4、参考定义框架 组件（Component）、连接件（Connector）、配置（Configuration）、端口（Port）、角色（Role）
+ 组件：具有某种功能的可重用的软件模块单元。 连接件：表示了组件之间的交互。 配置：表示了组件和连接件的拓扑逻辑和约束。 端口：组件的接口由一组端口组成，每个端口表示了组件和外部环境的交汇点。 角色：连接件的接口由一组角色组成，连接件的每个角色定义了该连接件表示的交互的参与者。  二元连接件有两个角色 有的连接件有多于两个的角色    第三章 至今没有一种建模方法能够满足软件架构建模的所有要求。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://LeiBuDao.github.io/posts/%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" /><meta property="article:section" content="posts" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="软件体系结构期末复习 第二章 1、概述  组成派关注于软件本身，将软件架构看做组件和交互的集合。 决策派关注于架构中的实体(人)，将软件架构视为一系列重要设计决策的集合。  2、组成派定义 依据：软件架构主要反映系统由哪些部分组成，以及这些部分是如何组成的，强调系统的整体结构和配置。
+（1）1992 —Dewane Perry &amp; Alexander Wolf
+​ 软件架构 = {元素、组成、原理}
+  架构元素：处理元素、数据元素、连接元素
+  架构组成：
+  加权的属性：约束架构的选择
+  关系：约束架构元素的放置
+    架构原理：捕获在选择架构风格、架构元素和架构形式的选择动机。
+  （2）Mary Shaw &amp; David Carlan
+软件架构包括组件、连接件和约束三大要素。
+ 组件：可以是一组代码，也可以是独立的程序。 连接件：可以是过程调用、管道和消息等，用于表示组件间的相互关系。 约束：组件连接时的条件。  （3）2011年 ISO/IEC/IEEE标准
+软件架构是某一系统的基本组织结构，其内容包括软件组件、组件间的联系、组件与其环境间的关系，以及指导上述内容设计与演化的原理。
+3、决策派定义 依据：软件架构是软件设计的一部分，软件设计实际上是开发人员意志和决策在软件开发过程中的体现，强调设计决策，更加注重架构风格和模式选择。
+4、参考定义框架 组件（Component）、连接件（Connector）、配置（Configuration）、端口（Port）、角色（Role）
+ 组件：具有某种功能的可重用的软件模块单元。 连接件：表示了组件之间的交互。 配置：表示了组件和连接件的拓扑逻辑和约束。 端口：组件的接口由一组端口组成，每个端口表示了组件和外部环境的交汇点。 角色：连接件的接口由一组角色组成，连接件的每个角色定义了该连接件表示的交互的参与者。  二元连接件有两个角色 有的连接件有多于两个的角色    第三章 至今没有一种建模方法能够满足软件架构建模的所有要求。"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title></title>
+	<link rel="stylesheet" href="https://LeiBuDao.github.io/css/style.min.eac77496566fd7d5768fd650ddb0b2b181ca6a2d7c5fdd6fe6b8ba4bf47e566f.css" integrity="sha256-6sd0llZv19V2j9ZQ3bCysYHKai18X91v5ri6S/R+Vm8=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://LeiBuDao.github.io/">Run</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="https://LeiBuDao.github.io/about-myblog/">About</a>
+				<a href="https://LeiBuDao.github.io/posts/">Blogs</a>
+				<a href="https://LeiBuDao.github.io/project/">Project</a>
+				<a href="https://LeiBuDao.github.io/contact-me/">Contact Me</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://github.com/LeiBuDao" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg></a><a href="https://web.telegram.org" target="_blank" rel="noopener me" title="Telegram"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 0 1-2.849 1.09c-.42.147-.99.332-1.473.901-.728.968.193 1.798.919 2.286 1.61.516 3.275 1.009 4.654 1.472.509 1.793.997 3.592 1.48 5.388.16.36.506.494.864.498l-.002.018s.281.028.555-.038a2.1 2.1 0 0 0 .933-.517c.345-.324 1.28-1.244 1.811-1.764l3.999 2.952.032.018s.442.311 1.09.355c.324.022.75-.04 1.116-.308.37-.27.613-.702.728-1.196.342-1.492 2.61-12.285 2.997-14.072l-.01.042c.27-1.006.17-1.928-.455-2.474a1.654 1.654 0 0 0-1.034-.407z" />
+</svg></a><a href="https://instagram.com/" target="_blank" rel="noopener me" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+</svg></a><a href="https://space.bilibili.com/438672729" target="_blank" rel="noopener me" title="Youtube"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="34" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://LeiBuDao.github.io/about-myblog/">About</a></li>
+			<li><a href="https://LeiBuDao.github.io/posts/">Blogs</a></li>
+			<li><a href="https://LeiBuDao.github.io/project/">Project</a></li>
+			<li><a href="https://LeiBuDao.github.io/contact-me/">Contact Me</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>Jan 1, 0001</span></div>
+				<h1></h1>
+			</header>
+			<div class="content">
+				<h1 id="软件体系结构期末复习"><strong>软件体系结构期末复习</strong><a href="#软件体系结构期末复习" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
+<h2 id="第二章">第二章<a href="#第二章" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h3 id="1概述">1、概述<a href="#1概述" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<ul>
+<li>组成派关注于软件本身，将软件架构看做组件和交互的集合。</li>
+<li>决策派关注于架构中的实体(人)，将软件架构视为一系列重要设计决策的集合。</li>
+</ul>
+<h3 id="2组成派定义">2、组成派定义<a href="#2组成派定义" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>依据：软件架构主要反映系统由哪些部分组成，以及这些部分是如何组成的，强调系统的整体结构和配置。</p>
+<p>（1）1992 —Dewane Perry &amp; Alexander Wolf</p>
+<p>​    软件架构 = {元素、组成、原理}</p>
+<ul>
+<li>
+<p>架构元素：处理元素、数据元素、连接元素</p>
+</li>
+<li>
+<p>架构组成：</p>
+<ul>
+<li>
+<p>加权的属性：约束架构的选择</p>
+</li>
+<li>
+<p>关系：约束架构元素的放置</p>
+</li>
+</ul>
+</li>
+<li>
+<p>架构原理：捕获在选择架构风格、架构元素和架构形式的选择动机。</p>
+</li>
+</ul>
+<p>（2）Mary Shaw &amp; David Carlan</p>
+<p>软件架构包括组件、连接件和约束三大要素。</p>
+<ul>
+<li>组件：可以是一组代码，也可以是独立的程序。</li>
+<li>连接件：可以是过程调用、管道和消息等，用于表示组件间的相互关系。</li>
+<li>约束：组件连接时的条件。</li>
+</ul>
+<p>（3）2011年 ISO/IEC/IEEE标准</p>
+<p>软件架构是某一系统的基本组织结构，其内容包括软件组件、组件间的联系、组件与其环境间的关系，以及指导上述内容设计与演化的原理。</p>
+<h3 id="3决策派定义">3、决策派定义<a href="#3决策派定义" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>依据：软件架构是软件设计的一部分，软件设计实际上是开发人员意志和决策在软件开发过程中的体现，强调设计决策，更加注重架构风格和模式选择。</p>
+<h3 id="4参考定义框架">4、参考定义框架<a href="#4参考定义框架" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>组件（Component）、连接件（Connector）、配置（Configuration）、端口（Port）、角色（Role）</p>
+<ul>
+<li>组件：具有某种功能的可重用的软件模块单元。</li>
+<li>连接件：表示了组件之间的交互。</li>
+<li>配置：表示了组件和连接件的拓扑逻辑和约束。</li>
+<li>端口：组件的接口由一组端口组成，每个端口表示了组件和外部环境的交汇点。</li>
+<li>角色：连接件的接口由一组角色组成，连接件的每个角色定义了该连接件表示的交互的参与者。
+<ul>
+<li>二元连接件有两个角色</li>
+<li>有的连接件有多于两个的角色</li>
+</ul>
+</li>
+</ul>
+<h2 id="第三章">第三章<a href="#第三章" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p><em><strong>至今没有一种建模方法能够满足软件架构建模的所有要求。</strong></em></p>
+<h3 id="1软件架构的五类建模方法过程缺点">1、软件架构的五类建模方法（过程、缺点）。<a href="#1软件架构的五类建模方法过程缺点" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h4 id="基于非规范的图形表示的建模方法">①基于非规范的图形表示的建模方法<a href="#基于非规范的图形表示的建模方法" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<ul>
+<li>
+<p>非正式图形表示：盒线图</p>
+</li>
+<li>
+<p>正式图形表示：</p>
+<ul>
+<li>
+<p>树形结构：</p>
+<p>（1）是显示层次性软件架构的理想方法。</p>
+<p>（2）难以处理复杂的问题。</p>
+</li>
+<li>
+<p>树地图（TreeMap）</p>
+<p>底层盒子往往用于表示方法，组合盒子往往用于表示类。</p>
+<p>（1）是展示整个软件层次架构的有效方法。</p>
+<p>（2）实质是一种空间填充方法。</p>
+</li>
+<li>
+<p>改进的树地图</p>
+</li>
+<li>
+<p>冰块图（Icicle Plot）</p>
+<p>每一行代表树的一个层次，按照子节点的数量进行分割。</p>
+<p>（1）有助于理解结构化的关系。</p>
+<p>（2）对于大型系统的层次化架构，这种可视化技术的扩展性和导航性存在问题。</p>
+</li>
+<li>
+<p>旭日图（SunBurst）</p>
+<p>（1）具有较好的弹性：图中元素的角度和颜色。</p>
+<p>（2）与树地图相比，更易学习且更令人舒适。</p>
+</li>
+<li>
+<p>双曲图（Hyperbolic）</p>
+<p>（1）双曲空间比欧几里得空间有更多的显示空间。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="基于uml的建模方法">②基于UML的建模方法<a href="#基于uml的建模方法" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<p>用例图、类图、状态图、协作图、序列图、活动图、包图、组件图、部署图、复合结构、交互概述图、时序图</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">架构元素</th>
+<th style="text-align:center">UML模型组件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">组件</td>
+<td style="text-align:center">分类器（如类、组件、节点、用例等）</td>
+</tr>
+<tr>
+<td style="text-align:center">接口</td>
+<td style="text-align:center">接口</td>
+</tr>
+<tr>
+<td style="text-align:center">关系（连接器）</td>
+<td style="text-align:center">关系（如泛化、关联、依赖等）</td>
+</tr>
+<tr>
+<td style="text-align:center">约束（规则）</td>
+<td style="text-align:center">规则</td>
+</tr>
+</tbody>
+</table>
+<p>用UML建模的三种方法：</p>
+<ul>
+<li>（1）将UML看作是一种软件架构描述语言直接对架构建模。</li>
+<li>（2）通过扩展机制约束UML的元模型以支持软件架构模型的需要。</li>
+<li>（3）对UML的元模型进行扩充。</li>
+</ul>
+<h4 id="基于形式化的建模方法">③基于形式化的建模方法<a href="#基于形式化的建模方法" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="基于uml形式化的方法">④基于UML形式化的方法<a href="#基于uml形式化的方法" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<p>UML不是一种形式化的语言</p>
+<p><strong>形式化与UML结合的建模过程：</strong></p>
+<p>需求分析—&gt;需求文档规格说明—&gt;UML建模—&gt;形式化描述—&gt;程序编码—&gt;测试变量（形式规范自动生成）—&gt;软件产品</p>
+<ul>
+<li>注意：前四步占全部工作量的60-70%</li>
+</ul>
+<h4 id="其他建模方法文本语言mda">⑤其他建模方法（文本语言、MDA）<a href="#其他建模方法文本语言mda" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<p><strong>文本语言建模方法</strong></p>
+<ul>
+<li>
+<p>文本语言建模是通过文本文件描绘架构，这些文本文件通常需要符合某些特殊的句法格式。</p>
+</li>
+<li>
+<p>可用方法：语法高亮显示、文本的静态检查、自动补全、代码折叠</p>
+</li>
+<li>
+<p>种类：XML文本建模方法、xADLite文本建模方法</p>
+</li>
+<li>
+<p>优势：</p>
+<p>（1）单个文档中描述整体架构，并且存在众多文本编辑器方便用户与文本文档的交互</p>
+<p>（2）许多工具能够生成程序库来对使用该语言的文本文档进行句法分析和检查。</p>
+<p>（3）许多编辑器附带额外的开发支持工具。</p>
+</li>
+<li>
+<p>缺点：</p>
+<p>（1）用文本语言建模方法表示类图形结构就不易理解。</p>
+<p>（2）文本编辑器通常限于显示满屏的文本，很难以另外的方式组织文本。</p>
+</li>
+</ul>
+<p><strong>MDA</strong></p>
+<ul>
+<li>MDA不是一个实现分布式系统的软件架构，而是一个模型技术进行软件开发的方法</li>
+<li>MDA将模型区分为PIM和PSM
+<ul>
+<li>平台无关模型（PIM）：PIM是一个系统的形式化规范，它与具体的实现技术无关。</li>
+<li>平台相关模型（PSM）：PSM基于某一具体目标平台的形式化规范。</li>
+</ul>
+</li>
+<li>它的核心思想是抽象出与实现技术无关、完整描述业务功能的平台独立模型。</li>
+</ul>
+<h3 id="241模型">2、“4+1”模型<a href="#241模型" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h4 id="1逻辑视图支持行为要求">（1）逻辑视图：支持行为要求。<a href="#1逻辑视图支持行为要求" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<ul>
+<li>描述系统各部分的抽象描述。用于建模系统的组成部分以及各组成部分之间的交互方式。</li>
+<li>通常包括类图、对象图、状态图和协作图。</li>
+</ul>
+<h4 id="2过程视图解决并发和分发">（2）过程视图：解决并发和分发。<a href="#2过程视图解决并发和分发" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<ul>
+<li>描述系统中的进程。 当 可视化系统中一定会发生的事情时，此视图特别有用。</li>
+<li>该视图通常包含活动图、顺序图等。</li>
+</ul>
+<h4 id="3开发视图组织软件模块库子系统开发单元">（3）开发视图：组织软件模块，库，子系统，开发单元。<a href="#3开发视图组织软件模块库子系统开发单元" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<ul>
+<li>描述系统的各部分如何被组织为模块和组件。</li>
+<li>该视图通常包含包图和组件图。</li>
+<li>管理系统体系结构中的层非常有用。</li>
+</ul>
+<h4 id="4物理视图将其他元素映射到处理和通信节点">（4）物理视图：将其他元素映射到处理和通信节点。<a href="#4物理视图将其他元素映射到处理和通信节点" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<ul>
+<li>
+<p>描述如何将前三个视图中所述的系统设计实现为一组现实世界的实体</p>
+</li>
+<li>
+<p>该视图通常包含部署图，展示了抽象部分</p>
+<p>如何映射到最终部署的系统中。</p>
+</li>
+</ul>
+<h4 id="5用例视图将其他视图映射到重要的用例这些用例被称作场景上对体系结构加以说明">（5）用例视图：将其他视图映射到重要的用例（这些用例被称作场景）上对体系结构加以说明。<a href="#5用例视图将其他视图映射到重要的用例这些用例被称作场景上对体系结构加以说明" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<ul>
+<li>从外部世界的角度描述正在建模的系统的功能。</li>
+<li>需要使用此视图来描述系统应该执行的操作。 所有其他视图都依靠用例视图（场景）来指导，这就是将模型称为4 + 1的原因。</li>
+<li>该视图通常包含用例图，描述和概述图。</li>
+</ul>
+<h2 id="第四章">第四章<a href="#第四章" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h3 id="1什么是软件架构风格">1、什么是软件架构风格？<a href="#1什么是软件架构风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="2使用架构风格的好处">2、使用架构风格的好处。<a href="#2使用架构风格的好处" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="3经典体系结构风格的特点优缺点适用范围组件连接件约束">3、经典体系结构风格的特点、优缺点、适用范围。（组件、连接件、约束）<a href="#3经典体系结构风格的特点优缺点适用范围组件连接件约束" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h4 id="31管道过滤器风格">3.1、管道过滤器风格<a href="#31管道过滤器风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="32主程序子程序风格">3.2、主程序/子程序风格<a href="#32主程序子程序风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="33面向对象风格">3.3、面向对象风格<a href="#33面向对象风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="34层次化风格">3.4、层次化风格<a href="#34层次化风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="35事件驱动风格">3.5、事件驱动风格<a href="#35事件驱动风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="36解释器风格">3.6、解释器风格<a href="#36解释器风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="37基于规则的系统风格">3.7、基于规则的系统风格<a href="#37基于规则的系统风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="38仓库风格">3.8、仓库风格<a href="#38仓库风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="39黑板系统风格">3.9、黑板系统风格<a href="#39黑板系统风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="310c2风格">3.10、C2风格<a href="#310c2风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="311cs风格">3.11、C/S风格<a href="#311cs风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="312bs风格">3.12、B/S风格<a href="#312bs风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="313平台插件风格">3.13、平台/插件风格<a href="#313平台插件风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="314面向agent风格">3.14、面向Agent风格<a href="#314面向agent风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="315面向方面软件架构风格">3.15、面向方面软件架构风格<a href="#315面向方面软件架构风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="316面向服务架构风格">3.16、面向服务架构风格<a href="#316面向服务架构风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="317正交架构风格">3.17、正交架构风格<a href="#317正交架构风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="318异构风格">3.18、异构风格<a href="#318异构风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="319基于层次消息总线的架构风格">3.19、基于层次消息总线的架构风格<a href="#319基于层次消息总线的架构风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="320模型-视图-控制器风格">3.20、模型-视图-控制器风格<a href="#320模型-视图-控制器风格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h2 id="第六章">第六章<a href="#第六章" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h3 id="1敏捷开发的基本理念">1、敏捷开发的基本理念。<a href="#1敏捷开发的基本理念" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>（1）强调个体和互动比强调过程和工具更好。</p>
+<p>（2）强调获得可运行的软件比强调完成详尽的文档好。</p>
+<p>（3）强调与客户合作比强调进行详细的合同谈判好。</p>
+<p>（4）强调响应变化比强调遵循既定的计划好。</p>
+<h3 id="2敏捷开发与架构设计的关系">2、敏捷开发与架构设计的关系。<a href="#2敏捷开发与架构设计的关系" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>（1） 软件架构与敏捷开发的出发点是一致的。</p>
+<ul>
+<li>软件架构与敏捷开发都是一个权衡的过程：软件架构设计需要权衡涉众们的各种需求，在众多的解决方案中确定唯一的架构设计；敏捷开发是在软件开发过程混沌和大量开发管理活动加入的两个极端中做出的一种权衡。</li>
+<li>软件架构与敏捷开发目的都是为了提高软件开发效率、提高软件质量、降低软件成本，将开发团队的价值最大化。</li>
+</ul>
+<p>（2）敏捷开发也需要重视软件架构。</p>
+<ul>
+<li>软件架构设计对于敏捷开发来说也是必要的。两者在软件开发实践中能够共同存在，且互相促进。</li>
+</ul>
+<p>（3）敏捷开发改变了软件架构的设计方式。</p>
+<ul>
+<li>敏捷开发将详细架构设计转移到Code编码阶段、重构阶段、单元测试阶段等。</li>
+</ul>
+<h3 id="3敏捷开发中如何改变了软件架构的设计方式">3、敏捷开发中如何改变了软件架构的设计方式？<a href="#3敏捷开发中如何改变了软件架构的设计方式" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>敏捷开发把传统软件开发前期的详细架构设计，分散到了整个敏捷开发软件过程中，以达到提高效率、减少风险的目的。</p>
+<ul>
+<li>
+<p><strong>需求分析</strong></p>
+<p>敏捷开发中的需求分析引入了架构设计的理念，分为初始阶段需求分析和迭代阶段需求分析。</p>
+</li>
+<li>
+<p><strong>初始设计</strong></p>
+<p>初始设计需要对软件系统的设计进行全局抽象层次上的考虑。包括系统的基本处理流程、系统的组织结构、模块划分、功能分配等</p>
+</li>
+<li>
+<p><strong>迭代过程</strong></p>
+<p>迭代设计、重构、确定架构、客户交流</p>
+</li>
+</ul>
+<h2 id="第八章">第八章<a href="#第八章" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h3 id="1成功的软件架构应具有的品质">1、成功的软件架构应具有的品质。<a href="#1成功的软件架构应具有的品质" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>（1）良好的模块化。</p>
+<p>（2）适应功能需求的变化，适应技术的变化 。</p>
+<p>（3）对系统的动态运行有良好的规划</p>
+<p>（4）对数据的良好规划。</p>
+<p>（5）明确、灵活的部署规划。</p>
+<h3 id="2基于体系结构的软件设计方法">2、基于体系结构的软件设计方法。<a href="#2基于体系结构的软件设计方法" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>基 于 体 系 结 构 的 软 件 设 计 （ architecture-based software design, ABSD）方法为软件系统的概念体系结构提供构造方法，概念体系结构描述了系统的主要设计元素及其关系。</p>
+<p><strong>ABSD方法基础</strong></p>
+<ul>
+<li>功能分解：ABSD方法使用已有的基于模块的内聚和耦合技术；</li>
+<li>通过选择体系结构风格来实现质量和业务需求。</li>
+<li>软件模板的使用：利用一些软件系统的结构。</li>
+</ul>
+<p><strong>ABSD方法的步骤</strong></p>
+<p>（1）功能分解：分解的目的是使每个组在体系结构内代表独立的元素。</p>
+<p>（2）选择体系结构风格</p>
+<p>（3）为风格分配功能</p>
+<p>（4）细化模板</p>
+<p>（5）功能校验</p>
+<p>（6）创建并发视图</p>
+<p>（7）创建配置视图</p>
+<p>（8）验证质量场景</p>
+<p>（9）验证约束</p>
+<h3 id="3将软件架构的概念和原则引入软件需求阶段有什么好处不引入可能会引起什么问题">3、将软件架构的概念和原则引入软件需求阶段有什么好处？不引入可能会引起什么问题？<a href="#3将软件架构的概念和原则引入软件需求阶段有什么好处不引入可能会引起什么问题" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<ul>
+<li>若把架构概念引入需求分析阶段，有助于保证需求规约、系统设计之间的可追踪性和一致性，有效保持软件质量。</li>
+<li>将软件架构概念和原则引入需求分析，也可以让我们获得更有结构性和可重用的需求规约。</li>
+<li>用传统的方法产生需求规约，不考虑软件架构概念和原则，则在软件架构设计阶段建立需求规约与架构的映射将相对困难。</li>
+</ul>
+<h3 id="4软件架构和软件需求是如何协同演化的">4、软件架构和软件需求是如何协同演化的？<a href="#4软件架构和软件需求是如何协同演化的" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="5将软件架构映射到详细设计经常遇到什么问题如何解决">5、将软件架构映射到详细设计经常遇到什么问题？如何解决？<a href="#5将软件架构映射到详细设计经常遇到什么问题如何解决" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p><strong>问题</strong></p>
+<p>（1）缺失重要架构视图，片面强调功能需求。</p>
+<p>（2）不够深入，架构设计方案过于笼统，基本还停留在概念性架构的层面，没有提供明确的技术蓝图。</p>
+<p>（3）名不副实的分层架构，缺失层次之间的交互接口和交互机制，只进行职责划分。</p>
+<p>（4）在某些方面过度设计。</p>
+<p><strong>解决方法</strong></p>
+<p>（1）对于缺失重要架构视图问题，可以针对遗漏的架构视图进行设计。</p>
+<p>（2）对于不够深入问题，需要将设计决策细化到和技术相关的层面。</p>
+<p>（3）对于名不副实的分层架构问题，需要步步深入，明确各层之间的交互接口和交互机制。</p>
+<p>（4）虽然我们必须考虑到系统的扩展性，可维护性等，但切忌过度设计。</p>
+<h3 id="6mda的基本思想过程应用mda的好处">6、MDA的基本思想、过程，应用MDA的好处。<a href="#6mda的基本思想过程应用mda的好处" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p><strong>基本思想</strong></p>
+<p>将软件系统分成模型和实现两部分：模型是对系统的描述，实现是利用特定技术在特定平台或环境中对模型的解释。模型仅仅负责对系统的描述，与实现技术无关。这是模型的实现技术无关性。</p>
+<p><strong>过程</strong></p>
+<p>（1）用计算无关模型CIM 捕获需求；</p>
+<p>（2）创建平台无关模型PIM；</p>
+<p>（3）将PIM转化成为一个或多个平台特定模型PSM，并加入平台特定的规则和代码；</p>
+<p>（4）将PSM 转化为代码等。</p>
+<p><strong>好处</strong></p>
+<p>将模型与实现分离后，能够很好的适应技术易变性。由于实现往往高度依赖特定技术和特定平台，当技术发生迁移时，只需针对这种技术作相应的实现，编写相应的运行平台或变换工具。所以，能够比较好的应对实现技术发展带来的挑战。</p>
+<h2 id="第十五章">第十五章<a href="#第十五章" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h3 id="1质量属性质量场景">1、质量属性、（质量）场景。<a href="#1质量属性质量场景" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p><strong>质量属性</strong></p>
+<p>（1）可修改性：度量软件系统变化的成本。</p>
+<p>（2）可用性：是指软件能够正常运行的时间比例。</p>
+<p>（3）性能：性能表征软件系统的响应速度或者由响应速度决定的其它度量。</p>
+<p>（4）可测试性：软件系统在多大程度上容易被测试检查出缺陷。</p>
+<p>（5）易用性：表明软件系统完成后用户的体验和效率。</p>
+<p>（6）安全性：代表软件对未授权和非法操作的防卫能力。</p>
+<p><strong>场景</strong></p>
+<ul>
+<li>
+<p>在进行体系结构评估时，一般首先要精确地得出具体的质量目标，并以之作为判定该体系结构优劣的标准。我们把为得出这些目标而采用的机制劣的标准。我们把为得出这些目标而采用的机制叫做场景。</p>
+</li>
+<li>
+<p>场景是从风险承担者的角度对与系统的交互的简短描述。</p>
+</li>
+<li>
+<p>在体系结构评估中，一般采用刺激、环境和响应三方面来对场景进行描述。</p>
+</li>
+</ul>
+<h3 id="2体系结构权衡分析方法atam的相关">2、体系结构权衡分析方法（ATAM）的相关。<a href="#2体系结构权衡分析方法atam的相关" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="3概念敏感点权衡点质量效用树评估过程步骤质量效用树的构建优缺点">3、概念（敏感点、权衡点、质量效用树）、评估过程（步骤）、质量效用树的构建、优缺点。<a href="#3概念敏感点权衡点质量效用树评估过程步骤质量效用树的构建优缺点" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h2 id="软件架构相关课题">软件架构相关课题<a href="#软件架构相关课题" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h3 id="1软件架构演化与维护">1、软件架构演化与维护<a href="#1软件架构演化与维护" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="2架构腐蚀">2、架构腐蚀<a href="#2架构腐蚀" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<p>软件架构腐蚀（software architecture erosion）是指预期软件架构或概念软件架构与实际软件架构之间的偏离。它意味着最终的实现并没有完全满足预定的计划或违背了系统的约束和规则。这种偏离更多的是源自日常的软件修改，而非人为的恶意。架构腐蚀会导致软件演化过程中出现工程质量的恶化。</p>
+<p><strong>预防方法</strong>：</p>
+<ul>
+<li>腐蚀最小化</li>
+<li>腐蚀预防</li>
+<li>腐蚀修补</li>
+</ul>
+<h3 id="3架构技术债">3、架构技术债<a href="#3架构技术债" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="4架构坏味道">4、架构坏味道<a href="#4架构坏味道" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="5架构脆弱性">5、架构脆弱性<a href="#5架构脆弱性" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<ul>
+<li>通常情况下，我们认为软件脆弱性是导致破坏系统安全策略的系统安全规范、系统设计、实现和内部控制等方面的弱点。</li>
+<li>在软件开发过程中，软件脆弱性包含软件基础模型的脆弱性、软件架构设计的脆弱性、软件模块设计的脆弱性、软件接口设计的脆弱性、软件界面设计的脆弱性、数据库设计的脆弱性、架构模式和设计模式的脆弱性以及实现的脆弱性等等。</li>
+</ul>
+
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>277 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>1011-11-0 08:00 &#43;0800</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="next-post" href="https://LeiBuDao.github.io/posts/leetcode/">
+				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;Newer</span><br><span>Leetcode 刷题笔记(最后更新-2021/12/5)</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2021 <a href="https://LeiBuDao.github.io/"> MADE BY RUNXU</a> &#183;<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener"> </a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://LeiBuDao.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://LeiBuDao.github.io/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js" integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin="anonymous"></script>
+	
+
+</body>
+
+</html>

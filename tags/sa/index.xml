@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Run</title>
-    <link>https://LeiBuDao.github.io/</link>
-    <description>Recent content on Run</description>
+    <title>SA on Run</title>
+    <link>https://LeiBuDao.github.io/tags/sa/</link>
+    <description>Recent content in SA on Run</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 23 Dec 2021 10:55:47 +0800</lastBuildDate><atom:link href="https://LeiBuDao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Dec 2021 10:55:47 +0800</lastBuildDate><atom:link href="https://LeiBuDao.github.io/tags/sa/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>软件体系结构期末复习</title>
       <link>https://LeiBuDao.github.io/posts/safinalexam/</link>
@@ -27,36 +27,6 @@
 软件架构是某一系统的基本组织结构，其内容包括软件组件、组件间的联系、组件与其环境间的关系，以及指导上述内容设计与演化的原理。
 3、决策派定义 依据：软件架构是软件设计的一部分，软件设计实际上是开发人员意志和决策在软件开发过程中的体现，强调设计决策，更加注重架构风格和模式选择。  4、参考定义框架 组件（Component）、连接件（Connector）、配置（Configuration）、端口（Port）、角色（Role）
  组件：具有某种功能的可重用的软件模块单元。 连接件：表示了组件之间的交互。 配置：表示了组件和连接件的拓扑逻辑和约束。 端口：组件的接口由一组端口组成，每个端口表示了组件和外部环境的交汇点。 角色：连接件的接口由一组角色组成，连接件的每个角色定义了该连接件表示的交互的参与者。  二元连接件有两个角色 有的连接件有多于两个的角色    第三章 至今没有一种建模方法能够满足软件架构建模的所有要求。</description>
-    </item>
-    
-    <item>
-      <title>About My Blog</title>
-      <link>https://LeiBuDao.github.io/about-myblog/</link>
-      <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://LeiBuDao.github.io/about-myblog/</guid>
-      <description>_ _____ _____ ______ _ _ ______ ___ _____ | | | ___| |_ _| | ___ \ | | | | | _ \ / _ \ | _ | | | | |__ | | | |_/ / | | | | | | | | / /_\ \ | | | | | | | __| | | | ___ \ | | | | | | | | | _ | | | | | | |____ | |___ _| |_ | |_/ / | |_| | | |/ / | | | | \ \_/ / \_____/ \____/ \___/ \____/ \___/ |___/ \_| |_/ \___/    👋 Hi, I’m @RUNXU , a SEU student majoring in software engineering.</description>
-    </item>
-    
-    <item>
-      <title>Leetcode 刷题笔记(最后更新-2021/12/5)</title>
-      <link>https://LeiBuDao.github.io/posts/leetcode/</link>
-      <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://LeiBuDao.github.io/posts/leetcode/</guid>
-      <description>1.两数之和 题目：给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出和为目标值 target 的那两个整数，并返回它们的数组下标。  示例 1：   输入：nums = [2,7,11,15], target = 9， 输出：[0,1]
-  示例 2：   输入：nums = [3,2,4], target = 6， 输出：[1,2]
-  示例 3：   输入：nums = [3,3], target = 6， 输出：[0,1]
-  * 解法一 暴力法，二重循环  复杂度：暴力算法时间复杂度O（n²），空间复杂度O（1）。  * 解法二 排序+双指针  思想：用一个pair数组vec储存nums的内容（first）以及下标（second）。根据first中从小到大排序，最后利用双指针遍历数组进行匹配，返回对应的second中的内容，即数组下标。 复杂度：这里先将数组排序好O（nlogn），再利用双指针法遍历一遍O（n）得到结果。 为了保存下标信息另开了一个数组。时间复杂度O（nlogn），空间复杂度O（n）。    class Solution {public:static bool cmp(const pair&amp;lt;int,int&amp;gt;a,const pair&amp;lt;int,int&amp;gt;b){return a.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://LeiBuDao.github.io/contact-me/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://LeiBuDao.github.io/contact-me/</guid>
-      <description>To Contact Me QQmail: 319701058@qq.com Gmail: leibudao@gmail.com Telegram: @leibudao </description>
     </item>
     
   </channel>
