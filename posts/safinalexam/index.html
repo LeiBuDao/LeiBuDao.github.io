@@ -8,55 +8,37 @@
 	<meta name="theme-color" content="111214">
 	<meta name="msapplication-TileColor" content="111214">
 <meta itemprop="name" content="软件体系结构期末复习">
-<meta itemprop="description" content="第二章 1、概述  组成派关注于软件本身，将软件架构看做组件和交互的集合。 决策派关注于架构中的实体(人)，将软件架构视为一系列重要设计决策的集合。  2、组成派定义 依据：软件架构主要反映系统由哪些部分组成，以及这些部分是如何组成的，强调系统的整体结构和配置。  （1）1992 —Dewane Perry &amp; Alexander Wolf
-软件架构 = {元素、组成、原理}
-  架构元素：处理元素、数据元素、连接元素
-  架构组成：
-  加权的属性：约束架构的选择
-  关系：约束架构元素的放置
-    架构原理：捕获在选择架构风格、架构元素和架构形式的选择动机。
-  （2）Mary Shaw &amp; David Carlan
-软件架构包括组件、连接件和约束三大要素。
- 组件：可以是一组代码，也可以是独立的程序。 连接件：可以是过程调用、管道和消息等，用于表示组件间的相互关系。 约束：组件连接时的条件。  （3）2011年 ISO/IEC/IEEE标准
-软件架构是某一系统的基本组织结构，其内容包括软件组件、组件间的联系、组件与其环境间的关系，以及指导上述内容设计与演化的原理。
-3、决策派定义 依据：软件架构是软件设计的一部分，软件设计实际上是开发人员意志和决策在软件开发过程中的体现，强调设计决策，更加注重架构风格和模式选择。  4、参考定义框架 组件（Component）、连接件（Connector）、配置（Configuration）、端口（Port）、角色（Role）
- 组件：具有某种功能的可重用的软件模块单元。 连接件：表示了组件之间的交互。 配置：表示了组件和连接件的拓扑逻辑和约束。 端口：组件的接口由一组端口组成，每个端口表示了组件和外部环境的交汇点。 角色：连接件的接口由一组角色组成，连接件的每个角色定义了该连接件表示的交互的参与者。  二元连接件有两个角色 有的连接件有多于两个的角色    第三章 至今没有一种建模方法能够满足软件架构建模的所有要求。"><meta itemprop="datePublished" content="2021-12-23T10:55:47+08:00" />
-<meta itemprop="dateModified" content="2021-12-23T10:55:47+08:00" />
-<meta itemprop="wordCount" content="287">
-<meta itemprop="keywords" content="SA,final exam," /><meta property="og:title" content="软件体系结构期末复习" />
-<meta property="og:description" content="第二章 1、概述  组成派关注于软件本身，将软件架构看做组件和交互的集合。 决策派关注于架构中的实体(人)，将软件架构视为一系列重要设计决策的集合。  2、组成派定义 依据：软件架构主要反映系统由哪些部分组成，以及这些部分是如何组成的，强调系统的整体结构和配置。  （1）1992 —Dewane Perry &amp; Alexander Wolf
-软件架构 = {元素、组成、原理}
-  架构元素：处理元素、数据元素、连接元素
-  架构组成：
-  加权的属性：约束架构的选择
-  关系：约束架构元素的放置
-    架构原理：捕获在选择架构风格、架构元素和架构形式的选择动机。
-  （2）Mary Shaw &amp; David Carlan
-软件架构包括组件、连接件和约束三大要素。
- 组件：可以是一组代码，也可以是独立的程序。 连接件：可以是过程调用、管道和消息等，用于表示组件间的相互关系。 约束：组件连接时的条件。  （3）2011年 ISO/IEC/IEEE标准
-软件架构是某一系统的基本组织结构，其内容包括软件组件、组件间的联系、组件与其环境间的关系，以及指导上述内容设计与演化的原理。
-3、决策派定义 依据：软件架构是软件设计的一部分，软件设计实际上是开发人员意志和决策在软件开发过程中的体现，强调设计决策，更加注重架构风格和模式选择。  4、参考定义框架 组件（Component）、连接件（Connector）、配置（Configuration）、端口（Port）、角色（Role）
- 组件：具有某种功能的可重用的软件模块单元。 连接件：表示了组件之间的交互。 配置：表示了组件和连接件的拓扑逻辑和约束。 端口：组件的接口由一组端口组成，每个端口表示了组件和外部环境的交汇点。 角色：连接件的接口由一组角色组成，连接件的每个角色定义了该连接件表示的交互的参与者。  二元连接件有两个角色 有的连接件有多于两个的角色    第三章 至今没有一种建模方法能够满足软件架构建模的所有要求。" />
+<meta itemprop="description" content="第一章—软件体系结构概述 1、软件体系结构的主要思想  软件架构是一个软件系统的设计图，并不局限于软件系统的总体结构，还包含一些质量属性以及功能与结构之间的映射关系，即设计决策。 软件架构的两个主要焦点集中于系统的总体结构以及需求和实现之间的对应。 软件架构的主要思想是将注意力集中在系统总体结构的组织上。  2、软件架构的特征    特征 实现方式 作用     注重可重用性 组件及架构级重用 提高软件质量   利益相关者众多 满足各利益相关者需求 平衡需求   关注点分离 分而治之、模块化 简化复杂性   质量驱动 使用软件架构来处理质量属性需求、控制复杂性 由功能、数据流驱动向质量驱动转变   概念完整性 强调设计决策是一个持续的过程 每个决策都要在其前面设计决策的基础上进行   循环风格 架构风格、架构模式 用标准方法来处理反复出现的问题    3、软件架构的发展阶段  （1）无体系结构  ​ 高级语言出现
+  （2）基础研究阶段（1968-1994）
+​ 面向过程开发
+  （3）核心技术形成（1991-2000）
+  ​ 面向对象开发
+​ 1）软件架构作为一个独立的研究领域出现
+​ 2）软件架构核心技术的发展"><meta itemprop="datePublished" content="2021-12-21T15:04:19+08:00" />
+<meta itemprop="dateModified" content="2021-12-21T15:04:19+08:00" />
+<meta itemprop="wordCount" content="617">
+<meta itemprop="keywords" content="SA,Review," /><meta property="og:title" content="软件体系结构期末复习" />
+<meta property="og:description" content="第一章—软件体系结构概述 1、软件体系结构的主要思想  软件架构是一个软件系统的设计图，并不局限于软件系统的总体结构，还包含一些质量属性以及功能与结构之间的映射关系，即设计决策。 软件架构的两个主要焦点集中于系统的总体结构以及需求和实现之间的对应。 软件架构的主要思想是将注意力集中在系统总体结构的组织上。  2、软件架构的特征    特征 实现方式 作用     注重可重用性 组件及架构级重用 提高软件质量   利益相关者众多 满足各利益相关者需求 平衡需求   关注点分离 分而治之、模块化 简化复杂性   质量驱动 使用软件架构来处理质量属性需求、控制复杂性 由功能、数据流驱动向质量驱动转变   概念完整性 强调设计决策是一个持续的过程 每个决策都要在其前面设计决策的基础上进行   循环风格 架构风格、架构模式 用标准方法来处理反复出现的问题    3、软件架构的发展阶段  （1）无体系结构  ​ 高级语言出现
+  （2）基础研究阶段（1968-1994）
+​ 面向过程开发
+  （3）核心技术形成（1991-2000）
+  ​ 面向对象开发
+​ 1）软件架构作为一个独立的研究领域出现
+​ 2）软件架构核心技术的发展" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://LeiBuDao.github.io/posts/safinalexam/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-12-23T10:55:47+08:00" />
-<meta property="article:modified_time" content="2021-12-23T10:55:47+08:00" />
+<meta property="article:published_time" content="2021-12-21T15:04:19+08:00" />
+<meta property="article:modified_time" content="2021-12-21T15:04:19+08:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="软件体系结构期末复习"/>
-<meta name="twitter:description" content="第二章 1、概述  组成派关注于软件本身，将软件架构看做组件和交互的集合。 决策派关注于架构中的实体(人)，将软件架构视为一系列重要设计决策的集合。  2、组成派定义 依据：软件架构主要反映系统由哪些部分组成，以及这些部分是如何组成的，强调系统的整体结构和配置。  （1）1992 —Dewane Perry &amp; Alexander Wolf
-软件架构 = {元素、组成、原理}
-  架构元素：处理元素、数据元素、连接元素
-  架构组成：
-  加权的属性：约束架构的选择
-  关系：约束架构元素的放置
-    架构原理：捕获在选择架构风格、架构元素和架构形式的选择动机。
-  （2）Mary Shaw &amp; David Carlan
-软件架构包括组件、连接件和约束三大要素。
- 组件：可以是一组代码，也可以是独立的程序。 连接件：可以是过程调用、管道和消息等，用于表示组件间的相互关系。 约束：组件连接时的条件。  （3）2011年 ISO/IEC/IEEE标准
-软件架构是某一系统的基本组织结构，其内容包括软件组件、组件间的联系、组件与其环境间的关系，以及指导上述内容设计与演化的原理。
-3、决策派定义 依据：软件架构是软件设计的一部分，软件设计实际上是开发人员意志和决策在软件开发过程中的体现，强调设计决策，更加注重架构风格和模式选择。  4、参考定义框架 组件（Component）、连接件（Connector）、配置（Configuration）、端口（Port）、角色（Role）
- 组件：具有某种功能的可重用的软件模块单元。 连接件：表示了组件之间的交互。 配置：表示了组件和连接件的拓扑逻辑和约束。 端口：组件的接口由一组端口组成，每个端口表示了组件和外部环境的交汇点。 角色：连接件的接口由一组角色组成，连接件的每个角色定义了该连接件表示的交互的参与者。  二元连接件有两个角色 有的连接件有多于两个的角色    第三章 至今没有一种建模方法能够满足软件架构建模的所有要求。"/>
+<meta name="twitter:description" content="第一章—软件体系结构概述 1、软件体系结构的主要思想  软件架构是一个软件系统的设计图，并不局限于软件系统的总体结构，还包含一些质量属性以及功能与结构之间的映射关系，即设计决策。 软件架构的两个主要焦点集中于系统的总体结构以及需求和实现之间的对应。 软件架构的主要思想是将注意力集中在系统总体结构的组织上。  2、软件架构的特征    特征 实现方式 作用     注重可重用性 组件及架构级重用 提高软件质量   利益相关者众多 满足各利益相关者需求 平衡需求   关注点分离 分而治之、模块化 简化复杂性   质量驱动 使用软件架构来处理质量属性需求、控制复杂性 由功能、数据流驱动向质量驱动转变   概念完整性 强调设计决策是一个持续的过程 每个决策都要在其前面设计决策的基础上进行   循环风格 架构风格、架构模式 用标准方法来处理反复出现的问题    3、软件架构的发展阶段  （1）无体系结构  ​ 高级语言出现
+  （2）基础研究阶段（1968-1994）
+​ 面向过程开发
+  （3）核心技术形成（1991-2000）
+  ​ 面向对象开发
+​ 1）软件架构作为一个独立的研究领域出现
+​ 2）软件架构核心技术的发展"/>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -99,16 +81,7 @@
 					<line x1="3" y1="6" x2="3" y2="6"></line>
 					<line x1="3" y1="12" x2="3" y2="12"></line>
 					<line x1="3" y1="18" x2="3" y2="18"></line>
-				</svg></button>
-			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css"
-				integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y"
-				crossorigin="anonymous">
-			<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"
-				integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx"
-				crossorigin="anonymous"></script>
-			<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"
-				integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe"
-				crossorigin="anonymous" onload="renderMathInElement(document.body);"></script><span class="hdr-social hide-in-mobile"><a href="https://github.com/LeiBuDao" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+				</svg></button><span class="hdr-social hide-in-mobile"><a href="https://github.com/LeiBuDao" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path
         d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
@@ -151,11 +124,106 @@
 <main class="site-main section-inner animated fadeIn faster">
 	<article class="thin">
 		<header class="post-header">
-			<div class="post-meta"><span>Dec 23, 2021</span></div>
+			<div class="post-meta"><span>Dec 21, 2021</span></div>
 			<h1>软件体系结构期末复习</h1>
 		</header>
 		<div class="content">
-			<h2 id="第二章">第二章<a href="#第二章" class="anchor"
+			<h2 id="第一章软件体系结构概述">第一章—软件体系结构概述<a href="#第一章软件体系结构概述" class="anchor"
+					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
+						<line x1="8" y1="12" x2="16" y2="12"></line>
+					</svg></a></h2>
+<h3 id="1软件体系结构的主要思想">1、软件体系结构的主要思想<a href="#1软件体系结构的主要思想" class="anchor"
+					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
+						<line x1="8" y1="12" x2="16" y2="12"></line>
+					</svg></a></h3>
+<ul>
+<li>软件架构是一个软件系统的设计图，并不局限于软件系统的总体结构，还包含一些质量属性以及功能与结构之间的映射关系，即设计决策。</li>
+<li>软件架构的两个主要焦点集中于系统的总体结构以及需求和实现之间的对应。</li>
+<li>软件架构的主要思想是将注意力集中在系统总体结构的组织上。</li>
+</ul>
+<h3 id="2软件架构的特征">2、软件架构的特征<a href="#2软件架构的特征" class="anchor"
+					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
+						<line x1="8" y1="12" x2="16" y2="12"></line>
+					</svg></a></h3>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>实现方式</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>注重可重用性</td>
+<td>组件及架构级重用</td>
+<td>提高软件质量</td>
+</tr>
+<tr>
+<td>利益相关者众多</td>
+<td>满足各利益相关者需求</td>
+<td>平衡需求</td>
+</tr>
+<tr>
+<td>关注点分离</td>
+<td>分而治之、模块化</td>
+<td>简化复杂性</td>
+</tr>
+<tr>
+<td>质量驱动</td>
+<td>使用软件架构来处理质量属性需求、控制复杂性</td>
+<td>由功能、数据流驱动向质量驱动转变</td>
+</tr>
+<tr>
+<td>概念完整性</td>
+<td>强调设计决策是一个持续的过程</td>
+<td>每个决策都要在其前面设计决策的基础上进行</td>
+</tr>
+<tr>
+<td>循环风格</td>
+<td>架构风格、架构模式</td>
+<td>用标准方法来处理反复出现的问题</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3软件架构的发展阶段">3、软件架构的发展阶段<a href="#3软件架构的发展阶段" class="anchor"
+					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
+						<line x1="8" y1="12" x2="16" y2="12"></line>
+					</svg></a></h3>
+<ul>
+<li><strong>（1）无体系结构</strong></li>
+</ul>
+<p>​                 高级语言出现</p>
+<ul>
+<li>
+<p><strong>（2）基础研究阶段（1968-1994）</strong></p>
+<p>​          面向过程开发</p>
+</li>
+<li>
+<p><strong>（3）核心技术形成（1991-2000）</strong></p>
+</li>
+</ul>
+<p>​                 面向对象开发</p>
+<p>​                1）软件架构作为一个独立的研究领域出现</p>
+<p>​                2）软件架构核心技术的发展</p>
+<p>​                3）软件组件技术</p>
+<ul>
+<li><strong>（4）理论体系丰富（1996-1999）</strong></li>
+</ul>
+<p>​                 面向服务开发</p>
+<ul>
+<li><strong>（5）理论体系完善及普及应用（1999-至今）</strong></li>
+</ul>
+<p>​                 云和移动服务、智能化软件开发</p>
+<h2 id="第二章软件架构定义">第二章—软件架构定义<a href="#第二章软件架构定义" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
@@ -177,13 +245,12 @@
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<pre><code>依据：软件架构主要反映系统由哪些部分组成，以及这些部分是如何组成的，强调系统的整体结构和配置。
-</code></pre>
+<p>依据：软件架构主要反映系统由哪些部分组成，以及这些部分是如何组成的，强调系统的整体结构和配置。</p>
 <p>（1）1992 —Dewane Perry &amp; Alexander Wolf</p>
-<p>软件架构 = {元素、组成、原理}</p>
+<p>​    软件架构 = {元素、组成、原理}</p>
 <ul>
 <li>
-<p>架构元素：处理元素、数据元素、连接元素</p>
+<p>架构元素：，具有一定形式的结构元素，包括处理元素、数据元素、连接元素</p>
 </li>
 <li>
 <p>架构组成：</p>
@@ -215,8 +282,7 @@
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<pre><code>依据：软件架构是软件设计的一部分，软件设计实际上是开发人员意志和决策在软件开发过程中的体现，强调设计决策，更加注重架构风格和模式选择。
-</code></pre>
+<p>依据：软件架构是软件设计的一部分，软件设计实际上是开发人员意志和决策在软件开发过程中的体现，更是高层领导和软件架构师意志和决策的体现。强调设计决策，更加注重架构风格和模式选择。</p>
 <h3 id="4参考定义框架">4、参考定义框架<a href="#4参考定义框架" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -236,7 +302,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="第三章">第三章<a href="#第三章" class="anchor"
+<h2 id="第三章软件架构模型">第三章—软件架构模型<a href="#第三章软件架构模型" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
@@ -255,6 +321,7 @@
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<p><strong>图形可视化是将软件架构按照图形的方式进行表达，需要便于涉众阅读、理解和交流，使之不会因图形过于复杂而难以把握架构的概况</strong></p>
 <ul>
 <li>
 <p>非正式图形表示：盒线图</p>
@@ -300,8 +367,7 @@
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
-<pre><code>用例图、类图、状态图、协作图、序列图、活动图、包图、组件图、部署图、复合结构、交互概述图、时序图
-</code></pre>
+<p>用例图、类图、状态图、协作图、序列图、活动图、包图、组件图、部署图、复合结构、交互概述图、时序图</p>
 <table>
 <thead>
 <tr>
@@ -340,27 +406,25 @@
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<p>Z语言、Petri网、过滤器模式、B语言、VDM、CSP</p>
 <h4 id="基于uml形式化的方法">④基于UML形式化的方法<a href="#基于uml形式化的方法" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
-<pre><code>UML不是一种形式化的语言 
-</code></pre>
+<p>UML不是一种形式化的语言</p>
+<p><strong>形式化与UML结合的建模过程：</strong></p>
+<p>需求分析—&gt;需求文档规格说明—&gt;UML建模—&gt;形式化描述—&gt;程序编码—&gt;测试变量（形式规范自动生成）—&gt;软件产品</p>
 <ul>
-<li><strong>形式化与UML结合的建模过程：</strong></li>
+<li>注意：前四步占全部工作量的60-70%</li>
 </ul>
-<p>需求分析 ——&gt; 需求文档规格说明 ——&gt; UML建模 ——&gt; 形式化描述 ——&gt; 程序编码 ——&gt; 测试变量（形式规范自动生成） ——&gt; 软件产品</p>
-<p>（注意：前四步占全部工作量的60-70%）</p>
 <h4 id="其他建模方法文本语言mda">⑤其他建模方法（文本语言、MDA）<a href="#其他建模方法文本语言mda" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
-<ul>
-<li>
 <p><strong>文本语言建模方法</strong></p>
 <ul>
 <li>
@@ -373,19 +437,17 @@
 <p>种类：XML文本建模方法、xADLite文本建模方法</p>
 </li>
 <li>
-<p><strong>优势：</strong></p>
+<p>优势：</p>
 <p>（1）单个文档中描述整体架构，并且存在众多文本编辑器方便用户与文本文档的交互</p>
 <p>（2）许多工具能够生成程序库来对使用该语言的文本文档进行句法分析和检查。</p>
 <p>（3）许多编辑器附带额外的开发支持工具。</p>
 </li>
 <li>
-<p><strong>缺点：</strong></p>
+<p>缺点：</p>
 <p>（1）用文本语言建模方法表示类图形结构就不易理解。</p>
 <p>（2）文本编辑器通常限于显示满屏的文本，很难以另外的方式组织文本。</p>
 </li>
 </ul>
-</li>
-<li>
 <p><strong>MDA</strong></p>
 <ul>
 <li>MDA不是一个实现分布式系统的软件架构，而是一个模型技术进行软件开发的方法</li>
@@ -396,8 +458,6 @@
 </ul>
 </li>
 <li>它的核心思想是抽象出与实现技术无关、完整描述业务功能的平台独立模型。</li>
-</ul>
-</li>
 </ul>
 <h3 id="241模型">2、“4+1”模型<a href="#241模型" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -422,7 +482,7 @@
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
 <ul>
-<li>描述系统中的进程。 当 可视化系统中一定会发生的事情时，此视图特别有用。</li>
+<li>描述系统中的进程。 当可视化系统中一定会发生的事情时，此视图特别有用。</li>
 <li>该视图通常包含活动图、顺序图等。</li>
 </ul>
 <h4 id="3开发视图组织软件模块库子系统开发单元">（3）开发视图：组织软件模块，库，子系统，开发单元。<a href="#3开发视图组织软件模块库子系统开发单元" class="anchor"
@@ -447,8 +507,7 @@
 <p>描述如何将前三个视图中所述的系统设计实现为一组现实世界的实体</p>
 </li>
 <li>
-<p>该视图通常包含部署图，展示了抽象部分</p>
-<p>如何映射到最终部署的系统中。</p>
+<p>该视图通常包含部署图，展示了抽象部分如何映射到最终部署的系统中。</p>
 </li>
 </ul>
 <h4 id="5用例视图将其他视图映射到重要的用例这些用例被称作场景上对体系结构加以说明">（5）用例视图：将其他视图映射到重要的用例（这些用例被称作场景）上对体系结构加以说明。<a href="#5用例视图将其他视图映射到重要的用例这些用例被称作场景上对体系结构加以说明" class="anchor"
@@ -462,7 +521,7 @@
 <li>需要使用此视图来描述系统应该执行的操作。 所有其他视图都依靠用例视图（场景）来指导，这就是将模型称为4 + 1的原因。</li>
 <li>该视图通常包含用例图，描述和概述图。</li>
 </ul>
-<h2 id="第四章">第四章<a href="#第四章" class="anchor"
+<h2 id="第四章软件架构风格">第四章—软件架构风格<a href="#第四章软件架构风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
@@ -474,12 +533,22 @@
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<ul>
+<li>
+<p>软件体系风格描述了一类体系结构，独立于实际问题，强调了软件系统中通用的组织结构，在实践中被多次应用，是若干设计思想的综合，具有已经被熟知的特性，并且可以被复用。</p>
+</li>
+<li>
+<p>软件架构风格又称软件架构惯用模式，是描述某一特定应用领域中系统组织方式的惯用模式，作为“可复用的组织模式和习语”，为设计人员的交流提供了公共的术语空间，促进了设计复用与代码复用。</p>
+</li>
+</ul>
 <h3 id="2使用架构风格的好处">2、使用架构风格的好处。<a href="#2使用架构风格的好处" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<p>（1）可以极大的促进设计的重用性和代码的重用性，并且使得系统的组织结构易被理解。</p>
+<p>（2）使用标准的架构风格可较好地支持系统内部的互操作性以及针对特定风格的分析。</p>
 <h3 id="3经典体系结构风格的特点优缺点适用范围组件连接件约束">3、经典体系结构风格的特点、优缺点、适用范围。（组件、连接件、约束）<a href="#3经典体系结构风格的特点优缺点适用范围组件连接件约束" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -492,121 +561,603 @@
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<ul>
+<li>
+<p>基本组件：过滤器（功能模块）</p>
+<ul>
+<li>
+<p>每个过滤器组件中都封装了一个处理步骤</p>
+</li>
+<li>
+<p>数据源点和数据终点可以看作是特殊的过滤器</p>
+</li>
+</ul>
+</li>
+<li>
+<p>连接件：管道（数据流）</p>
+</li>
+<li>
+<p>过滤器Filter：</p>
+<ul>
+<li>作用：将源数据变换为目标数据</li>
+<li>变换方式：（丰富）增加、（精炼）删除、（转换）改变、分解、合并等</li>
+<li>特性：独立性
+<ul>
+<li>（1）过滤器独立完成自身功能，相互之间无需进行状态交互</li>
+<li>（2）过滤器自身无状态</li>
+<li>（3）过滤器对其上下游的过滤器“无知”</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>管道Pipe：</p>
+<ul>
+<li>作用：将数据从一个过滤器的输出口转移到另一个过滤器的输入口</li>
+<li>过滤器是单向移动的。</li>
+<li>过滤器可以有缓冲区。</li>
+</ul>
+</li>
+<li>
+<p><strong>结果的正确性不依赖于各个过滤器运行的先后顺序</strong></p>
+</li>
+<li>
+<p>优点：</p>
+<ul>
+<li>（1）由于每个组件行为不受其他组件的影响，整个系统的行为易于理解。</li>
+<li>（2）管道-过滤器风格支持功能模块的复用。</li>
+<li>（3）具有较强的可维护性和可拓展性</li>
+<li>（4）支持一些特定的分析，如吞吐量计算和死锁检测等。</li>
+<li>（5）具有并发性。</li>
+</ul>
+</li>
+<li>
+<p>缺点：</p>
+<ul>
+<li>（1）往往导致系统处理过程的成批操作。</li>
+<li>（2）增加了过滤器具体实现的复杂性，系统性能不高。</li>
+<li>（3）交互式处理能力弱。</li>
+</ul>
+</li>
+<li>
+<p>应用场景：数据源源不断的产生，系统需要对这些数据进行若干处理。</p>
+</li>
+</ul>
 <h4 id="32主程序子程序风格">3.2、主程序/子程序风格<a href="#32主程序子程序风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<ul>
+<li>组件：程序和明确可见的数据（程序=数据结构+算法）</li>
+<li>连接件：程序调用和数据共享</li>
+<li>约束：单线程</li>
+<li>优点：
+<ul>
+<li>（1）结构化程序设计的典型风格，相对于非结构化设计逻辑清晰，易理解。</li>
+<li>（2）开发过程采用逐步细化，将大系统分解为若干模块。</li>
+</ul>
+</li>
+<li>缺点：
+<ul>
+<li>（1）对数据存储格式的变化将会影响几乎所有的模块。</li>
+<li>（2）在规模变大时将会难理解。</li>
+<li>（3）难以支持有效的复用。</li>
+</ul>
+</li>
+<li>应用场景：它适用于可以通过过程定义的层次结构适当地定义计算的应用程序。</li>
+</ul>
 <h4 id="33面向对象风格">3.3、面向对象风格<a href="#33面向对象风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<ul>
+<li>特点：
+<ul>
+<li>（1）对象负责维护其表示的完整性；</li>
+<li>（2）对象的表示对其他对象而言是隐蔽的。抽象数据类型的使用，以及面向对象系统的使用已经非常普遍。</li>
+</ul>
+</li>
+<li>应用场景：它适用于中心问题是识别和保护相关信息体（尤其是表示信息）的应用程序。</li>
+<li>组件：管理器（例如，服务器、对象、抽象数据类型）</li>
+<li>连接件：程序调用</li>
+<li>约束：分散的，通常是单线程</li>
+<li>优点：
+<ul>
+<li>（1）对象隐藏了其实现细节，使得对象的使用变得简单方便，而且具有很高的安全性和可靠性。</li>
+<li>（2）设计者可将一些数据存取操作的问题分解成一些交互的代理程序的集合。</li>
+</ul>
+</li>
+<li>缺点：
+<ul>
+<li>（1）管理多个对象</li>
+<li>（2）管理许多交互</li>
+<li>（3）行为的分布式责任，难以理解</li>
+<li>（4）捕获相关设计的族</li>
+</ul>
+</li>
+</ul>
 <h4 id="34层次化风格">3.4、层次化风格<a href="#34层次化风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<ul>
+<li>特点：
+<ul>
+<li>（1）每层为上一层提供服务，使用下一层的服务，只能见到与自己邻接的层。</li>
+<li>（2）大的问题分解为若干渐进的小问题，逐步解决，隐藏了很多复杂度。</li>
+<li>（3）修改一层，最多影响两层，而通常只能影响上层。接口稳固，见谁都不影响。</li>
+<li>（4）上层必须知道下层的身份，不能调整层次之间的顺序。</li>
+</ul>
+</li>
+<li>应用场景：它适用于涉及可以分层排列的不同服务类的应用程序。</li>
+<li>组件：通常是复合的，例如程序的集合。</li>
+<li>连接件：取决于组件的结构；通常是在受限的可见性下进行的过程调用。</li>
+<li>约束：单线程</li>
+<li>优点：
+<ul>
+<li>（1）支持基于可增加抽象层的设计，允许将一个复杂问题分解成一个增量步骤序列的实现。</li>
+<li>（2）支持扩展。【维护、修改比较容易】</li>
+<li>（3）支持重用。【接口稳定】</li>
+</ul>
+</li>
+<li>缺点：
+<ul>
+<li>（1）不是所有系统都容易用这种模式来构建；</li>
+<li>（2）定义一个合适的抽象层次可能会非常困难，特别是对于标准化的层次模型。</li>
+<li>（3）层层相调，影响性能。</li>
+</ul>
+</li>
+</ul>
 <h4 id="35事件驱动风格">3.5、事件驱动风格<a href="#35事件驱动风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<ul>
+<li>
+<p><strong>基本思想</strong>：组件不直接调用一个过程，而是发布或广播一个或多个事件。</p>
+</li>
+<li>
+<p><strong>特点</strong>：事件的触发者并不知道哪些构件会被这些事件影响，相互保持独立。</p>
+</li>
+<li>
+<p><strong>事件分派策略</strong>：广播式、选择广播式</p>
+</li>
+<li>
+<p><strong>优点</strong>：</p>
+<ul>
+<li>（1）组件之间关联较弱，一个组件出错将不会影响其他构件。</li>
+<li>（2）提高软件的复用能力。</li>
+<li>（3）系统便于升级。</li>
+</ul>
+</li>
+<li>
+<p><strong>缺点</strong>：</p>
+<ul>
+<li>（1）组件放弃了对计算机的控制权，完全由系统决定。</li>
+<li>（2）存在数据交换问题。</li>
+<li>（3）该风格中，正确性验证成为一个问题。</li>
+</ul>
+</li>
+</ul>
 <h4 id="36解释器风格">3.6、解释器风格<a href="#36解释器风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<ul>
+<li>
+<p><strong>解释器&amp;编译器</strong></p>
+<ul>
+<li>编译器不会执行输入的源程序代码，而是将其翻译为另一种语言，并输出到文件中以便随后链接为可执行文件并加以执行；在解释器中程序源代码被解释器直接加以执行。</li>
+<li>解释器的执行速度要慢于编译器产生目标代码的执行速度，却低于编译器“编译+链接+执行”的总时间。</li>
+</ul>
+</li>
+<li>
+<p><strong>解释器的三种策略</strong></p>
+<ul>
+<li>传统解释器:纯粹的解释执行</li>
+<li>基于字节码的解释器：编译为字节码—&gt;解释执行</li>
+<li>JIT编译器：编译||解释执行（模糊了解释器、字节码解释器和编译器之间的边界与区分）</li>
+</ul>
+</li>
+<li>
+<p><strong>优点</strong>：</p>
+<ul>
+<li>（1）有利于实现程序的可移植性和语言的跨平台能力。</li>
+<li>（2）可以对未来的硬件进行模拟和仿真，降低测试所带来的复杂性和昂贵花费。</li>
+</ul>
+</li>
+<li>
+<p><strong>缺点</strong>：</p>
+<ul>
+<li>（1）额外的间接层次导致了系统性能的下降。</li>
+</ul>
+</li>
+</ul>
 <h4 id="37基于规则的系统风格">3.7、基于规则的系统风格<a href="#37基于规则的系统风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<ul>
+<li>
+<p><strong>核心思想</strong></p>
+<ul>
+<li>将业务逻辑中可能频繁发生变化的代码从源代码中分离出来。</li>
+</ul>
+</li>
+<li>
+<p><strong>优点</strong>：</p>
+<ul>
+<li>（1）降低了修改业务逻辑的成本。</li>
+<li>（2）缩短了开发时间。</li>
+<li>（3）将规则外部化，可在多个应用之间共享。</li>
+<li>（4）对规则的改变将会非常迅速并且具有较低的风险。</li>
+</ul>
+</li>
+<li>
+<p><strong>缺点</strong>：</p>
+<ul>
+<li>（1）额外的间接层次导致了系统性能的下降。</li>
+</ul>
+</li>
+</ul>
 <h4 id="38仓库风格">3.8、仓库风格<a href="#38仓库风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<ul>
+<li><strong>应用场景</strong>：应用于核心问题是建立、扩充和维护一个复杂的中央信息体的情况。
+<ul>
+<li>数据处理，主要需要用传统的数据库来搭建业务决策系统。</li>
+<li>软件开发环境，主要需要表示和操作相关的程序和设计。</li>
+</ul>
+</li>
+<li><strong>组件</strong>：
+<ul>
+<li>中心数据结构组件，表示当前数据的状态。</li>
+<li>相对独立的组件集合，各个功能模块（子系统）等。</li>
+</ul>
+</li>
+<li><strong>连接件</strong>：数据仓库与独立组件之间的交互
+<ul>
+<li>由输入流中事务触发系统相应的进程执行—&gt;数据库型知识库。</li>
+<li>由中心数据结构的当前状态触发系统相应的进程执行—&gt;黑板知识库。</li>
+</ul>
+</li>
+<li><strong>优点</strong>：
+<ul>
+<li>（1）便于模块间的数据共享。</li>
+<li>（2）方便模块的添加、更新和删除。</li>
+<li>（3）避免了知识源的不必要的重复存储等。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>（1）对于各个模块，需要一定的同步/加锁机制保证数据结构的完整性和一致性等。</li>
+</ul>
+</li>
+</ul>
 <h4 id="39黑板系统风格">3.9、黑板系统风格<a href="#39黑板系统风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<ul>
+<li><strong>组成部分</strong>
+<ul>
+<li>知识源：是描述某个独立领域问题的知识及其处理方法的知识库。</li>
+<li>黑板数据结构：</li>
+<li>控制器：时刻监视黑板状态变化</li>
+</ul>
+</li>
+<li><strong>优点</strong>：
+<ul>
+<li>（1）便于多客户共享大量数据。</li>
+<li>（2）即便于添加新的作为知识源代理的应用程序，也便于扩展共享的黑板数据结构。</li>
+<li>（3）知识源可重用。</li>
+<li>（4）支持容错性和健壮性。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>（1）不同的知识源代理对于共享数据结构要达成一致，这也造成了对黑板数据结构的修改较为困难—要考虑到各个代理的调用。</li>
+<li>（2）需要一定的同步/加锁机制保证数据结构的完整性和一致性，增大了系统复杂度。</li>
+</ul>
+</li>
+</ul>
 <h4 id="310c2风格">3.10、C2风格<a href="#310c2风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<p>通过连接件绑定在一起的按照一组规则运作的并行组件网络。该规则规定了所有组件之间的交互必须是通过异步消息机制来实现。【不能跨层连接】</p>
+<ul>
+<li><strong>优点</strong>：
+<ul>
+<li>（1）可使用任何编程语言开发组件，组件重用和替换易实现。</li>
+<li>（2）组件相互独立，依赖较小，具有一定的扩展能力，可支持不同粒度的组件。</li>
+<li>（3）组件不需要共享地址空间。</li>
+<li>（4）可实现多个用户和多个系统之间的交互。</li>
+<li>（5）可使用多个工具集和多媒体类型，动态更新系统框架结构。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>（1）不太适合大规模流式风格系统，以及对数据库使用比较频繁的使用。</li>
+</ul>
+</li>
+</ul>
 <h4 id="311cs风格">3.11、C/S风格<a href="#311cs风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<p><strong>两层C/S架构</strong></p>
+<ul>
+<li>优点：
+<ul>
+<li>(1)客户机组件和服务器组件分别运行在不同的计算机上，有利于分布式数据的组织和处理。</li>
+<li>(2)组件之间的位置是相互透明的。</li>
+<li>(3)客户机程序和服务器程序可运行在不同的操作系统上，便于实现异构环境和多种不同开发技术的融合。</li>
+<li>(4)软件环境和硬件环境的配置具有极大的灵活性，易于系统功能的扩展。</li>
+<li>(5)将大规模的业务逻辑分布到多个通过网络连接的低成本的计算机上，降低了系统的整体开销。</li>
+</ul>
+</li>
+<li>缺点：
+<ul>
+<li>(1)开发成本较高(客户机的软硬件要求高)。</li>
+<li>(2)客户机程序的设计复杂度大，客户机负荷重。</li>
+<li>(3)信息内容和形式单一。</li>
+<li>(4)C/S架构升级需要开发人员到现场更新客户机程序，对运行环境进行重新配置，增加了维护费用。</li>
+<li>(5)两层C/S结构采用了单一的服务器，同时以局域网为中心，难以扩展到Internet。</li>
+<li>(6)数据安全性不高，客户端程序可以直接访问数据库数据。</li>
+</ul>
+</li>
+</ul>
+<p><strong>三层C/S架构</strong></p>
+<ul>
+<li>
+<p>相比于两层的优点</p>
+<ul>
+<li>(1)合理地划分三层结构的功能，可以使系统的逻辑结构更加清晰，提高软件的可维护性和可扩充性。</li>
+<li>(2)在实现三层C/S架构时，可以更有效地选择运行平台和硬件环境，从而使每一层都具有清晰的逻辑结构、良好的负荷处理能力和较好的开放性。</li>
+<li>(3)在C/S架构中，可以分别选择合适的编程语言并行开发。</li>
+<li>(4)系统具有较高的安全性。</li>
+</ul>
+</li>
+<li>
+<p>需要注意的问题</p>
+<ul>
+<li>
+<p>(1)如果各层之间的通信效率不高，即使每一层的硬件配置都很高，系统的整体性能也不会太高。</p>
+</li>
+<li>
+<p>(2)必须慎重考虑三层之间的通信方法、通信频率和传输数据量，这和提高各层的独</p>
+<p>立性一样也是实现三层C/S架构的关键性问题。</p>
+</li>
+</ul>
+</li>
+</ul>
 <h4 id="312bs风格">3.12、B/S风格<a href="#312bs风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<ul>
+<li><strong>优点</strong>
+<ul>
+<li>（1）客户端只需要安装浏览器，操作简单，能够发布动态信息和静态信息。</li>
+<li>（2）运用HTTP标准协议和统一客户端软件，能够实现跨平台通信。</li>
+<li>（3）开发成本比较低，只需要维护Web服务器程序和中心数据库。客户端升级可以通过升级浏览器来实现。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>（1）个性化程度比较低，所有客户端程序的功能都是一样的。</li>
+<li>（2）客户端数据处理能力比较差，加重了Web服务器的工作负担，影响系统的整体性能。</li>
+<li>（3）在B/S架构中，数据提交一般以页面为单位，动态交互性不强，不利于在线事务处理。</li>
+<li>（4）B/S架构的可扩展性比较差，系统安全性难以保障。</li>
+<li>（5）B/S架构的应用系统查询中心数据库，其速度要远低于C/S架构。</li>
+</ul>
+</li>
+</ul>
 <h4 id="313平台插件风格">3.13、平台/插件风格<a href="#313平台插件风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<p>将待开发的目标软件分为两个部分：（1）程序的主体框架，可定义为平台。 （2）功能扩展或补充模块，可定义为插件。</p>
+<ul>
+<li><strong>优点</strong>：
+<ul>
+<li>（1）降低系统各模块之间的互依赖性。</li>
+<li>（2）系统模块独立开发、部署、维护。</li>
+<li>（3）根据需求动态的组装、分离系统。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>（1）插件是别人开发的可以用到某主程序中的，只服务于该主程序，可重用性差。</li>
+</ul>
+</li>
+</ul>
 <h4 id="314面向agent风格">3.14、面向Agent风格<a href="#314面向agent风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<p>认为事物的属性，特别是动态特性在很大程度上受到与其密切相关的人和环境的影响，将事务的主观与客观特征相结合抽象为系统的agent，作为系统的基本构成单位，通过agent之间的合作实现系统的整体目标。</p>
+<ul>
+<li><strong>优点</strong>：
+<ul>
+<li>（1）面向Agent的软件工程方法对于解决复杂问题是一种好的技术，特别是对于分布开放异构的软件环境。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>（1）大多数结构中Agent自身缺乏社会性结构描述和与环境的交互。</li>
+</ul>
+</li>
+</ul>
 <h4 id="315面向方面软件架构风格">3.15、面向方面软件架构风格<a href="#315面向方面软件架构风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<p>尽量分离“技术问题实现”和“业务问题实现”。允许开发者能够对横切关注点进行模块化设计。</p>
+<ul>
+<li><strong>优缺点分析</strong>
+<ul>
+<li>（1）可以定义交叉的关系，并将这些关系应用于跨模块的、彼此不同的对象模型。</li>
+<li>（2）AOP同时还可以让我们层次化功能性而不是嵌入功能性，从而使代码由更好的可读性和易维护性。</li>
+<li>（3）它会和面向对象编程可以很好地合作，互补。</li>
+</ul>
+</li>
+</ul>
 <h4 id="316面向服务架构风格">3.16、面向服务架构风格<a href="#316面向服务架构风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<p><strong>服务请求者、服务提供者、服务注册中心</strong></p>
+<p>具有基于标准、松散耦合、共享服务和粗粒度等优势，易于集成现有系统、具有标准化的架构、提升开发效率、降低开发维护复杂度。</p>
+<ul>
+<li><strong>优点</strong>：
+<ul>
+<li>（1）灵活性，根据需求变化，重新编排服务。</li>
+<li>（2）对IT资产的复用。</li>
+<li>（3）使企业的信息化建设真正以业务为核心。业务人员根据需求编排服务，而不必考虑技术细节。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>（1）服务的划分很困难。</li>
+<li>（2）服务的编排是否得当。</li>
+<li>（3）如果选择的接口标准有问题，会带来系统额外开销和不稳定性。</li>
+<li>（4）对IT硬件资产还谈不上复用。</li>
+<li>（5）主流实现方式接口很多，很难统一。</li>
+<li>（6）主流实现方式只局限于不带界面的服务的共享。</li>
+</ul>
+</li>
+</ul>
 <h4 id="317正交架构风格">3.17、正交架构风格<a href="#317正交架构风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<p>是一种以垂直线索组件族为基础的层次化结构，其基本思想是把应用系统的结构按功能的正交相关性，垂直分割为若干个线索，线索又分为几个层次，每个线索由多个具有不同层次功能和不同抽象级别的组件构成。</p>
+<ul>
+<li>
+<p><strong>特点</strong>：</p>
+<ul>
+<li>（1）由完成不同功能的n（n&gt;1）个线索（子系统）组成。</li>
+<li>（2）系统具有m（m&gt;1）个不同抽象级别的层。</li>
+<li>（3）线索之间是相互独立（正交）的。</li>
+<li>（4）系统有一个公共驱动层（一般为最高层）和公共数据结构（一般为最底层）。</li>
+</ul>
+</li>
+<li>
+<p><strong>优点</strong>：</p>
+<ul>
+<li>（1）结构清晰，易于理解。</li>
+<li>（2）易修改，可维护性强。</li>
+<li>（3）可移植性强，重用粒度大。</li>
+</ul>
+</li>
+<li>
+<p><strong>缺点</strong>：</p>
+<ul>
+<li>（1）在实际应用中，并不是所有软件系统都能完全正交化，或者有时完全正交化的成本太高。因此，在进行应用项目的软件架构设计是，必须反复权衡进一步正交化的额外开销与所得到的更好的性能之间的关系。</li>
+</ul>
+</li>
+</ul>
 <h4 id="318异构风格">3.18、异构风格<a href="#318异构风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<ul>
+<li><strong>优点</strong>：
+<ul>
+<li>（1）可以实现遗留代码的重用。</li>
+<li>（2）在某一单位中，规定了共享软件包和某些标准，但仍会存在解释和表示习惯上的不同。而异构风格可以解决这一问题。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>（1）不同风格之间的兼容问题很难解决。</li>
+</ul>
+</li>
+</ul>
 <h4 id="319基于层次消息总线的架构风格">3.19、基于层次消息总线的架构风格<a href="#319基于层次消息总线的架构风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<p>基于层次消息总线、支持组件的分布和并发，组件之间通过消息总线进行通讯。</p>
+<ul>
+<li><strong>优点</strong>
+<ul>
+<li>（1）构件接口是一种基于消息的互联接口，可以较好的支持架构设计。降低了构件之间的耦合性，增强了构件之间的重用性。</li>
+<li>（2）支持运行时的系统演化，主要体现在可动态增加和删除构件，动态改变构件所响应的消息以及消息过滤这三个方面。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>
+<ul>
+<li>（1）可重用要求高，可重用性差。</li>
+</ul>
+</li>
+</ul>
 <h4 id="320模型-视图-控制器风格">3.20、模型-视图-控制器风格<a href="#320模型-视图-控制器风格" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
-<h2 id="第六章">第六章<a href="#第六章" class="anchor"
+<p>MVC结构主要包括模型(封装问题的核心数据、逻辑关系和计算功能，提供处理问题的操作过程)、视图（提供交互界面）和控制器（处理用户与系统之间的交互）。</p>
+<ul>
+<li><strong>应用场景</strong>：用户交互程序的设计中</li>
+<li><strong>优点</strong>：
+<ul>
+<li>（1）多个视图和一个模型相对应，便于维护。</li>
+<li>（2）具有良好的移植性。</li>
+<li>（3）当功能发生变化时，改变其中的一部分就能满足要求。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>（1）增加了系统设计和运行的复杂性。</li>
+<li>（2）视图和控制器连接的过于紧密，妨碍了二者的独立重用。</li>
+<li>（3）视图访问模型的效率比较低。</li>
+<li>（4）频繁访问未变化的数据，也将降低系统性能。</li>
+</ul>
+</li>
+</ul>
+<h2 id="第六章软件架构与敏捷开发">第六章—软件架构与敏捷开发<a href="#第六章软件架构与敏捷开发" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
@@ -662,7 +1213,22 @@
 <p>迭代设计、重构、确定架构、客户交流</p>
 </li>
 </ul>
-<h2 id="第八章">第八章<a href="#第八章" class="anchor"
+<p>敏捷开发的思想在软件架构设计中最主要的体现就是团队设计和简单设计这两种设计理念。</p>
+<ul>
+<li><strong>团队设计</strong>
+<ul>
+<li>优点：其结论要比个人决策更加完整，避免个人遗漏，相对稳定、周密。</li>
+<li>缺点：需要额外付出沟通成本、决策效率低、责任不明确。</li>
+</ul>
+</li>
+<li><strong>简单设计</strong>
+<ul>
+<li>简单体现在两个方面：表达方式的简单和现实抽象的简单化。</li>
+<li>简单设计可以降低开发成本、提升沟通效率、增强适应性和稳定性。</li>
+</ul>
+</li>
+</ul>
+<h2 id="第八章软件架构设计和实现">第八章—软件架构设计和实现<a href="#第八章软件架构设计和实现" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
@@ -685,7 +1251,7 @@
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<p>基 于 体 系 结 构 的 软 件 设 计 （ architecture-based software design, ABSD）方法为软件系统的概念体系结构提供构造方法，概念体系结构描述了系统的主要设计元素及其关系。</p>
+<p>基于体系结构的软件设计（ architecture-based software design, ABSD）方法为软件系统的概念体系结构提供构造方法，概念体系结构描述了系统的主要设计元素及其关系。概念体系结构代表了在开发过程中做出的第一个选择，它是达到系统质量和业务目标的关键，为达到预定功能提供了基础。</p>
 <p><strong>ABSD方法基础</strong></p>
 <ul>
 <li>功能分解：ABSD方法使用已有的基于模块的内聚和耦合技术；</li>
@@ -719,18 +1285,22 @@
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<ul>
+<li>软件需求和软件架构两者是相辅相成的关系，一方面软件需求影响软件架构设计，另一方面软件架构帮助需求分析的明确和细化。</li>
+<li>需求与架构的互相影响可以看作一个螺旋的过程，也是一个双峰的过程。在一个反复的过程中，产生更详细的需求规约和设计规约，最终把交织在软件开发过程中的设计规约和需求规约分离开来。</li>
+</ul>
 <h3 id="5将软件架构映射到详细设计经常遇到什么问题如何解决">5、将软件架构映射到详细设计经常遇到什么问题？如何解决？<a href="#5将软件架构映射到详细设计经常遇到什么问题如何解决" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<p><strong>问题</strong></p>
+<p><strong>问题</strong>：</p>
 <p>（1）缺失重要架构视图，片面强调功能需求。</p>
 <p>（2）不够深入，架构设计方案过于笼统，基本还停留在概念性架构的层面，没有提供明确的技术蓝图。</p>
 <p>（3）名不副实的分层架构，缺失层次之间的交互接口和交互机制，只进行职责划分。</p>
 <p>（4）在某些方面过度设计。</p>
-<p><strong>解决方法</strong></p>
+<p><strong>解决方法</strong>：</p>
 <p>（1）对于缺失重要架构视图问题，可以针对遗漏的架构视图进行设计。</p>
 <p>（2）对于不够深入问题，需要将设计决策细化到和技术相关的层面。</p>
 <p>（3）对于名不副实的分层架构问题，需要步步深入，明确各层之间的交互接口和交互机制。</p>
@@ -741,16 +1311,17 @@
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<p><strong>基本思想</strong></p>
+<p>MDA——model driven architecture，基于模型驱动软件架构。</p>
+<p><strong>基本思想：</strong></p>
 <p>将软件系统分成模型和实现两部分：模型是对系统的描述，实现是利用特定技术在特定平台或环境中对模型的解释。模型仅仅负责对系统的描述，与实现技术无关。这是模型的实现技术无关性。</p>
-<p><strong>过程</strong></p>
+<p><strong>过程：</strong></p>
 <p>（1）用计算无关模型CIM 捕获需求；</p>
 <p>（2）创建平台无关模型PIM；</p>
 <p>（3）将PIM转化成为一个或多个平台特定模型PSM，并加入平台特定的规则和代码；</p>
 <p>（4）将PSM 转化为代码等。</p>
-<p><strong>好处</strong></p>
+<p><strong>好处：</strong></p>
 <p>将模型与实现分离后，能够很好的适应技术易变性。由于实现往往高度依赖特定技术和特定平台，当技术发生迁移时，只需针对这种技术作相应的实现，编写相应的运行平台或变换工具。所以，能够比较好的应对实现技术发展带来的挑战。</p>
-<h2 id="第十五章">第十五章<a href="#第十五章" class="anchor"
+<h2 id="第十五章软件体系结构评估">第十五章—软件体系结构评估<a href="#第十五章软件体系结构评估" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
@@ -762,17 +1333,17 @@
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<p><strong>质量属性</strong></p>
+<p><strong>质量属性：</strong></p>
 <p>（1）可修改性：度量软件系统变化的成本。</p>
 <p>（2）可用性：是指软件能够正常运行的时间比例。</p>
-<p>（3）性能：性能表征软件系统的响应速度或者由响应速度决定的其它度量。</p>
+<p>（3）性能：性能表示软件系统的响应速度或者由响应速度决定的其它度量。</p>
 <p>（4）可测试性：软件系统在多大程度上容易被测试检查出缺陷。</p>
 <p>（5）易用性：表明软件系统完成后用户的体验和效率。</p>
 <p>（6）安全性：代表软件对未授权和非法操作的防卫能力。</p>
-<p><strong>场景</strong></p>
+<p><strong>场景：</strong></p>
 <ul>
 <li>
-<p>在进行体系结构评估时，一般首先要精确地得出具体的质量目标，并以之作为判定该体系结构优劣的标准。我们把为得出这些目标而采用的机制劣的标准。我们把为得出这些目标而采用的机制叫做场景。</p>
+<p>在进行体系结构评估时，一般首先要精确地得出具体的质量目标，并以之作为判定该体系结构优劣的标准。我们把为得出这些目标而采用的机制叫做场景。</p>
 </li>
 <li>
 <p>场景是从风险承担者的角度对与系统的交互的简短描述。</p>
@@ -781,18 +1352,74 @@
 <p>在体系结构评估中，一般采用刺激、环境和响应三方面来对场景进行描述。</p>
 </li>
 </ul>
-<h3 id="2体系结构权衡分析方法atam的相关">2、体系结构权衡分析方法（ATAM）的相关。<a href="#2体系结构权衡分析方法atam的相关" class="anchor"
+<h3 id="2体系结构权衡分析方法atam的相关概念敏感点权衡点质量效用树评估过程步骤质量效用树的构建优缺点">2、体系结构权衡分析方法（ATAM）的相关概念（敏感点、权衡点、质量效用树）、评估过程（步骤）、质量效用树的构建、优缺点。<a href="#2体系结构权衡分析方法atam的相关概念敏感点权衡点质量效用树评估过程步骤质量效用树的构建优缺点" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<h3 id="3概念敏感点权衡点质量效用树评估过程步骤质量效用树的构建优缺点">3、概念（敏感点、权衡点、质量效用树）、评估过程（步骤）、质量效用树的构建、优缺点。<a href="#3概念敏感点权衡点质量效用树评估过程步骤质量效用树的构建优缺点" class="anchor"
-					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
-						<line x1="8" y1="12" x2="16" y2="12"></line>
-					</svg></a></h3>
+<p><strong>ATAM-Architecture Tradeoff Analysis Method</strong></p>
+<p><strong>（1）概念：</strong></p>
+<ul>
+<li>
+<p>**敏感点：**敏感点是一个或者多个构件的特征，可以使设计师搞清楚实现质量目标时应该注意什么。</p>
+</li>
+<li>
+<p>**权衡点：**权衡点是影响多个质量属性的特征；是多个质量属性的敏感点；权衡点需要进行权衡。</p>
+</li>
+<li>
+<p>**质量效用树：**效用树为我们提供了一种直接而有效地将系统的业务驱动因素转换为具体的质量属性场景的机制，该步骤的输出结果是对具体质量属性需求（以场景形式实现）的优先级的确定。</p>
+</li>
+<li>
+<p>**风险承担者、涉众、牵涉到的人：**体系结构设计师、开发人员、维护人员、集成人员、测试人员、标准专家、性能工程师</p>
+</li>
+</ul>
+<p><strong>（2）ATAM评估步骤：</strong></p>
+<p>​         ATAM主要部分包括4组，共9个步骤。</p>
+<ul>
+<li><strong>1）陈述，包括通过它进行的信息交流</strong>
+<ul>
+<li>①ATAM方法的陈述</li>
+<li>②商业动机的陈述</li>
+<li>③SA的陈述</li>
+</ul>
+</li>
+<li><strong>2）调查与分析，包括对照体系结构方法评估关键</strong>
+<ul>
+<li>④确定体系结构方法</li>
+<li>⑤生成质量效用树</li>
+<li>⑥分析体系结构方法：</li>
+</ul>
+</li>
+<li><strong>3）测试，包括对照所有相关人员的需求检验最新结果</strong>
+<ul>
+<li>⑦集体讨论并确定场景优先级</li>
+<li>⑧分析体系结构方法</li>
+</ul>
+</li>
+<li><strong>4）形成报告，包括陈述ATAM的结果</strong>
+<ul>
+<li>⑨结果的表述</li>
+</ul>
+</li>
+</ul>
+<p><strong>（3）质量效用树的构建</strong></p>
+<ul>
+<li>效用树中质量属性细化为场景</li>
+<li>确定最重要的质量属性目标，并设置优先级</li>
+<li>效用树设置优先级标准</li>
+</ul>
+<p><strong>（4）优缺点</strong></p>
+<p><strong>优点</strong>：</p>
+<ul>
+<li>考虑了所有与系统相关的人员对质量的要求。</li>
+<li>涉及到的基本活动包括确定应用领域的功能和软件体系结构之间的映射，设计用于体现待评估质量属性的场景以及分析软件体系结构对场景的支持程度。</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>基于场景的评估方式是特定领域的，对一个领域适合的场景设计在另一领域未必适合。</li>
+<li>实施者一方面需要有丰富的领域知识以对某质量需求设计出合理的场景，另一方面，必须对待评估的软件体系结构有一定的了解以判断是否支持场景描述的一系列活动。</li>
+</ul>
 <h2 id="软件架构相关课题">软件架构相关课题<a href="#软件架构相关课题" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -805,6 +1432,13 @@
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<p>软件架构演化就是为了维护软件架构自身的有用性。</p>
+<p><strong>（1）对象演化 （2）消息演化（3）复合片段演化（4）约束演化</strong></p>
+<p>针对软件架构的演化过程是否处于系统运行时期，可以将软件架构演化分为静态演化和动态演化。</p>
+<ul>
+<li>静态演化：发生在软件架构设计、实现和维护过程中，软件系统还未运行或者处于运行停止状态。</li>
+<li>动态演化：发生在软件系统运行过程中。</li>
+</ul>
 <h3 id="2架构腐蚀">2、架构腐蚀<a href="#2架构腐蚀" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -824,12 +1458,25 @@
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<p>技术债是指开发人员为了加速软件开发，或是由于自身经验的缺乏，有意或无意的在应该采用最佳方案的时候进行了妥协，使用了短时期能加速软件开发的方案，从而在未来给自己带来额外的开发负担。</p>
+<p><strong>分类：</strong></p>
+<ul>
+<li>代码债</li>
+<li>设计债</li>
+<li>测试债</li>
+<li>文档债</li>
+</ul>
 <h3 id="4架构坏味道">4、架构坏味道<a href="#4架构坏味道" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<ul>
+<li>如果程序中某一段代码是不稳定的或者有一些潜在的问题，那么该段代码往往会包含一些明显的不太好的痕迹。我们称这些痕迹为代码坏味道。架构坏味道定义和代码坏味道类似，只是架构坏味道在系统粒度下出现的层次要高于代码坏味道。</li>
+<li>架构坏味道是一种通常使用的，可以对系统生命周期特性产生消极影响的架构设计。它可能是由于在不适当的环境下应用了一个不适合的解决方案或者在错误的粒度层次下应用了某个设计抽象等产生的，会对系统的可理解性、可测试性、可扩展性以及可重用性等产生负面影响。</li>
+<li>**典型的架构坏味道：**连接件嫉妒、过度分散的功能、模糊接口、无关的相邻连接件、砖关注过载、砖使用过载、砖循环依赖、未使用接口、重复的组件功能、组件嫉妒、连接件链。</li>
+</ul>
 <h3 id="5架构脆弱性">5、架构脆弱性<a href="#5架构脆弱性" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -837,8 +1484,8 @@
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
 <ul>
-<li>通常情况下，我们认为软件脆弱性是导致破坏系统安全策略的系统安全规范、系统设计、实现和内部控制等方面的弱点。</li>
-<li>在软件开发过程中，软件脆弱性包含软件基础模型的脆弱性、软件架构设计的脆弱性、软件模块设计的脆弱性、软件接口设计的脆弱性、软件界面设计的脆弱性、数据库设计的脆弱性、架构模式和设计模式的脆弱性以及实现的脆弱性等等。</li>
+<li>软件（系统）架构设计存在一些明显的或者隐含的缺陷，攻击者可以利用这些缺陷攻击系统，或者当受到某个或某些外部刺激时，系统发生性能下降、稳定性下降、可靠性下降、安全性下降等等。如果软件架构具备这类缺陷，我们认为该软件架构是脆弱的，也就是软件架构脆弱性。</li>
+<li>软件架构脆弱性通常与软件架构的风格和模式有关，不同风格和模式的软件架构，脆弱性体现和特点有很大不同。</li>
 </ul>
 
 		</div>
@@ -850,7 +1497,7 @@
 					class="feather feather-tag meta-icon">
 					<path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
 					<line x1="7" y1="7" x2="7" y2="7"></line>
-				</svg><span class="tag"><a href="https://LeiBuDao.github.io/%20tags/sa">SA</a></span><span class="tag"><a href="https://LeiBuDao.github.io/%20tags/final-exam">final exam</a></span>
+				</svg><span class="tag"><a href="https://LeiBuDao.github.io/%20tags/sa">SA</a></span><span class="tag"><a href="https://LeiBuDao.github.io/%20tags/review">Review</a></span>
 			</p>
 			<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
 					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -860,7 +1507,7 @@
 					<line x1="16" y1="13" x2="8" y2="13"></line>
 					<line x1="16" y1="17" x2="8" y2="17"></line>
 					<polyline points="10 9 9 9 8 9"></polyline>
-				</svg>287 Words</p>
+				</svg>617 Words</p>
 			<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
 					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
 					class="feather feather-calendar">
@@ -868,7 +1515,7 @@
 					<line x1="16" y1="2" x2="16" y2="6"></line>
 					<line x1="8" y1="2" x2="8" y2="6"></line>
 					<line x1="3" y1="10" x2="21" y2="10"></line>
-				</svg>232312-1223-47 10:55 &#43;0800</p>
+				</svg>212112-1221-19 15:04 &#43;0800</p>
 
 
 		</footer>
@@ -877,7 +1524,14 @@
 		<div class="toc-title">Table of Contents</div>
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#第二章">第二章</a>
+    <li><a href="#第一章软件体系结构概述">第一章—软件体系结构概述</a>
+      <ul>
+        <li><a href="#1软件体系结构的主要思想">1、软件体系结构的主要思想</a></li>
+        <li><a href="#2软件架构的特征">2、软件架构的特征</a></li>
+        <li><a href="#3软件架构的发展阶段">3、软件架构的发展阶段</a></li>
+      </ul>
+    </li>
+    <li><a href="#第二章软件架构定义">第二章—软件架构定义</a>
       <ul>
         <li><a href="#1概述">1、概述</a></li>
         <li><a href="#2组成派定义">2、组成派定义</a></li>
@@ -885,27 +1539,27 @@
         <li><a href="#4参考定义框架">4、参考定义框架</a></li>
       </ul>
     </li>
-    <li><a href="#第三章">第三章</a>
+    <li><a href="#第三章软件架构模型">第三章—软件架构模型</a>
       <ul>
         <li><a href="#1软件架构的五类建模方法过程缺点">1、软件架构的五类建模方法（过程、缺点）。</a></li>
         <li><a href="#241模型">2、“4+1”模型</a></li>
       </ul>
     </li>
-    <li><a href="#第四章">第四章</a>
+    <li><a href="#第四章软件架构风格">第四章—软件架构风格</a>
       <ul>
         <li><a href="#1什么是软件架构风格">1、什么是软件架构风格？</a></li>
         <li><a href="#2使用架构风格的好处">2、使用架构风格的好处。</a></li>
         <li><a href="#3经典体系结构风格的特点优缺点适用范围组件连接件约束">3、经典体系结构风格的特点、优缺点、适用范围。（组件、连接件、约束）</a></li>
       </ul>
     </li>
-    <li><a href="#第六章">第六章</a>
+    <li><a href="#第六章软件架构与敏捷开发">第六章—软件架构与敏捷开发</a>
       <ul>
         <li><a href="#1敏捷开发的基本理念">1、敏捷开发的基本理念。</a></li>
         <li><a href="#2敏捷开发与架构设计的关系">2、敏捷开发与架构设计的关系。</a></li>
         <li><a href="#3敏捷开发中如何改变了软件架构的设计方式">3、敏捷开发中如何改变了软件架构的设计方式？</a></li>
       </ul>
     </li>
-    <li><a href="#第八章">第八章</a>
+    <li><a href="#第八章软件架构设计和实现">第八章—软件架构设计和实现</a>
       <ul>
         <li><a href="#1成功的软件架构应具有的品质">1、成功的软件架构应具有的品质。</a></li>
         <li><a href="#2基于体系结构的软件设计方法">2、基于体系结构的软件设计方法。</a></li>
@@ -915,11 +1569,10 @@
         <li><a href="#6mda的基本思想过程应用mda的好处">6、MDA的基本思想、过程，应用MDA的好处。</a></li>
       </ul>
     </li>
-    <li><a href="#第十五章">第十五章</a>
+    <li><a href="#第十五章软件体系结构评估">第十五章—软件体系结构评估</a>
       <ul>
         <li><a href="#1质量属性质量场景">1、质量属性、（质量）场景。</a></li>
-        <li><a href="#2体系结构权衡分析方法atam的相关">2、体系结构权衡分析方法（ATAM）的相关。</a></li>
-        <li><a href="#3概念敏感点权衡点质量效用树评估过程步骤质量效用树的构建优缺点">3、概念（敏感点、权衡点、质量效用树）、评估过程（步骤）、质量效用树的构建、优缺点。</a></li>
+        <li><a href="#2体系结构权衡分析方法atam的相关概念敏感点权衡点质量效用树评估过程步骤质量效用树的构建优缺点">2、体系结构权衡分析方法（ATAM）的相关概念（敏感点、权衡点、质量效用树）、评估过程（步骤）、质量效用树的构建、优缺点。</a></li>
       </ul>
     </li>
     <li><a href="#软件架构相关课题">软件架构相关课题</a>
@@ -941,7 +1594,7 @@
 					stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
 					<line x1="5" y1="12" x2="19" y2="12"></line>
 					<polyline points="12 5 19 12 12 19"></polyline>
-				</svg></span><br><span>Leetcode 刷题笔记(最后更新-2021/12/5)</span>
+				</svg></span><br><span>Leetcode 刷题笔记</span>
 		</a>
 	</div>
 	<div id="comments" class="thin">

@@ -7,26 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 23 Dec 2021 10:55:47 +0800</lastBuildDate><atom:link href="https://LeiBuDao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Dec 2021 15:04:19 +0800</lastBuildDate><atom:link href="https://LeiBuDao.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>软件体系结构期末复习</title>
       <link>https://LeiBuDao.github.io/posts/safinalexam/</link>
-      <pubDate>Thu, 23 Dec 2021 10:55:47 +0800</pubDate>
+      <pubDate>Tue, 21 Dec 2021 15:04:19 +0800</pubDate>
       
       <guid>https://LeiBuDao.github.io/posts/safinalexam/</guid>
-      <description>第二章 1、概述  组成派关注于软件本身，将软件架构看做组件和交互的集合。 决策派关注于架构中的实体(人)，将软件架构视为一系列重要设计决策的集合。  2、组成派定义 依据：软件架构主要反映系统由哪些部分组成，以及这些部分是如何组成的，强调系统的整体结构和配置。  （1）1992 —Dewane Perry &amp;amp; Alexander Wolf
-软件架构 = {元素、组成、原理}
-  架构元素：处理元素、数据元素、连接元素
-  架构组成：
-  加权的属性：约束架构的选择
-  关系：约束架构元素的放置
-    架构原理：捕获在选择架构风格、架构元素和架构形式的选择动机。
-  （2）Mary Shaw &amp;amp; David Carlan
-软件架构包括组件、连接件和约束三大要素。
- 组件：可以是一组代码，也可以是独立的程序。 连接件：可以是过程调用、管道和消息等，用于表示组件间的相互关系。 约束：组件连接时的条件。  （3）2011年 ISO/IEC/IEEE标准
-软件架构是某一系统的基本组织结构，其内容包括软件组件、组件间的联系、组件与其环境间的关系，以及指导上述内容设计与演化的原理。
-3、决策派定义 依据：软件架构是软件设计的一部分，软件设计实际上是开发人员意志和决策在软件开发过程中的体现，强调设计决策，更加注重架构风格和模式选择。  4、参考定义框架 组件（Component）、连接件（Connector）、配置（Configuration）、端口（Port）、角色（Role）
- 组件：具有某种功能的可重用的软件模块单元。 连接件：表示了组件之间的交互。 配置：表示了组件和连接件的拓扑逻辑和约束。 端口：组件的接口由一组端口组成，每个端口表示了组件和外部环境的交汇点。 角色：连接件的接口由一组角色组成，连接件的每个角色定义了该连接件表示的交互的参与者。  二元连接件有两个角色 有的连接件有多于两个的角色    第三章 至今没有一种建模方法能够满足软件架构建模的所有要求。</description>
+      <description>第一章—软件体系结构概述 1、软件体系结构的主要思想  软件架构是一个软件系统的设计图，并不局限于软件系统的总体结构，还包含一些质量属性以及功能与结构之间的映射关系，即设计决策。 软件架构的两个主要焦点集中于系统的总体结构以及需求和实现之间的对应。 软件架构的主要思想是将注意力集中在系统总体结构的组织上。  2、软件架构的特征    特征 实现方式 作用     注重可重用性 组件及架构级重用 提高软件质量   利益相关者众多 满足各利益相关者需求 平衡需求   关注点分离 分而治之、模块化 简化复杂性   质量驱动 使用软件架构来处理质量属性需求、控制复杂性 由功能、数据流驱动向质量驱动转变   概念完整性 强调设计决策是一个持续的过程 每个决策都要在其前面设计决策的基础上进行   循环风格 架构风格、架构模式 用标准方法来处理反复出现的问题    3、软件架构的发展阶段  （1）无体系结构  ​ 高级语言出现
+  （2）基础研究阶段（1968-1994）
+​ 面向过程开发
+  （3）核心技术形成（1991-2000）
+  ​ 面向对象开发
+​ 1）软件架构作为一个独立的研究领域出现
+​ 2）软件架构核心技术的发展</description>
     </item>
     
     <item>
@@ -35,11 +29,11 @@
       <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://LeiBuDao.github.io/about-myblog/</guid>
-      <description>_ _____ _____ ______ _ _ ______ ___ _____ | | | ___| |_ _| | ___ \ | | | | | _ \ / _ \ | _ | | | | |__ | | | |_/ / | | | | | | | | / /_\ \ | | | | | | | __| | | | ___ \ | | | | | | | | | _ | | | | | | |____ | |___ _| |_ | |_/ / | |_| | | |/ / | | | | \ \_/ / \_____/ \____/ \___/ \____/ \___/ |___/ \_| |_/ \___/    👋 Hi, I’m @RUNXU , a SEU student majoring in software engineering.</description>
+      <description>_ooOoo_ o8888888o 88&amp;quot; . &amp;quot;88 (| -_- |) O\ = /O ____/`---&#39;\____ . &#39; \\| |// `. / \\||| : |||// \ / _||||| -:- |||||- \ | | \\\ - /// | | | \_| &#39;&#39;\---/&#39;&#39; | | \ .-\__ `-` ___/-. / ___`. .&#39; /--.--\ `. . __ .&amp;quot;&amp;quot; &#39;&amp;lt; `.___\_&amp;lt;|&amp;gt;_/___.&#39; &amp;gt;&#39;&amp;quot;&amp;quot;. | | : `- \`.;`\ _ /`;.`/ - ` : | | \ \ `-.</description>
     </item>
     
     <item>
-      <title>Leetcode 刷题笔记(最后更新-2021/12/5)</title>
+      <title>Leetcode 刷题笔记</title>
       <link>https://LeiBuDao.github.io/posts/leetcode/</link>
       <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
       
