@@ -19,10 +19,10 @@
 建议搭配视频食用：三小时AJAX从入门到精通
 第一章： Ajax概述 1.1、Ajax简介  Ajax全称为Asynchronous Javascript And XML，即异步JS和XML 通过Ajax可以在浏览器中向服务器发送异步请求，最大的优势：无刷新获取数据 AJAX不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式  1.2 、XML简介   XML：可扩展标记语言
   XML：被设计用来传输和存储数据
-  XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据
-  比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ; 用XML 表示：
-&amp;lt;student&amp;gt; &amp;lt;name&amp;gt;孙悟空&amp;lt;/name&amp;gt; &amp;lt;age&amp;gt;18&amp;lt;/age&amp;gt; &amp;lt;gender&amp;gt;男&amp;lt;/gender&amp;gt; &amp;lt;/student&amp;gt;     现在已被JSON取代
-{&amp;#34;name&amp;#34;:&amp;#34;孙悟空&amp;#34;,&amp;#34;age&amp;#34;:18,&amp;#34;gender&amp;#34;:&amp;#34;男&amp;#34;}   1.3、 AJAX 的特点 1.3.1、AJAX的优点  可以无刷新页面与服务端进行通信 允许你根据用户事件来更新部分页面内容  1.3.2、AJAX 的缺点  没有浏览历史，不能回退 存在跨域问题（同源） SEO不友好（爬虫获取不到信息）  第二章 jQuery中的AJAX 2.</description>
+  XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据.比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ;用XML 表示：
+&amp;lt;student&amp;gt; &amp;lt;name&amp;gt;孙悟空&amp;lt;/name&amp;gt; &amp;lt;age&amp;gt;18&amp;lt;/age&amp;gt; &amp;lt;gender&amp;gt;男&amp;lt;/gender&amp;gt; &amp;lt;/student&amp;gt;   现在已被JSON取代
+{&amp;#34;name&amp;#34;:&amp;#34;孙悟空&amp;#34;,&amp;#34;age&amp;#34;:18,&amp;#34;gender&amp;#34;:&amp;#34;男&amp;#34;}   1.3、 AJAX 的特点 1.3.1、AJAX的优点  可以无刷新页面与服务端进行通信 允许你根据用户事件来更新部分页面内容  1.3.2、AJAX 的缺点  没有浏览历史，不能回退 存在跨域问题（同源） SEO不友好（爬虫获取不到信息）  第二章 jQuery中的AJAX 2.1、MDN文档 https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview
+2.2、HTTP 请求交互的基本过程  前后应用从浏览器端向服务器发送HTTP 请求(请求报文) 后台服务器接收到请求后, 调度服务器应用处理请求, 向浏览器端返回HTTP响应(响应报文) 浏览器端接收到响应, 解析显示响应体/调用监视回调  2.</description>
 			<content type="html"><![CDATA[<p>AJAX学习的笔记，主要环境为Node.js</p>
 <p>建议搭配视频食用：<a href="https://www.bilibili.com/video/BV1WC4y1b78y">三小时AJAX从入门到精通</a></p>
 <h2 id="第一章-ajax概述">第一章： Ajax概述</h2>
@@ -41,19 +41,13 @@
 <p>XML：被设计用来传输和存储数据</p>
 </li>
 <li>
-<p>XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据</p>
-<ul>
-<li>
-<p>比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ;
-用XML 表示：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">student</span><span class="o">&gt;</span>
-	<span class="o">&lt;</span><span class="nx">name</span><span class="o">&gt;</span><span class="nx">孙悟空</span><span class="o">&lt;</span><span class="err">/name&gt;</span>
-	<span class="o">&lt;</span><span class="nx">age</span><span class="o">&gt;</span><span class="mi">18</span><span class="o">&lt;</span><span class="err">/age&gt;</span>
-	<span class="o">&lt;</span><span class="nx">gender</span><span class="o">&gt;</span><span class="nx">男</span><span class="o">&lt;</span><span class="err">/gender&gt;</span>
-<span class="o">&lt;</span><span class="err">/student&gt;</span>
+<p>XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据.比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ;用XML 表示：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">student</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">name</span><span class="p">&gt;</span>孙悟空<span class="p">&lt;/</span><span class="nt">name</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">age</span><span class="p">&gt;</span>18<span class="p">&lt;/</span><span class="nt">age</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">gender</span><span class="p">&gt;</span>男<span class="p">&lt;/</span><span class="nt">gender</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">student</span><span class="p">&gt;</span>
 </code></pre></div></li>
-</ul>
-</li>
 <li>
 <p>现在已被JSON取代</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;孙悟空&#34;</span><span class="p">,</span><span class="nt">&#34;age&#34;</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span><span class="nt">&#34;gender&#34;</span><span class="p">:</span><span class="s2">&#34;男&#34;</span><span class="p">}</span>
@@ -127,17 +121,17 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 </li>
 </ul>
 <h3 id="26常见的响应状态码">2.6、常见的响应状态码</h3>
-<pre tabindex="0"><code>200 OK ：请求成功。一般用于GET 与POST 请求
-201 Created ：已创建。成功请求并创建了新的资源
-401 Unauthorized ：未授权/请求要求用户的身份认证
-404 Not Found ：服务器无法根据客户端的请求找到资源
-500 Internal Server Error ：服务器内部错误，无法完成请求
-</code></pre><h3 id="27不同类型的请求及其作用">2.7、不同类型的请求及其作用</h3>
-<pre tabindex="0"><code>GET: 从服务器端读取数据（查）
-POST: 向服务器端添加新数据 （增）
-PUT: 更新服务器端已经数据 （改）
-DELETE: 删除服务器端数据 （删）
-</code></pre><h3 id="28api-的分类">2.8、API 的分类</h3>
+<p><code>200 OK </code>：请求成功。一般用于GET 与POST 请求
+<code>201 Created</code> ：已创建。成功请求并创建了新的资源
+<code>401 Unauthorized</code> ：未授权/请求要求用户的身份认证
+<code>404 Not Found</code> ：服务器无法根据客户端的请求找到资源
+<code>500 Internal Server Error</code> ：服务器内部错误，无法完成请求</p>
+<h3 id="27不同类型的请求及其作用">2.7、不同类型的请求及其作用</h3>
+<p><code>GET</code>: 从服务器端读取数据（查）
+<code>POST</code>: 向服务器端添加新数据 （增）
+<code>PUT</code>: 更新服务器端已经数据 （改）
+<code>DELETE</code>: 删除服务器端数据 （删）</p>
+<h3 id="28api-的分类">2.8、API 的分类</h3>
 <ol>
 <li>
 <p>REST API: restful （Representational State Transfer (资源)表现层状态转化）</p>
@@ -204,12 +198,11 @@ DELETE: 删除服务器端数据 （删）
 </span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8000</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;服务已经启动, 8000 端口监听中...&#34;</span><span class="p">);</span>
  <span class="p">})</span>
-
 </code></pre></div><ol start="4">
 <li>运行js程序</li>
 </ol>
-<pre tabindex="0"><code>node express.js
-</code></pre><ol start="5">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">node</span> <span class="n">express</span><span class="p">.</span><span class="n">js</span>
+</code></pre></div><ol start="5">
 <li>打开网页显示页面</li>
 </ol>
 <p><img src="../image/AJAX_study/2.png" alt=""></p>
@@ -235,29 +228,25 @@ DELETE: 删除服务器端数据 （删）
 </ol>
 <h3 id="32-核心对象使用步骤">3.2 、核心对象使用步骤</h3>
 <h4 id="321创建xmlhttprequest-对象">3.2.1、创建XMLHttpRequest 对象</h4>
-<pre tabindex="0"><code>var xhr = new XMLHttpRequest();
-
-</code></pre><h4 id="322设置请求信息请求方法和url">3.2.2、设置请求信息（请求方法和url）</h4>
-<pre tabindex="0"><code>// 请求方式
-xhr.open(method, url);
-//可以设置请求头，一般不设置
-xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-</code></pre><h4 id="323发送请求">3.2.3、发送请求</h4>
-<pre tabindex="0"><code>xhr.send(body) //get请求不传 body 参数，只有post请求使用
-
-</code></pre><h4 id="324接收响应事件绑定处理服务端返回的结果">3.2.4、接收响应（事件绑定，处理服务端返回的结果）</h4>
-<pre tabindex="0"><code>//xhr.responseXML 接收 xml格式 的响应数据
-//xhr.responseText 接收 文本格式 的响应数据
-xhr.onreadystatechange = function (){
-	// readyState 是 xhr对象中的属性, 表示状态 0 1 2 3 4
-	if(xhr.readyState == 4 &amp;&amp; xhr.status == 200){
-		var text = xhr.responseText;
-		console.log(text);
-	}
-}
-
-</code></pre><h3 id="33-使用案例">3.3 、使用案例</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">var xhr = new XMLHttpRequest();
+</code></pre></div><h4 id="322设置请求信息请求方法和url">3.2.2、设置请求信息（请求方法和url）</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 请求方式
+</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">url</span><span class="p">);</span>
+<span class="c1">//可以设置请求头，一般不设置
+</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/x-www-form-urlencoded&#39;</span><span class="p">);</span>
+</code></pre></div><h4 id="323发送请求">3.2.3、发送请求</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span> <span class="c1">//get请求不传 body 参数，只有post请求使用
+</span></code></pre></div><h4 id="324接收响应事件绑定处理服务端返回的结果">3.2.4、接收响应（事件绑定，处理服务端返回的结果）</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">//xhr.responseXML 接收 xml格式 的响应数据
+</span><span class="c1">//xhr.responseText 接收 文本格式 的响应数据
+</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(){</span>
+	<span class="c1">// readyState 是 xhr对象中的属性, 表示状态 0 1 2 3 4
+</span><span class="c1"></span>	<span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">==</span> <span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">){</span>
+		<span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="33-使用案例">3.3 、使用案例</h3>
 <h4 id="331get-请求">3.3.1、GET 请求</h4>
 <p>创建两个文件，浏览器端使用的html文件和服务器端使用的js文件</p>
 <p><img src="../image/AJAX_study/4.png" alt=""></p>
@@ -280,10 +269,9 @@ xhr.onreadystatechange = function (){
 </span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8000</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;服务已经启动, 8000 端口监听中...&#34;</span><span class="p">);</span>
  <span class="p">})</span>
-
 </code></pre></div><p>启动服务</p>
-<pre tabindex="0"><code>node server.js
-</code></pre><p>前端页面 html</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">node</span> <span class="n">server</span><span class="p">.</span><span class="n">js</span>
+</code></pre></div><p>前端页面 html</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -338,10 +326,9 @@ xhr.onreadystatechange = function (){
   <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-
 </code></pre></div><p><img src="../image/AJAX_study/5.gif" alt=""></p>
 <p>设置url参数</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">xhr.open(&#39;GET&#39;, &#39;http://127.0.0.1:8000/server?a=100<span class="ni">&amp;b=200&amp;c=300&#39;);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;http://127.0.0.1:8000/server?a=100&amp;b=200&amp;c=300&#39;</span><span class="p">);</span>
 </code></pre></div><p><img src="../image/AJAX_study/6.png" alt=""></p>
 <h4 id="332post请求">3.3.2、POST请求</h4>
 <p>鼠标放到div中，发post请求，将响应体放在div中呈现</p>
@@ -352,7 +339,6 @@ xhr.onreadystatechange = function (){
   <span class="c1">// 设置响应体
 </span><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">&#34;Hello Ajax POST&#34;</span><span class="p">);</span>
 <span class="p">});</span>
-
 </code></pre></div><p>post.html</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
@@ -396,15 +382,12 @@ xhr.onreadystatechange = function (){
   <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">// 设置请求体内容的类型
-xhr.setRequesHeader(&#39;Content-Type&#39;,&#39;application/x-www-from-urlencoded&#39;);
-// 自定义头信息
-xhr.setRequesHeader(&#39;name&#39;, &#39;ykyk&#39;);
-
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 设置请求体内容的类型
+</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequesHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span><span class="s1">&#39;application/x-www-from-urlencoded&#39;</span><span class="p">);</span>
+<span class="c1">// 自定义头信息
+</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequesHeader</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;ykyk&#39;</span><span class="p">);</span>
 </code></pre></div><p>server.js中设置响应头允许自定义请求头 post改成all</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">response</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Header&#39;</span><span class="p">,</span><span class="s1">&#39;*&#39;</span><span class="p">);</span>
-
 </code></pre></div><h3 id="34-json数据请求">3.4 、json数据请求</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">app</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s1">&#39;/json-server&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="c1">// 设置响应头, 设置允许跨域
@@ -420,7 +403,6 @@ xhr.setRequesHeader(&#39;name&#39;, &#39;ykyk&#39;);
   <span class="c1">// 设置响应体
 </span><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
 <span class="p">});</span>
-
 </code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -467,35 +449,33 @@ xhr.setRequesHeader(&#39;name&#39;, &#39;ykyk&#39;);
   <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-
 </code></pre></div><h3 id="35-请求超时与网络异常">3.5 、请求超时与网络异常</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">// 超时设置 （2秒）
-xhr.timeout = 2000;
-// 超时回调
-xhr.ontimeout = function(){
-	alert(&#39;网络超时，请稍后重试&#39;)
-}
-// 网络异常回调
-xhr.onerror = function(){
-	alert(&#39;网络异常，请稍后重试&#39;)
-}
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 超时设置 （2秒）
+</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">timeout</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span>
+<span class="c1">// 超时回调
+</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">ontimeout</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+	<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;网络超时，请稍后重试&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// 网络异常回调
+</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+	<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;网络异常，请稍后重试&#39;</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div><h3 id="36-取消请求">3.6 、取消请求</h3>
-<pre tabindex="0"><code>// 手动取消
-xhr.abort()
-</code></pre><h3 id="37-请求重复发送问题">3.7 、请求重复发送问题</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 手动取消
+</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">abort</span><span class="p">()</span>
+</code></pre></div><h3 id="37-请求重复发送问题">3.7 、请求重复发送问题</h3>
 <h3 id="38-解决-ie-缓存问题">3.8、 解决 IE 缓存问题</h3>
 <p><strong>问题</strong>：在一些浏览器中(IE),由于缓存机制的存在，ajax 只会发送的第一次请求，剩余多次请求不会在发送给浏览器而是直接加载缓存中的数据。<strong>解决方式</strong>：浏览器的缓存是根据url 地址来记录的，所以我们只需要修改url 地址即可避免缓存问题</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">xhr.open(&#34;get&#34;,&#34;/testAJAX?t=&#34;+Date.now());
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&#34;get&#34;</span><span class="p">,</span><span class="s2">&#34;/testAJAX?t=&#34;</span><span class="o">+</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">());</span>
 </code></pre></div><h3 id="39-ajax-请求状态">3.9 、AJAX 请求状态</h3>
 <p><code>xhr.readyState</code> 可以用来查看请求当前的状态
 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/readyState">https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/readyState</a></p>
 <ul>
-<li>0: 表示XMLHttpRequest 实例已经生成，但是open()方法还没有被调用</li>
-<li>1: 表示send()方法还没有被调用，仍然可以使用setRequestHeader()，设定HTTP请求的头信息</li>
-<li>2: 表示send()方法已经执行，并且头信息和状态码已经收到</li>
-<li>3: 表示正在接收服务器传来的body 部分的数据</li>
-<li>4: 表示服务器数据已经完全接收，或者本次接收已经失败了</li>
+<li><code>0</code>: 表示XMLHttpRequest 实例已经生成，但是open()方法还没有被调用</li>
+<li><code>1</code>:表示send()方法还没有被调用，仍然可以使用setRequestHeader()，设定HTTP请求的头信息</li>
+<li><code>2</code>: 表示send()方法已经执行，并且头信息和状态码已经收到</li>
+<li><code>3</code>: 表示正在接收服务器传来的body 部分的数据</li>
+<li><code>4</code>: 表示服务器数据已经完全接收，或者本次接收已经失败了</li>
 </ul>
 <h3 id="310-api总结">3.10 、API总结</h3>
 <ul>
@@ -518,44 +498,43 @@ xhr.abort()
 </ul>
 <h2 id="第四章-jquery中的ajax">第四章 JQuery中的AJAX</h2>
 <h3 id="41-get-请求">4.1 、get 请求</h3>
-<pre tabindex="0"><code>$.get(url, [data], [callback], [type])
-</code></pre><ul>
-<li>url:请求的URL 地址</li>
-<li>data:请求携带的参数</li>
-<li>callback:载入成功时回调函数</li>
-<li>type:设置返回内容格式，xml, html, script, json, text, _default</li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">[</span><span class="nx">data</span><span class="p">],</span> <span class="p">[</span><span class="nx">callback</span><span class="p">],</span> <span class="p">[</span><span class="nx">type</span><span class="p">])</span>
+</code></pre></div><ul>
+<li><code>url:</code>请求的URL 地址</li>
+<li><code>data:</code>请求携带的参数</li>
+<li><code>callback:</code>载入成功时回调函数</li>
+<li><code>type:</code>设置返回内容格式，xml, html, script, json, text, _default</li>
 </ul>
 <h3 id="42-post-请求">4.2 、post 请求</h3>
-<pre tabindex="0"><code>$.post(url, [data], [callback], [type])
-</code></pre><ul>
-<li>url:请求的URL 地址</li>
-<li>data:请求携带的参数</li>
-<li>callback:载入成功时回调函数</li>
-<li>type:设置返回内容格式，xml, html, script, json, text, _default</li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">[</span><span class="nx">data</span><span class="p">],</span> <span class="p">[</span><span class="nx">callback</span><span class="p">],</span> <span class="p">[</span><span class="nx">type</span><span class="p">])</span>
+</code></pre></div><ul>
+<li><code>url:</code>请求的URL 地址</li>
+<li><code>data:</code>请求携带的参数</li>
+<li><code>callback:</code>载入成功时回调函数</li>
+<li><code>type:</code>设置返回内容格式，xml, html, script, json, text, _default</li>
 </ul>
 <h3 id="43通用方法">4.3、通用方法</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">$.ajax({
-	// url
-	url: &#39;http://127.0.0.1:8000/jquery-server&#39;,
-	// 参数
-	data: {a:100, b:200},
-	// 请求类型
-	type: &#39;GET&#39;,
-	// 响应体结果
-	dataType: &#39;json&#39;,
-	// 成功的回调
-	success: function(data){console.log(data);},
-	// 超时时间
-	timeout: 2000,
-	// 失败的回调
-	error: function(){console.log(&#39;出错拉~&#39;);},
-	// 头信息
-	headers: {
-		c: 300,
-		d: 400
-	}
-})
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+	<span class="c1">// url
+</span><span class="c1"></span>	<span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://127.0.0.1:8000/jquery-server&#39;</span><span class="p">,</span>
+	<span class="c1">// 参数
+</span><span class="c1"></span>	<span class="nx">data</span><span class="o">:</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span><span class="mi">100</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span><span class="mi">200</span><span class="p">},</span>
+	<span class="c1">// 请求类型
+</span><span class="c1"></span>	<span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span>
+	<span class="c1">// 响应体结果
+</span><span class="c1"></span>	<span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span>
+	<span class="c1">// 成功的回调
+</span><span class="c1"></span>	<span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);},</span>
+	<span class="c1">// 超时时间
+</span><span class="c1"></span>	<span class="nx">timeout</span><span class="o">:</span> <span class="mi">2000</span><span class="p">,</span>
+	<span class="c1">// 失败的回调
+</span><span class="c1"></span>	<span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;出错拉~&#39;</span><span class="p">);},</span>
+	<span class="c1">// 头信息
+</span><span class="c1"></span>	<span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+		<span class="nx">c</span><span class="o">:</span> <span class="mi">300</span><span class="p">,</span>
+		<span class="nx">d</span><span class="o">:</span> <span class="mi">400</span>
+	<span class="p">}</span>
+<span class="p">})</span>
 </code></pre></div><h2 id="第五章-跨域">第五章 跨域</h2>
 <p>推荐阅读：</p>
 <ul>
@@ -649,7 +628,6 @@ xhr.abort()
 		<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-
 </code></pre></div></li>
 </ol>
 <h3 id="522cors">5.2.2、CORS</h3>
