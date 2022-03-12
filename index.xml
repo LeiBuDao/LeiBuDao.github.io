@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 10 Mar 2022 15:21:00 +0800</lastBuildDate><atom:link href="https://LeiBuDao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Mar 2022 13:38:13 +0800</lastBuildDate><atom:link href="https://LeiBuDao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Promise学习笔记</title>
+      <link>https://LeiBuDao.github.io/posts/promise_study/</link>
+      <pubDate>Sat, 12 Mar 2022 13:38:13 +0800</pubDate>
+      
+      <guid>https://LeiBuDao.github.io/posts/promise_study/</guid>
+      <description>一、Promise的理解与使用  1、概念:
+​	Promise是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。
+通俗讲，Promise是一个许诺、承诺,是对未来事情的承诺，承诺不一定能完成，但是无论是否能完成都会有一个结果。
+ Pending 正在做。。。 Resolved 完成这个承诺 Rejected 这个承诺没有完成，失败了  ​	Promise 用来预定一个不一定能完成的任务，要么成功，要么失败
+​	在具体的程序中具体的体现，通常用来封装一个异步任务，提供承诺结果
+Promise 是异步编程的一种解决方案，主要用来解决回调地狱的问题，可以有效的减少回调嵌套。真正解决需要配合async/await
+2、特点:
+​	(1)对象的状态不受外界影响。Promise对象代表一个异步操作，有三种状态：Pending（进行中）、Resolved（已完成，又称Fulfilled）和Rejected（已失败）。只有异步操作的结果，可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。
+​	(2)一旦状态改变，就不会再变，任何时候都可以得到这个结果。Promise对象的状态改变，只有两种可能：从Pending变为Resolved和从Pending变为Rejected。只要这两种情况发生，状态就凝固了，不会再变了，会一直保持这个结果。就算改变已经发生了，你再对Promise对象添加回调函数，也会立即得到这个结果。
+3、缺点:
+​	(1)无法取消Promise，一旦新建它就会立即执行，无法中途取消。和一般的对象不一样，无需调用。
+​	(2)如果不设置回调函数，Promise内部抛出的错误，不会反应到外部。
+​	(3)当处于Pending状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）
+  1、Promise是什么? Ⅰ-理解   抽象表达:  ​	1) Promise 是一门新的技术(ES6 规范)
+​	2)Promise 是 JS 中进行异步编程的新解决方案
+​	备注：旧方案是单纯使用回调函数
+具体表达:    从语法上来说: Promise 是一个构造函数
+  从功能上来说: promise 对象用来封装一个异步操作并可以获取其成功/ 失败的结果值
+   Ⅱ-promise 的状态 a) promise 的状态  实例对象中的一个属性 『PromiseState』</description>
+    </item>
+    
     <item>
       <title>三小时AJAX从入门到精通</title>
       <link>https://LeiBuDao.github.io/posts/ajax_study/</link>
