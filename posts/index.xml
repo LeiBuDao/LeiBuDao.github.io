@@ -107,7 +107,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 </blockquote>
 <h4 id="-promise的基本流程">Ⅲ-promise的基本流程</h4>
 <blockquote>
-<p><img src="../../static/image/Promise_study/Promise%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0_promise%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png" alt="Promise系统学习_promise工作流程"></p>
+<p><img src="../../image/Promise_study/Promise%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0_promise%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png" alt="Promise系统学习_promise工作流程"></p>
 </blockquote>
 <h4 id="-promise的基本使用">Ⅳ-promise的基本使用</h4>
 <h6 id="1使用-promise-封装基于定时器的异步">1.使用 promise 封装基于定时器的异步</h6>
@@ -250,7 +250,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 <h5 id="1什么是回调地狱">1、什么是回调地狱</h5>
 <blockquote>
 <p>回调函数嵌套调用, 外部回调函数异步执行的结果是嵌套的回调执行的条件</p>
-<p><img src="../../static/image/Promise_study/Promise%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0_%E5%9B%9E%E8%B0%83%E5%9C%B0%E7%8B%B1.jpg" alt="Promise系统学习_回调地狱"></p>
+<p><img src="../../image/Promise_study/Promise%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0_%E5%9B%9E%E8%B0%83%E5%9C%B0%E7%8B%B1.jpg" alt="Promise系统学习_回调地狱"></p>
 </blockquote>
 <h5 id="2回调地狱的缺点">2、回调地狱的缺点?</h5>
 <blockquote>
@@ -504,7 +504,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;错误捕获: &#39;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
 <span class="p">});</span>
 <span class="c1">//执行结果:  错误捕获:  Error: 抛出异常
-</span></code></pre></div><p>注:可以在每个then()的第二个回调函数中进行err处理,也可以利用异常穿透特性,到最后用<code>catch</code>去承接统一处理,两者一起用时,前者会生效(因为err已经将其处理,就不会再往下穿透)而走不到后面的catch<img src="../../static/image/Promise_study/image-20210927105504988.png" alt="image-20210927105504988"></p>
+</span></code></pre></div><p>注:可以在每个then()的第二个回调函数中进行err处理,也可以利用异常穿透特性,到最后用<code>catch</code>去承接统一处理,两者一起用时,前者会生效(因为err已经将其处理,就不会再往下穿透)而走不到后面的catch<img src="../../image/Promise_study/image-20210927105504988.png" alt="image-20210927105504988"></p>
 </blockquote>
 <h4 id="--中断-promise-链">Ⅶ- 中断 promise 链?</h4>
 <blockquote>
@@ -690,7 +690,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 <span class="nx">loadImageAsync</span><span class="p">(</span><span class="s1">&#39;正确的url&#39;</span><span class="p">)</span> <span class="c1">//打印图片加载成功
 </span><span class="c1"></span><span class="nx">loadImageAsync</span><span class="p">(</span><span class="s1">&#39;错误的url&#39;</span><span class="p">)</span> <span class="c1">//抛出异常
 </span></code></pre></div><p>上面代码中，使用<code>Promise</code>包装了一个图片加载的异步操作。如果加载成功，就调用<code>resolve</code>方法，否则就调用<code>reject</code>方法。</p>
-<p><img src="../../static/image/Promise_study/image-20210926180306961.png" alt="image-20210926180306961"></p>
+<p><img src="../../image/Promise_study/image-20210926180306961.png" alt="image-20210926180306961"></p>
 </blockquote>
 <h4 id="-举个用promise对象实现的-ajax-操作的栗子">⑥ 举个用<code>Promise</code>对象实现的 Ajax 操作的栗子</h4>
 <blockquote>
@@ -718,12 +718,12 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;出错了&#39;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><p>上面代码中，<code>getJSON</code>是对 XMLHttpRequest 对象的封装，用于发出一个针对 JSON 数据的 HTTP 请求，并且返回一个<code>Promise</code>对象。需要注意的是，在<code>getJSON</code>内部，<code>resolve</code>函数和<code>reject</code>函数调用时，都带有参数。</p>
-<p><img src="../../static/image/Promise_study/image-20210926182129672.png" alt="image-20210926182129672"></p>
+<p><img src="../../image/Promise_study/image-20210926182129672.png" alt="image-20210926182129672"></p>
 <blockquote>
 <p>小贴士:此处可能有同学想尝试却发现读取本地文件会有跨域问题,这边教一下你们</p>
 </blockquote>
 <blockquote>
-<p><img src="../../static/image/Promise_study/image-20210926182506259.png" alt="image-20210926182506259"></p>
+<p><img src="../../image/Promise_study/image-20210926182506259.png" alt="image-20210926182506259"></p>
 </blockquote>
 </blockquote>
 <h4 id="--resolve--的参数可以是另一个-promise-实例">⑦  resolve()  的参数可以是另一个 Promise 实例</h4>
@@ -969,7 +969,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;错误捕获: &#39;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
 <span class="p">});</span>
 <span class="c1">//执行结果:  错误捕获:  Error: 抛出异常
-</span></code></pre></div><p>注:可以在每个then()的第二个回调函数中进行err处理,也可以利用异常穿透特性,到最后用<code>catch</code>去承接统一处理,两者一起用时,前者会生效(因为err已经将其处理,就不会再往下穿透)而走不到后面的catch<img src="../../static/image/Promise_study/image-20210927105504988.png" alt="image-20210927105504988"></p>
+</span></code></pre></div><p>注:可以在每个then()的第二个回调函数中进行err处理,也可以利用异常穿透特性,到最后用<code>catch</code>去承接统一处理,两者一起用时,前者会生效(因为err已经将其处理,就不会再往下穿透)而走不到后面的catch<img src="../../image/Promise_study/image-20210927105504988.png" alt="image-20210927105504988"></p>
 </blockquote>
 <h5 id="f-建议使用-catch-进行异常处理">f) 建议使用 catch() 进行异常处理</h5>
 <blockquote>
@@ -1133,7 +1133,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 
 <span class="c1">// reject 的值是 3
 </span><span class="c1"></span><span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="k">finally</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{})</span>
-</code></pre></div><p><img src="../../static/image/Promise_study/image-20210927135255264.png" alt="image-20210927135255264"></p>
+</code></pre></div><p><img src="../image/Promise_study/image-20210927135255264.png" alt="image-20210927135255264"></p>
 </blockquote>
 <h4 id="-promiseall">④ Promise.all()</h4>
 <blockquote>
@@ -2618,7 +2618,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 <h2 id="-说明">Ⅰ-说明</h2>
 <blockquote>
 <p>原理图:</p>
-<p><img src="../../static/image/Promise_study/Promise%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0_%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%BE%AE%E4%BB%BB%E5%8A%A1%E5%8E%9F%E7%90%86%E5%9B%BE.png" alt="Promise系统学习_宏任务微任务原理图"></p>
+<p><img src="../../image/Promise_study/Promise%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0_%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%BE%AE%E4%BB%BB%E5%8A%A1%E5%8E%9F%E7%90%86%E5%9B%BE.png" alt="Promise系统学习_宏任务微任务原理图"></p>
 <p>说明:</p>
 <ol>
 <li>JS中用来存储待执行回调函数的队列包含2个不同特定的列队</li>
@@ -2699,18 +2699,18 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 </code></pre></div></blockquote>
 <h4 id="b-第二个栗子的结果">b) 第二个栗子的结果</h4>
 <blockquote>
-<p><img src="../../static/image/Promise_study/image-20210827094130354.png" alt="image-20210827094130354"></p>
+<p><img src="../../image/Promise_study/image-20210827094130354.png" alt="image-20210827094130354"></p>
 <p>PS: 可以忽略<code>undefined</code>这个打印结果, 因为这会加重我们对于宏任务与微任务的理解负担.</p>
 <p>当然人都是会好奇的,没有打破砂锅问到底的精神呢也当不了一个好程序员,那我就在下方额外给出解释</p>
 </blockquote>
 <h1 id="五对浏览器console控制台输出undefined的分析">五、对浏览器console控制台输出undefined的分析</h1>
 <h2 id="--出现场景">Ⅰ- 出现场景</h2>
 <blockquote>
-<p><img src="../../static/image/Promise_study/image-20210827095144833.png" alt="image-20210827095144833"></p>
+<p><img src="../../image/Promise_study/image-20210827095144833.png" alt="image-20210827095144833"></p>
 </blockquote>
 <h2 id="---尝试输入其他内容进行分析">Ⅱ - 尝试输入其他内容进行分析</h2>
 <blockquote>
-<p><img src="../../static/image/Promise_study/image-20210827095702736.png" alt="image-20210827095702736"></p>
+<p><img src="../../image/Promise_study/image-20210827095702736.png" alt="image-20210827095702736"></p>
 <p>那么做个合理推测: 应该是在控制台输入的内容,它的 <code>返回值</code> 会显示出来,这让我们不禁想到JS的 [ <strong>eval()</strong> ]</p>
 </blockquote>
 <h2 id="---evalstring">Ⅲ - eval（string）</h2>
@@ -2722,12 +2722,12 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 </blockquote>
 <h2 id="---验证一下">Ⅳ - 验证一下</h2>
 <blockquote>
-<p><img src="../../static/image/Promise_study/image-20210827100156570.png" alt="image-20210827100156570"></p>
+<p><img src="../../image/Promise_study/image-20210827100156570.png" alt="image-20210827100156570"></p>
 <p>大家都是聪明人,看到这个结果应该就不用我组织语言来解释了吧</p>
 </blockquote>
 <h2 id="----分析其在宏任务与微任务的打印顺序">Ⅴ -  分析其在宏任务与微任务的打印顺序</h2>
 <blockquote>
-<p>首先看图:<img src="../../static/image/Promise_study/image-20210827094130354.png" alt="image-20210827094130354"></p>
+<p>首先看图:<img src="../../image/Promise_study/image-20210827094130354.png" alt="image-20210827094130354"></p>
 <p>可以看到 [ undefined ] 实在微任务完成后,宏任务执行前 打印</p>
 </blockquote>
 ]]></content>
@@ -2793,8 +2793,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 <h3 id="21mdn文档">2.1、MDN文档</h3>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview">https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview</a></p>
 <h3 id="22http-请求交互的基本过程">2.2、HTTP 请求交互的基本过程</h3>
-<p><img src="../../static/image/AJAX_study/1.png" alt="">
-<!-- raw HTML omitted --></p>
+<p><img src="../../image/AJAX_study/1.png" alt=""></p>
 <ol>
 <li>前后应用从浏览器端向服务器发送HTTP 请求(请求报文)</li>
 <li>后台服务器接收到请求后, 调度服务器应用处理请求, 向浏览器端返回HTTP响应(响应报文)</li>
@@ -2930,11 +2929,11 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 </code></pre></div><ol start="5">
 <li>打开网页显示页面</li>
 </ol>
-<p><img src="../../static/image/AJAX_study/2.png" alt=""></p>
+<p><img src="../../image/AJAX_study/2.png" alt=""></p>
 <ol start="6">
 <li>调试程序可以查看请求和响应</li>
 </ol>
-<p><img src="../../static/image/AJAX_study/3.png" alt=""></p>
+<p><img src="../../image/AJAX_study/3.png" alt=""></p>
 <h4 id="303安装nodemon自动重启工具">3.0.3、安装nodemon自动重启工具</h4>
 <p>文件内容有修改自动重新启动服务:<a href="https://www.npmjs.com/package/nodemon">https://www.npmjs.com/package/nodemon</a></p>
 <ul>
@@ -2974,7 +2973,7 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 </code></pre></div><h3 id="33-使用案例">3.3 、使用案例</h3>
 <h4 id="331get-请求">3.3.1、GET 请求</h4>
 <p>创建两个文件，浏览器端使用的html文件和服务器端使用的js文件</p>
-<p><img src="../../static/image/AJAX_study/4.png" alt=""></p>
+<p><img src="../../image/AJAX_study/4.png" alt=""></p>
 <p>服务器端 server.js</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 1. 引入express
 </span><span class="c1"></span><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
@@ -3051,10 +3050,10 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
   <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div><p><img src="../../static/image/AJAX_study/5.gif" alt=""></p>
+</code></pre></div><p><img src="../../image/AJAX_study/5.gif" alt=""></p>
 <p>设置url参数</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;http://127.0.0.1:8000/server?a=100&amp;b=200&amp;c=300&#39;</span><span class="p">);</span>
-</code></pre></div><p><img src="../../static/image/AJAX_study/6.png" alt=""></p>
+</code></pre></div><p><img src="../../image/AJAX_study/6.png" alt=""></p>
 <h4 id="332post请求">3.3.2、POST请求</h4>
 <p>鼠标放到div中，发post请求，将响应体放在div中呈现</p>
 <p>server.js添加post</p>

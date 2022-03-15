@@ -275,7 +275,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
 <blockquote>
-<p><img src="../../static/image/Promise_study/Promise%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0_promise%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png" alt="Promise系统学习_promise工作流程"></p>
+<p><img src="../../image/Promise_study/Promise%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0_promise%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png" alt="Promise系统学习_promise工作流程"></p>
 </blockquote>
 <h4 id="-promise的基本使用">Ⅳ-promise的基本使用<a href="#-promise的基本使用" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -468,7 +468,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 					</svg></a></h5>
 <blockquote>
 <p>回调函数嵌套调用, 外部回调函数异步执行的结果是嵌套的回调执行的条件</p>
-<p><img src="../../static/image/Promise_study/Promise%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0_%E5%9B%9E%E8%B0%83%E5%9C%B0%E7%8B%B1.jpg" alt="Promise系统学习_回调地狱"></p>
+<p><img src="../../image/Promise_study/Promise%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0_%E5%9B%9E%E8%B0%83%E5%9C%B0%E7%8B%B1.jpg" alt="Promise系统学习_回调地狱"></p>
 </blockquote>
 <h5 id="2回调地狱的缺点">2、回调地狱的缺点?<a href="#2回调地狱的缺点" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -812,7 +812,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;错误捕获: &#39;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
 <span class="p">});</span>
 <span class="c1">//执行结果:  错误捕获:  Error: 抛出异常
-</span></code></pre></div><p>注:可以在每个then()的第二个回调函数中进行err处理,也可以利用异常穿透特性,到最后用<code>catch</code>去承接统一处理,两者一起用时,前者会生效(因为err已经将其处理,就不会再往下穿透)而走不到后面的catch<img src="../../static/image/Promise_study/image-20210927105504988.png" alt="image-20210927105504988"></p>
+</span></code></pre></div><p>注:可以在每个then()的第二个回调函数中进行err处理,也可以利用异常穿透特性,到最后用<code>catch</code>去承接统一处理,两者一起用时,前者会生效(因为err已经将其处理,就不会再往下穿透)而走不到后面的catch<img src="../../image/Promise_study/image-20210927105504988.png" alt="image-20210927105504988"></p>
 </blockquote>
 <h4 id="--中断-promise-链">Ⅶ- 中断 promise 链?<a href="#--中断-promise-链" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -1053,7 +1053,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 <span class="nx">loadImageAsync</span><span class="p">(</span><span class="s1">&#39;正确的url&#39;</span><span class="p">)</span> <span class="c1">//打印图片加载成功
 </span><span class="c1"></span><span class="nx">loadImageAsync</span><span class="p">(</span><span class="s1">&#39;错误的url&#39;</span><span class="p">)</span> <span class="c1">//抛出异常
 </span></code></pre></div><p>上面代码中，使用<code>Promise</code>包装了一个图片加载的异步操作。如果加载成功，就调用<code>resolve</code>方法，否则就调用<code>reject</code>方法。</p>
-<p><img src="../../static/image/Promise_study/image-20210926180306961.png" alt="image-20210926180306961"></p>
+<p><img src="../../image/Promise_study/image-20210926180306961.png" alt="image-20210926180306961"></p>
 </blockquote>
 <h4 id="-举个用promise对象实现的-ajax-操作的栗子">⑥ 举个用<code>Promise</code>对象实现的 Ajax 操作的栗子<a href="#-举个用promise对象实现的-ajax-操作的栗子" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -1086,12 +1086,12 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;出错了&#39;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><p>上面代码中，<code>getJSON</code>是对 XMLHttpRequest 对象的封装，用于发出一个针对 JSON 数据的 HTTP 请求，并且返回一个<code>Promise</code>对象。需要注意的是，在<code>getJSON</code>内部，<code>resolve</code>函数和<code>reject</code>函数调用时，都带有参数。</p>
-<p><img src="../../static/image/Promise_study/image-20210926182129672.png" alt="image-20210926182129672"></p>
+<p><img src="../../image/Promise_study/image-20210926182129672.png" alt="image-20210926182129672"></p>
 <blockquote>
 <p>小贴士:此处可能有同学想尝试却发现读取本地文件会有跨域问题,这边教一下你们</p>
 </blockquote>
 <blockquote>
-<p><img src="../../static/image/Promise_study/image-20210926182506259.png" alt="image-20210926182506259"></p>
+<p><img src="../../image/Promise_study/image-20210926182506259.png" alt="image-20210926182506259"></p>
 </blockquote>
 </blockquote>
 <h4 id="--resolve--的参数可以是另一个-promise-实例">⑦  resolve()  的参数可以是另一个 Promise 实例<a href="#--resolve--的参数可以是另一个-promise-实例" class="anchor"
@@ -1422,7 +1422,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;错误捕获: &#39;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
 <span class="p">});</span>
 <span class="c1">//执行结果:  错误捕获:  Error: 抛出异常
-</span></code></pre></div><p>注:可以在每个then()的第二个回调函数中进行err处理,也可以利用异常穿透特性,到最后用<code>catch</code>去承接统一处理,两者一起用时,前者会生效(因为err已经将其处理,就不会再往下穿透)而走不到后面的catch<img src="../../static/image/Promise_study/image-20210927105504988.png" alt="image-20210927105504988"></p>
+</span></code></pre></div><p>注:可以在每个then()的第二个回调函数中进行err处理,也可以利用异常穿透特性,到最后用<code>catch</code>去承接统一处理,两者一起用时,前者会生效(因为err已经将其处理,就不会再往下穿透)而走不到后面的catch<img src="../../image/Promise_study/image-20210927105504988.png" alt="image-20210927105504988"></p>
 </blockquote>
 <h5 id="f-建议使用-catch-进行异常处理">f) 建议使用 catch() 进行异常处理<a href="#f-建议使用-catch-进行异常处理" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -1621,7 +1621,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 
 <span class="c1">// reject 的值是 3
 </span><span class="c1"></span><span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="k">finally</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{})</span>
-</code></pre></div><p><img src="../../static/image/Promise_study/image-20210927135255264.png" alt="image-20210927135255264"></p>
+</code></pre></div><p><img src="../image/Promise_study/image-20210927135255264.png" alt="image-20210927135255264"></p>
 </blockquote>
 <h4 id="-promiseall">④ Promise.all()<a href="#-promiseall" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -3416,7 +3416,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 					</svg></a></h2>
 <blockquote>
 <p>原理图:</p>
-<p><img src="../../static/image/Promise_study/Promise%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0_%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%BE%AE%E4%BB%BB%E5%8A%A1%E5%8E%9F%E7%90%86%E5%9B%BE.png" alt="Promise系统学习_宏任务微任务原理图"></p>
+<p><img src="../../image/Promise_study/Promise%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0_%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%BE%AE%E4%BB%BB%E5%8A%A1%E5%8E%9F%E7%90%86%E5%9B%BE.png" alt="Promise系统学习_宏任务微任务原理图"></p>
 <p>说明:</p>
 <ol>
 <li>JS中用来存储待执行回调函数的队列包含2个不同特定的列队</li>
@@ -3532,7 +3532,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
 <blockquote>
-<p><img src="../../static/image/Promise_study/image-20210827094130354.png" alt="image-20210827094130354"></p>
+<p><img src="../../image/Promise_study/image-20210827094130354.png" alt="image-20210827094130354"></p>
 <p>PS: 可以忽略<code>undefined</code>这个打印结果, 因为这会加重我们对于宏任务与微任务的理解负担.</p>
 <p>当然人都是会好奇的,没有打破砂锅问到底的精神呢也当不了一个好程序员,那我就在下方额外给出解释</p>
 </blockquote>
@@ -3549,7 +3549,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h2>
 <blockquote>
-<p><img src="../../static/image/Promise_study/image-20210827095144833.png" alt="image-20210827095144833"></p>
+<p><img src="../../image/Promise_study/image-20210827095144833.png" alt="image-20210827095144833"></p>
 </blockquote>
 <h2 id="---尝试输入其他内容进行分析">Ⅱ - 尝试输入其他内容进行分析<a href="#---尝试输入其他内容进行分析" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -3558,7 +3558,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h2>
 <blockquote>
-<p><img src="../../static/image/Promise_study/image-20210827095702736.png" alt="image-20210827095702736"></p>
+<p><img src="../../image/Promise_study/image-20210827095702736.png" alt="image-20210827095702736"></p>
 <p>那么做个合理推测: 应该是在控制台输入的内容,它的 <code>返回值</code> 会显示出来,这让我们不禁想到JS的 [ <strong>eval()</strong> ]</p>
 </blockquote>
 <h2 id="---evalstring">Ⅲ - eval（string）<a href="#---evalstring" class="anchor"
@@ -3580,7 +3580,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h2>
 <blockquote>
-<p><img src="../../static/image/Promise_study/image-20210827100156570.png" alt="image-20210827100156570"></p>
+<p><img src="../../image/Promise_study/image-20210827100156570.png" alt="image-20210827100156570"></p>
 <p>大家都是聪明人,看到这个结果应该就不用我组织语言来解释了吧</p>
 </blockquote>
 <h2 id="----分析其在宏任务与微任务的打印顺序">Ⅴ -  分析其在宏任务与微任务的打印顺序<a href="#----分析其在宏任务与微任务的打印顺序" class="anchor"
@@ -3590,7 +3590,7 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h2>
 <blockquote>
-<p>首先看图:<img src="../../static/image/Promise_study/image-20210827094130354.png" alt="image-20210827094130354"></p>
+<p>首先看图:<img src="../../image/Promise_study/image-20210827094130354.png" alt="image-20210827094130354"></p>
 <p>可以看到 [ undefined ] 实在微任务完成后,宏任务执行前 打印</p>
 </blockquote>
 
