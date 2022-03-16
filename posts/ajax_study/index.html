@@ -10,23 +10,23 @@
 <meta itemprop="name" content="三小时AJAX从入门到精通">
 <meta itemprop="description" content="AJAX学习的笔记，主要环境为Node.js
 建议搭配视频食用：三小时AJAX从入门到精通
-第一章： Ajax概述 1.1、Ajax简介  Ajax全称为Asynchronous Javascript And XML，即异步JS和XML 通过Ajax可以在浏览器中向服务器发送异步请求，最大的优势：无刷新获取数据 AJAX不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式  1.2 、XML简介   XML：可扩展标记语言
+第一章： Ajax概述 1.1、Ajax简介   Ajax全称为Asynchronous Javascript And XML，即异步JS和XML 通过Ajax可以在浏览器中向服务器发送异步请求，最大的优势：无刷新获取数据 AJAX不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式   1.2 、XML简介    XML：可扩展标记语言
   XML：被设计用来传输和存储数据
-  XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据.比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ;用XML 表示：
-&lt;student&gt; &lt;name&gt;孙悟空&lt;/name&gt; &lt;age&gt;18&lt;/age&gt; &lt;gender&gt;男&lt;/gender&gt; &lt;/student&gt;   现在已被JSON取代
-{&#34;name&#34;:&#34;孙悟空&#34;,&#34;age&#34;:18,&#34;gender&#34;:&#34;男&#34;}   1.3、 AJAX 的特点 1.3.1、AJAX的优点  可以无刷新页面与服务端进行通信 允许你根据用户事件来更新部分页面内容  1.3.2、AJAX 的缺点  没有浏览历史，不能回退 存在跨域问题（同源） SEO不友好（爬虫获取不到信息）  第二章 jQuery中的AJAX 2.1、MDN文档 https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview
-2.2、HTTP 请求交互的基本过程  前后应用从浏览器端向服务器发送HTTP 请求(请求报文) 后台服务器接收到请求后, 调度服务器应用处理请求, 向浏览器端返回HTTP响应(响应报文) 浏览器端接收到响应, 解析显示响应体/调用监视回调  2."><meta itemprop="datePublished" content="2022-03-10T15:21:00+08:00" />
+  XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据
+  比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ; 用XML 表示：
+&lt;student&gt; &lt;name&gt;孙悟空&lt;/name&gt; &lt;age&gt;18&lt;/age&gt; &lt;gender&gt;男&lt;/gender&gt; &lt;/student&gt;     现在已被JSON取代
+{&#34;name&#34;:&#34;孙悟空&#34;,&#34;age&#34;:18,&#34;gender&#34;:&#34;男&#34;}    1.3、 AJAX 的特点 Ⅰ、AJAX的优点   可以无刷新页面与服务端进行通信 允许你根据用户事件来更新部分页面内容   Ⅱ、AJAX 的缺点   没有浏览历史，不能回退 存在跨域问题（同源） SEO不友好（爬虫获取不到信息）   第二章 jQuery中的AJAX 2."><meta itemprop="datePublished" content="2022-03-10T15:21:00+08:00" />
 <meta itemprop="dateModified" content="2022-03-10T15:21:00+08:00" />
-<meta itemprop="wordCount" content="1155">
+<meta itemprop="wordCount" content="1171">
 <meta itemprop="keywords" content="front-end," /><meta property="og:title" content="三小时AJAX从入门到精通" />
 <meta property="og:description" content="AJAX学习的笔记，主要环境为Node.js
 建议搭配视频食用：三小时AJAX从入门到精通
-第一章： Ajax概述 1.1、Ajax简介  Ajax全称为Asynchronous Javascript And XML，即异步JS和XML 通过Ajax可以在浏览器中向服务器发送异步请求，最大的优势：无刷新获取数据 AJAX不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式  1.2 、XML简介   XML：可扩展标记语言
+第一章： Ajax概述 1.1、Ajax简介   Ajax全称为Asynchronous Javascript And XML，即异步JS和XML 通过Ajax可以在浏览器中向服务器发送异步请求，最大的优势：无刷新获取数据 AJAX不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式   1.2 、XML简介    XML：可扩展标记语言
   XML：被设计用来传输和存储数据
-  XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据.比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ;用XML 表示：
-&lt;student&gt; &lt;name&gt;孙悟空&lt;/name&gt; &lt;age&gt;18&lt;/age&gt; &lt;gender&gt;男&lt;/gender&gt; &lt;/student&gt;   现在已被JSON取代
-{&#34;name&#34;:&#34;孙悟空&#34;,&#34;age&#34;:18,&#34;gender&#34;:&#34;男&#34;}   1.3、 AJAX 的特点 1.3.1、AJAX的优点  可以无刷新页面与服务端进行通信 允许你根据用户事件来更新部分页面内容  1.3.2、AJAX 的缺点  没有浏览历史，不能回退 存在跨域问题（同源） SEO不友好（爬虫获取不到信息）  第二章 jQuery中的AJAX 2.1、MDN文档 https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview
-2.2、HTTP 请求交互的基本过程  前后应用从浏览器端向服务器发送HTTP 请求(请求报文) 后台服务器接收到请求后, 调度服务器应用处理请求, 向浏览器端返回HTTP响应(响应报文) 浏览器端接收到响应, 解析显示响应体/调用监视回调  2." />
+  XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据
+  比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ; 用XML 表示：
+&lt;student&gt; &lt;name&gt;孙悟空&lt;/name&gt; &lt;age&gt;18&lt;/age&gt; &lt;gender&gt;男&lt;/gender&gt; &lt;/student&gt;     现在已被JSON取代
+{&#34;name&#34;:&#34;孙悟空&#34;,&#34;age&#34;:18,&#34;gender&#34;:&#34;男&#34;}    1.3、 AJAX 的特点 Ⅰ、AJAX的优点   可以无刷新页面与服务端进行通信 允许你根据用户事件来更新部分页面内容   Ⅱ、AJAX 的缺点   没有浏览历史，不能回退 存在跨域问题（同源） SEO不友好（爬虫获取不到信息）   第二章 jQuery中的AJAX 2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://LeiBuDao.github.io/posts/ajax_study/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-03-10T15:21:00+08:00" />
@@ -36,12 +36,12 @@
 <meta name="twitter:title" content="三小时AJAX从入门到精通"/>
 <meta name="twitter:description" content="AJAX学习的笔记，主要环境为Node.js
 建议搭配视频食用：三小时AJAX从入门到精通
-第一章： Ajax概述 1.1、Ajax简介  Ajax全称为Asynchronous Javascript And XML，即异步JS和XML 通过Ajax可以在浏览器中向服务器发送异步请求，最大的优势：无刷新获取数据 AJAX不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式  1.2 、XML简介   XML：可扩展标记语言
+第一章： Ajax概述 1.1、Ajax简介   Ajax全称为Asynchronous Javascript And XML，即异步JS和XML 通过Ajax可以在浏览器中向服务器发送异步请求，最大的优势：无刷新获取数据 AJAX不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式   1.2 、XML简介    XML：可扩展标记语言
   XML：被设计用来传输和存储数据
-  XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据.比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ;用XML 表示：
-&lt;student&gt; &lt;name&gt;孙悟空&lt;/name&gt; &lt;age&gt;18&lt;/age&gt; &lt;gender&gt;男&lt;/gender&gt; &lt;/student&gt;   现在已被JSON取代
-{&#34;name&#34;:&#34;孙悟空&#34;,&#34;age&#34;:18,&#34;gender&#34;:&#34;男&#34;}   1.3、 AJAX 的特点 1.3.1、AJAX的优点  可以无刷新页面与服务端进行通信 允许你根据用户事件来更新部分页面内容  1.3.2、AJAX 的缺点  没有浏览历史，不能回退 存在跨域问题（同源） SEO不友好（爬虫获取不到信息）  第二章 jQuery中的AJAX 2.1、MDN文档 https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview
-2.2、HTTP 请求交互的基本过程  前后应用从浏览器端向服务器发送HTTP 请求(请求报文) 后台服务器接收到请求后, 调度服务器应用处理请求, 向浏览器端返回HTTP响应(响应报文) 浏览器端接收到响应, 解析显示响应体/调用监视回调  2."/>
+  XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据
+  比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ; 用XML 表示：
+&lt;student&gt; &lt;name&gt;孙悟空&lt;/name&gt; &lt;age&gt;18&lt;/age&gt; &lt;gender&gt;男&lt;/gender&gt; &lt;/student&gt;     现在已被JSON取代
+{&#34;name&#34;:&#34;孙悟空&#34;,&#34;age&#34;:18,&#34;gender&#34;:&#34;男&#34;}    1.3、 AJAX 的特点 Ⅰ、AJAX的优点   可以无刷新页面与服务端进行通信 允许你根据用户事件来更新部分页面内容   Ⅱ、AJAX 的缺点   没有浏览历史，不能回退 存在跨域问题（同源） SEO不友好（爬虫获取不到信息）   第二章 jQuery中的AJAX 2."/>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -143,17 +143,20 @@
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<blockquote>
 <ul>
 <li>Ajax全称为Asynchronous Javascript And XML，即异步JS和XML</li>
 <li>通过Ajax可以在浏览器中向服务器发送异步请求，最大的优势：<strong>无刷新获取数据</strong></li>
 <li>AJAX不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式</li>
 </ul>
+</blockquote>
 <h3 id="12-xml简介">1.2 、XML简介<a href="#12-xml简介" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<blockquote>
 <ul>
 <li>
 <p>XML：可扩展标记语言</p>
@@ -162,45 +165,56 @@
 <p>XML：被设计用来传输和存储数据</p>
 </li>
 <li>
-<p>XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据.比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ;用XML 表示：</p>
+<p>XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据</p>
+<ul>
+<li>
+<p>比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ;
+用XML 表示：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">student</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">name</span><span class="p">&gt;</span>孙悟空<span class="p">&lt;/</span><span class="nt">name</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">age</span><span class="p">&gt;</span>18<span class="p">&lt;/</span><span class="nt">age</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">gender</span><span class="p">&gt;</span>男<span class="p">&lt;/</span><span class="nt">gender</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">name</span><span class="p">&gt;</span>孙悟空<span class="p">&lt;/</span><span class="nt">name</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">age</span><span class="p">&gt;</span>18<span class="p">&lt;/</span><span class="nt">age</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">gender</span><span class="p">&gt;</span>男<span class="p">&lt;/</span><span class="nt">gender</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">student</span><span class="p">&gt;</span>
 </code></pre></div></li>
+</ul>
+</li>
 <li>
 <p>现在已被JSON取代</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;孙悟空&#34;</span><span class="p">,</span><span class="nt">&#34;age&#34;</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span><span class="nt">&#34;gender&#34;</span><span class="p">:</span><span class="s2">&#34;男&#34;</span><span class="p">}</span>
 </code></pre></div></li>
 </ul>
+</blockquote>
 <h3 id="13-ajax-的特点">1.3、 AJAX 的特点<a href="#13-ajax-的特点" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<h4 id="131ajax的优点">1.3.1、AJAX的优点<a href="#131ajax的优点" class="anchor"
+<h4 id="ajax的优点">Ⅰ、AJAX的优点<a href="#ajax的优点" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<blockquote>
 <ul>
 <li>可以无刷新页面与服务端进行通信</li>
 <li>允许你根据用户事件来更新部分页面内容</li>
 </ul>
-<h4 id="132ajax-的缺点">1.3.2、AJAX 的缺点<a href="#132ajax-的缺点" class="anchor"
+</blockquote>
+<h4 id="ajax-的缺点">Ⅱ、AJAX 的缺点<a href="#ajax-的缺点" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<blockquote>
 <ul>
 <li>没有浏览历史，不能回退</li>
 <li>存在跨域问题（同源）</li>
 <li>SEO不友好（爬虫获取不到信息）</li>
 </ul>
+</blockquote>
 <h2 id="第二章-jquery中的ajax">第二章 jQuery中的AJAX<a href="#第二章-jquery中的ajax" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -213,78 +227,80 @@
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<blockquote>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview">https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview</a></p>
+</blockquote>
 <h3 id="22http-请求交互的基本过程">2.2、HTTP 请求交互的基本过程<a href="#22http-请求交互的基本过程" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<p><img src="../../image/AJAX_study/1.png" alt=""></p>
+<blockquote>
 <ol>
 <li>前后应用从浏览器端向服务器发送HTTP 请求(请求报文)</li>
 <li>后台服务器接收到请求后, 调度服务器应用处理请求, 向浏览器端返回HTTP响应(响应报文)</li>
 <li>浏览器端接收到响应, 解析显示响应体/调用监视回调</li>
 </ol>
+<p><img src="../../image/AJAX_study/1.png" alt="HTTP 请求交互的基本过程"></p>
+</blockquote>
 <h3 id="23http请求报文">2.3、HTTP请求报文<a href="#23http请求报文" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<h4 id="231请求行">2.3.1、请求行<a href="#231请求行" class="anchor"
-					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
-						<line x1="8" y1="12" x2="16" y2="12"></line>
-					</svg></a></h4>
+<blockquote>
+<ul>
+<li>
+<p><strong>请求行</strong></p>
 <pre tabindex="0"><code>method url
 GET /product_detail?id=2
 POST /login
-</code></pre><h4 id="232多个请求头">2.3.2、多个请求头<a href="#232多个请求头" class="anchor"
-					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
-						<line x1="8" y1="12" x2="16" y2="12"></line>
-					</svg></a></h4>
+</code></pre></li>
+<li>
+<p><strong>多个请求头</strong></p>
 <pre tabindex="0"><code>Host: www.baidu.com
 Cookie: BAIDUID=AD3B0FA706E; BIDUPSID=AD3B0FA706;
 Content-Type: application/x-www-form-urlencoded 或者application/json
-</code></pre><h4 id="233请求体">2.3.3、请求体<a href="#233请求体" class="anchor"
-					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
-						<line x1="8" y1="12" x2="16" y2="12"></line>
-					</svg></a></h4>
+</code></pre></li>
+<li>
+<p><strong>请求体</strong></p>
 <pre tabindex="0"><code>username=tom&amp;pwd=123
 {&quot;username&quot;: &quot;tom&quot;, &quot;pwd&quot;: 123}
-</code></pre><h3 id="24http-响应报文">2.4、HTTP 响应报文<a href="#24http-响应报文" class="anchor"
+</code></pre></li>
+</ul>
+</blockquote>
+<h3 id="24http-响应报文">2.4、HTTP 响应报文<a href="#24http-响应报文" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<blockquote>
 <ul>
 <li>
-<p>响应状态行:</p>
+<p><strong>响应状态行</strong></p>
 <pre tabindex="0"><code>status statusText
 </code></pre></li>
 <li>
-<p>多个响应头</p>
+<p><strong>多个响应头</strong></p>
 <pre tabindex="0"><code>- Content-Type: text/html;charset=utf-8
 - Set-Cookie: BD_CK_SAM=1;path=/
 </code></pre></li>
 <li>
-<p>响应体</p>
+<p><strong>响应体</strong></p>
 <pre tabindex="0"><code>html 文本/json 文本/js/css/图片...
 </code></pre></li>
 </ul>
+</blockquote>
 <h3 id="25post-请求体参数格式">2.5、post 请求体参数格式<a href="#25post-请求体参数格式" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<blockquote>
 <ul>
 <li>
 <pre tabindex="0"><code>Content-Type: application/x-www-form-urlencoded;charset=utf-8
@@ -301,53 +317,61 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 </code></pre><p>用于文件上传请求</p>
 </li>
 </ul>
+</blockquote>
 <h3 id="26常见的响应状态码">2.6、常见的响应状态码<a href="#26常见的响应状态码" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<p><code>200 OK </code>：请求成功。一般用于GET 与POST 请求
-<code>201 Created</code> ：已创建。成功请求并创建了新的资源
-<code>401 Unauthorized</code> ：未授权/请求要求用户的身份认证
-<code>404 Not Found</code> ：服务器无法根据客户端的请求找到资源
-<code>500 Internal Server Error</code> ：服务器内部错误，无法完成请求</p>
+<blockquote>
+<p><code>200 OK</code> ：请求成功。一般用于GET 与POST 请求</p>
+<p><code>201 Created </code>：已创建。成功请求并创建了新的资源</p>
+<p><code>401 Unauthorized</code> ：未授权/请求要求用户的身份认证</p>
+<p><code>404 Not Found</code> ：服务器无法根据客户端的请求找到资源</p>
+<p><code>500 Internal Server Error</code> ：服务器内部错误，无法完成请求</p>
+</blockquote>
 <h3 id="27不同类型的请求及其作用">2.7、不同类型的请求及其作用<a href="#27不同类型的请求及其作用" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<p><code>GET</code>: 从服务器端读取数据（查）
-<code>POST</code>: 向服务器端添加新数据 （增）
-<code>PUT</code>: 更新服务器端已经数据 （改）
-<code>DELETE</code>: 删除服务器端数据 （删）</p>
+<blockquote>
+<p><code>GET</code>: 从服务器端读取数据（查）</p>
+<p><code>POST</code>: 向服务器端添加新数据 （增）</p>
+<p><code>PUT</code>: 更新服务器端已经数据 （改）</p>
+<p><code>DELETE</code>: 删除服务器端数据 （删）</p>
+</blockquote>
 <h3 id="28api-的分类">2.8、API 的分类<a href="#28api-的分类" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<blockquote>
 <ol>
 <li>
-<p>REST API: restful （Representational State Transfer (资源)表现层状态转化）</p>
+<p><strong>REST API</strong>: restful （Representational State Transfer (资源)表现层状态转化）</p>
 <p>(1) 发送请求进行CRUD 哪个操作由请求方式来决定</p>
 <p>(2) 同一个请求路径可以进行多个操作</p>
 <p>(3) 请求方式会用到GET/POST/PUT/DELETE</p>
 </li>
 <li>
-<p>非REST API: restless</p>
+<p><strong>非REST API</strong>: restless</p>
 <p>(1) 请求方式不决定请求的CRUD 操作</p>
 <p>(2) 一个请求路径只对应一个操作</p>
 <p>(3) 一般只有GET/POST</p>
 </li>
 </ol>
+</blockquote>
 <h3 id="29区别-一般http请求-与-ajax请求">2.9、区别 一般http请求 与 ajax请求<a href="#29区别-一般http请求-与-ajax请求" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<blockquote>
 <ol>
 <li>
 <p>ajax请求 是一种特别的 http请求</p>
@@ -364,6 +388,7 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 <p>(2) ajax请求: 浏览器不会对界面进行任何更新操作, 只是调用监视的回调函数并传入响应相关数据</p>
 </li>
 </ol>
+</blockquote>
 <h2 id="第三章-原生ajax-的基本使用-xhr">第三章 原生AJAX 的基本使用 XHR<a href="#第三章-原生ajax-的基本使用-xhr" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -376,31 +401,35 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<h4 id="301安装nodejs">3.0.1、安装node.js<a href="#301安装nodejs" class="anchor"
+<h4 id="301-安装nodejs">3.0.1 安装node.js<a href="#301-安装nodejs" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<blockquote>
 <p><a href="http://nodejs.cn/">http://nodejs.cn/</a></p>
-<h4 id="302安装express服务端框架">3.0.2、安装express（服务端框架）<a href="#302安装express服务端框架" class="anchor"
+</blockquote>
+<h4 id="302-安装express服务端框架">3.0.2 安装express（服务端框架）<a href="#302-安装express服务端框架" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<blockquote>
 <p><a href="https://www.expressjs.com.cn/">https://www.expressjs.com.cn/</a></p>
+</blockquote>
 <ol>
-<li>初始化环境</li>
-</ol>
+<li>
+<p><strong>初始化环境</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">npm</span> <span class="n">init</span> <span class="o">--</span><span class="n">yes</span>
-</code></pre></div><ol start="2">
-<li>下载express包</li>
-</ol>
+</code></pre></div></li>
+<li>
+<p><strong>下载express包</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">npm</span> <span class="n">install</span> <span class="n">express</span> <span class="o">--</span><span class="n">save</span>
-</code></pre></div><ol start="3">
-<li>编写js代码</li>
-</ol>
+</code></pre></div></li>
+<li>
+<p><strong>编写js代码</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 1. 引入express
 </span><span class="c1"></span><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
 
@@ -419,58 +448,66 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 </span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8000</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;服务已经启动, 8000 端口监听中...&#34;</span><span class="p">);</span>
  <span class="p">})</span>
-</code></pre></div><ol start="4">
-<li>运行js程序</li>
-</ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">node</span> <span class="n">express</span><span class="p">.</span><span class="n">js</span>
-</code></pre></div><ol start="5">
-<li>打开网页显示页面</li>
+</code></pre></div></li>
+<li>
+<p><strong>运行js程序</strong></p>
+<pre tabindex="0"><code>node express.js
+</code></pre></li>
+<li>
+<p><strong>打开网页显示页面</strong></p>
+</li>
 </ol>
 <p><img src="../../image/AJAX_study/2.png" alt=""></p>
 <ol start="6">
-<li>调试程序可以查看请求和响应</li>
+<li><strong>调试程序可以查看请求和响应</strong></li>
 </ol>
 <p><img src="../../image/AJAX_study/3.png" alt=""></p>
-<h4 id="303安装nodemon自动重启工具">3.0.3、安装nodemon自动重启工具<a href="#303安装nodemon自动重启工具" class="anchor"
+<h4 id="303-安装nodemon自动重启工具">3.0.3 安装nodemon自动重启工具<a href="#303-安装nodemon自动重启工具" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<blockquote>
 <p>文件内容有修改自动重新启动服务:<a href="https://www.npmjs.com/package/nodemon">https://www.npmjs.com/package/nodemon</a></p>
+</blockquote>
 <ul>
-<li>安装:</li>
-</ul>
+<li>
+<p>安装:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">nodemon</span>
-</code></pre></div><ul>
-<li>启动服务:</li>
-</ul>
+</code></pre></div></li>
+<li>
+<p>启动服务:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">ndoemon</span> <span class="n">server</span><span class="p">.</span><span class="n">js</span>
-</code></pre></div><h3 id="31-理解">3.1、 理解<a href="#31-理解" class="anchor"
+</code></pre></div></li>
+</ul>
+<h3 id="31-理解">3.1、 理解<a href="#31-理解" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<blockquote>
 <ol>
 <li>使用<code>XMLHttpRequest</code> (XHR)对象可以与服务器交互, 也就是发送ajax 请求</li>
 <li>前端可以获取到数据，而无需让整个的页面刷新。</li>
 <li>这使得Web 页面可以只更新页面的局部，而不影响用户的操作。</li>
 </ol>
+</blockquote>
 <h3 id="32-核心对象使用步骤">3.2 、核心对象使用步骤<a href="#32-核心对象使用步骤" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<h4 id="321创建xmlhttprequest-对象">3.2.1、创建XMLHttpRequest 对象<a href="#321创建xmlhttprequest-对象" class="anchor"
+<h4 id="321-创建xmlhttprequest-对象">3.2.1 创建XMLHttpRequest 对象<a href="#321-创建xmlhttprequest-对象" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">var xhr = new XMLHttpRequest();
-</code></pre></div><h4 id="322设置请求信息请求方法和url">3.2.2、设置请求信息（请求方法和url）<a href="#322设置请求信息请求方法和url" class="anchor"
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+</code></pre></div><h4 id="322-设置请求信息请求方法和url">3.2.2 设置请求信息（请求方法和url）<a href="#322-设置请求信息请求方法和url" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
@@ -480,14 +517,14 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 </span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">url</span><span class="p">);</span>
 <span class="c1">//可以设置请求头，一般不设置
 </span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/x-www-form-urlencoded&#39;</span><span class="p">);</span>
-</code></pre></div><h4 id="323发送请求">3.2.3、发送请求<a href="#323发送请求" class="anchor"
+</code></pre></div><h4 id="323-发送请求">3.2.3 发送请求<a href="#323-发送请求" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span> <span class="c1">//get请求不传 body 参数，只有post请求使用
-</span></code></pre></div><h4 id="324接收响应事件绑定处理服务端返回的结果">3.2.4、接收响应（事件绑定，处理服务端返回的结果）<a href="#324接收响应事件绑定处理服务端返回的结果" class="anchor"
+</span></code></pre></div><h4 id="324-接收响应事件绑定处理服务端返回的结果">3.2.4 接收响应（事件绑定，处理服务端返回的结果）<a href="#324-接收响应事件绑定处理服务端返回的结果" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
@@ -508,15 +545,17 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<h4 id="331get-请求">3.3.1、GET 请求<a href="#331get-请求" class="anchor"
+<h4 id="331-get-请求">3.3.1 GET 请求<a href="#331-get-请求" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<blockquote>
 <p>创建两个文件，浏览器端使用的html文件和服务器端使用的js文件</p>
+</blockquote>
 <p><img src="../../image/AJAX_study/4.png" alt=""></p>
-<p>服务器端 server.js</p>
+<p><strong>服务器端 server.js</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 1. 引入express
 </span><span class="c1"></span><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
 
@@ -535,9 +574,10 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 </span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8000</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;服务已经启动, 8000 端口监听中...&#34;</span><span class="p">);</span>
  <span class="p">})</span>
-</code></pre></div><p>启动服务</p>
+
+</code></pre></div><p><strong>启动服务</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">node</span> <span class="n">server</span><span class="p">.</span><span class="n">js</span>
-</code></pre></div><p>前端页面 html</p>
+</code></pre></div><p><strong>前端页面 html</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -592,25 +632,29 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
   <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+
 </code></pre></div><p><img src="../../image/AJAX_study/5.gif" alt=""></p>
-<p>设置url参数</p>
+<p><strong>设置url参数</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;http://127.0.0.1:8000/server?a=100&amp;b=200&amp;c=300&#39;</span><span class="p">);</span>
 </code></pre></div><p><img src="../../image/AJAX_study/6.png" alt=""></p>
-<h4 id="332post请求">3.3.2、POST请求<a href="#332post请求" class="anchor"
+<h4 id="332-post请求">3.3.2 POST请求<a href="#332-post请求" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<blockquote>
 <p>鼠标放到div中，发post请求，将响应体放在div中呈现</p>
-<p>server.js添加post</p>
+</blockquote>
+<p><strong>server.js添加post</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/server&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="c1">// 设置响应头, 设置允许跨域
 </span><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">);</span>
   <span class="c1">// 设置响应体
 </span><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">&#34;Hello Ajax POST&#34;</span><span class="p">);</span>
 <span class="p">});</span>
-</code></pre></div><p>post.html</p>
+
+</code></pre></div><p><strong>post.html</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -653,6 +697,7 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
   <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+
 </code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 设置请求体内容的类型
 </span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequesHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span><span class="s1">&#39;application/x-www-from-urlencoded&#39;</span><span class="p">);</span>
 <span class="c1">// 自定义头信息
@@ -679,6 +724,7 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
   <span class="c1">// 设置响应体
 </span><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
 <span class="p">});</span>
+
 </code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -725,6 +771,7 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
   <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+
 </code></pre></div><h3 id="35-请求超时与网络异常">3.5 、请求超时与网络异常<a href="#35-请求超时与网络异常" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -761,7 +808,12 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<p><strong>问题</strong>：在一些浏览器中(IE),由于缓存机制的存在，ajax 只会发送的第一次请求，剩余多次请求不会在发送给浏览器而是直接加载缓存中的数据。<strong>解决方式</strong>：浏览器的缓存是根据url 地址来记录的，所以我们只需要修改url 地址即可避免缓存问题</p>
+<blockquote>
+<p><strong>问题</strong>：</p>
+<p>在一些浏览器中(IE),由于缓存机制的存在，ajax 只会发送的第一次请求，剩余多次请求不会在发送给浏览器而是直接加载缓存中的数据。</p>
+<p><strong>解决方式</strong>：</p>
+<p>浏览器的缓存是根据url 地址来记录的，所以我们只需要修改url 地址即可避免缓存问题.</p>
+</blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&#34;get&#34;</span><span class="p">,</span><span class="s2">&#34;/testAJAX?t=&#34;</span><span class="o">+</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">());</span>
 </code></pre></div><h3 id="39-ajax-请求状态">3.9 、AJAX 请求状态<a href="#39-ajax-请求状态" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -769,21 +821,24 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<blockquote>
 <p><code>xhr.readyState</code> 可以用来查看请求当前的状态
 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/readyState">https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/readyState</a></p>
 <ul>
 <li><code>0</code>: 表示XMLHttpRequest 实例已经生成，但是open()方法还没有被调用</li>
-<li><code>1</code>:表示send()方法还没有被调用，仍然可以使用setRequestHeader()，设定HTTP请求的头信息</li>
+<li><code>1</code>: 表示send()方法还没有被调用，仍然可以使用setRequestHeader()，设定HTTP请求的头信息</li>
 <li><code>2</code>: 表示send()方法已经执行，并且头信息和状态码已经收到</li>
 <li><code>3</code>: 表示正在接收服务器传来的body 部分的数据</li>
 <li><code>4</code>: 表示服务器数据已经完全接收，或者本次接收已经失败了</li>
 </ul>
+</blockquote>
 <h3 id="310-api总结">3.10 、API总结<a href="#310-api总结" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<blockquote>
 <ul>
 <li><code>XMLHttpRequest()</code>：创建 XHR 对象的构造函数</li>
 <li><code>status</code>：响应状态码值，如 200、404</li>
@@ -802,6 +857,7 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 <li><code>getAllResponseHeaders()</code>：获取所有响应头组成的字符串</li>
 <li><code>setRequestHeader(name, value)</code>：设置请求头</li>
 </ul>
+</blockquote>
 <h2 id="第四章-jquery中的ajax">第四章 JQuery中的AJAX<a href="#第四章-jquery中的ajax" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -814,32 +870,37 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">[</span><span class="nx">data</span><span class="p">],</span> <span class="p">[</span><span class="nx">callback</span><span class="p">],</span> <span class="p">[</span><span class="nx">type</span><span class="p">])</span>
 </code></pre></div><ul>
-<li><code>url:</code>请求的URL 地址</li>
-<li><code>data:</code>请求携带的参数</li>
-<li><code>callback:</code>载入成功时回调函数</li>
-<li><code>type:</code>设置返回内容格式，xml, html, script, json, text, _default</li>
+<li>url:请求的URL 地址</li>
+<li>data:请求携带的参数</li>
+<li>callback:载入成功时回调函数</li>
+<li>type:设置返回内容格式，xml, html, script, json, text, _default</li>
 </ul>
+</blockquote>
 <h3 id="42-post-请求">4.2 、post 请求<a href="#42-post-请求" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">[</span><span class="nx">data</span><span class="p">],</span> <span class="p">[</span><span class="nx">callback</span><span class="p">],</span> <span class="p">[</span><span class="nx">type</span><span class="p">])</span>
-</code></pre></div><ul>
-<li><code>url:</code>请求的URL 地址</li>
-<li><code>data:</code>请求携带的参数</li>
-<li><code>callback:</code>载入成功时回调函数</li>
-<li><code>type:</code>设置返回内容格式，xml, html, script, json, text, _default</li>
+<blockquote>
+<pre tabindex="0"><code>$.post(url, [data], [callback], [type])
+</code></pre><ul>
+<li>url:请求的URL 地址</li>
+<li>data:请求携带的参数</li>
+<li>callback:载入成功时回调函数</li>
+<li>type:设置返回内容格式，xml, html, script, json, text, _default</li>
 </ul>
-<h3 id="43通用方法">4.3、通用方法<a href="#43通用方法" class="anchor"
+</blockquote>
+<h3 id="43-通用方法">4.3 通用方法<a href="#43-通用方法" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
 	<span class="c1">// url
 </span><span class="c1"></span>	<span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://127.0.0.1:8000/jquery-server&#39;</span><span class="p">,</span>
@@ -861,13 +922,14 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 		<span class="nx">d</span><span class="o">:</span> <span class="mi">400</span>
 	<span class="p">}</span>
 <span class="p">})</span>
-</code></pre></div><h2 id="第五章-跨域">第五章 跨域<a href="#第五章-跨域" class="anchor"
+</code></pre></div></blockquote>
+<h2 id="第五章-跨域">第五章 跨域<a href="#第五章-跨域" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h2>
-<p>推荐阅读：</p>
+<p><strong>推荐阅读：</strong></p>
 <ul>
 <li><a href="https://segmentfault.com/a/1190000015450909">前端跨域策略实践</a></li>
 <li><a href="https://segmentfault.com/a/1190000015597029">不要再问我跨域问题了</a></li>
@@ -878,6 +940,7 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<blockquote>
 <ul>
 <li>
 <p>同源策略（Same-Origin Policy）最早由 Netscape 公司提出，是浏览器的一种安全策略。</p>
@@ -889,30 +952,32 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 <p>违背同源策略就是跨域</p>
 </li>
 </ul>
+</blockquote>
 <h3 id="52-如何解决跨域">5.2 、如何解决跨域<a href="#52-如何解决跨域" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<h4 id="521jsonp">5.2.1、JSONP<a href="#521jsonp" class="anchor"
+<h4 id="521-jsonp">5.2.1 JSONP<a href="#521-jsonp" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
+<blockquote>
 <ol>
 <li>
-<p>JSONP是什么</p>
+<p><strong>JSONP是什么</strong></p>
 <p>JSONP (JSON with Padding)，是一个非官方的跨域解决方案，纯粹凭借程序员的聪明才智开发出来，只支持get请求。</p>
 </li>
 <li>
-<p>JSONP 怎么工作的？</p>
+<p><strong>JSONP 怎么工作的？</strong></p>
 <p>在网页有一些标签天生具有跨域能力，比如：img, link, iframe, script。</p>
 <p>JSONP就是利用<strong>script</strong>标签的跨域能力来发送请求的。</p>
 </li>
 <li>
-<p>JSONP的使用</p>
+<p><strong>JSONP的使用</strong></p>
 <ul>
 <li>动态的创建一个script标签</li>
 </ul>
@@ -942,7 +1007,7 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 <span class="p">});</span>
 </code></pre></div></li>
 <li>
-<p>jQuery 中的JSONP</p>
+<p><strong>jQuery 中的JSONP</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
 	<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -974,14 +1039,17 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 		<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+
 </code></pre></div></li>
 </ol>
-<h3 id="522cors">5.2.2、CORS<a href="#522cors" class="anchor"
+</blockquote>
+<h3 id="522-cors">5.2.2 CORS<a href="#522-cors" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
+<blockquote>
 <p>推荐阅读：</p>
 <ul>
 <li><a href="http://www.ruanyifeng.com/blog/2016/04/cors.html">http://www.ruanyifeng.com/blog/2016/04/cors.html</a></li>
@@ -989,24 +1057,24 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 </ul>
 <ol>
 <li>
-<p>CORS是什么？</p>
+<p><strong>CORS是什么？</strong></p>
 <p>CORS (Cross-Origin Resource Sharing), 跨域资源共享。CORS 是官方的跨域解决方案，它的特点是不需要在客户端做任何特殊的操作，完全在服务器中进行处理，支持 get 和 post 等请求。跨域资源共享标准新增了一组 HTTP  首部字段（响应头），允许服务器声明哪些源站通过浏览器有权限访问哪些资源</p>
 </li>
 <li>
-<p>CORS怎么工作的？</p>
+<p><strong>CORS怎么工作的？</strong></p>
 <p>CORS 是通过设置一个响应头来告诉浏览器，该请求允许跨域，浏览器收到该响应以后就会对响应放行。</p>
 </li>
 <li>
-<p>CORS 的使用</p>
+<p><strong>CORS 的使用</strong></p>
 <p>主要是服务端的设置：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;/testAJAX&#34;</span> <span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span> <span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">//通过res 来设置响应头，来允许跨域请求
 </span><span class="c1"></span>	<span class="c1">//res.set(&#34;Access-Control-Allow-Origin&#34;,&#34;http://127.0.0.1:3000&#34;);
 </span><span class="c1"></span>	<span class="nx">res</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&#34;Access-Control-Allow-Origin&#34;</span><span class="p">,</span><span class="s2">&#34;*&#34;</span><span class="p">);</span>
-	<span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">&#34;testAJAX 返回的响应&#34;</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div></li>
 </ol>
+</blockquote>
 
 		</div>
 		<hr class="post-end">
@@ -1027,7 +1095,7 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 					<line x1="16" y1="13" x2="8" y2="13"></line>
 					<line x1="16" y1="17" x2="8" y2="17"></line>
 					<polyline points="10 9 9 9 8 9"></polyline>
-				</svg>1155 Words</p>
+				</svg>1171 Words</p>
 			<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
 					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
 					class="feather feather-calendar">
@@ -1083,14 +1151,14 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
       <ul>
         <li><a href="#41-get-请求">4.1 、get 请求</a></li>
         <li><a href="#42-post-请求">4.2 、post 请求</a></li>
-        <li><a href="#43通用方法">4.3、通用方法</a></li>
+        <li><a href="#43-通用方法">4.3 通用方法</a></li>
       </ul>
     </li>
     <li><a href="#第五章-跨域">第五章 跨域</a>
       <ul>
         <li><a href="#51-同源策略">5.1 、同源策略</a></li>
         <li><a href="#52-如何解决跨域">5.2 、如何解决跨域</a></li>
-        <li><a href="#522cors">5.2.2、CORS</a></li>
+        <li><a href="#522-cors">5.2.2 CORS</a></li>
       </ul>
     </li>
   </ul>
