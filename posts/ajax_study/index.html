@@ -10,23 +10,27 @@
 <meta itemprop="name" content="三小时AJAX从入门到精通">
 <meta itemprop="description" content="AJAX学习的笔记，主要环境为Node.js
 建议搭配视频食用：三小时AJAX从入门到精通
- 第一章： Ajax概述 1.1、Ajax简介   Ajax全称为Asynchronous Javascript And XML，即异步JS和XML 通过Ajax可以在浏览器中向服务器发送异步请求，最大的优势：无刷新获取数据 AJAX不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式   1.2 、XML简介    XML：可扩展标记语言
-  XML：被设计用来传输和存储数据
-  XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据
-  比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ; 用XML 表示：
-&lt;student&gt; &lt;name&gt;孙悟空&lt;/name&gt; &lt;age&gt;18&lt;/age&gt; &lt;gender&gt;男&lt;/gender&gt; &lt;/student&gt;     现在已被JSON取代
-{&#34;name&#34;:&#34;孙悟空&#34;,&#34;age&#34;:18,&#34;gender&#34;:&#34;男&#34;}    1.3、 AJAX 的特点 Ⅰ、AJAX的优点   可以无刷新页面与服务端进行通信 允许你根据用户事件来更新部分页面内容   Ⅱ、AJAX 的缺点   没有浏览历史，不能回退 存在跨域问题（同源） SEO不友好（爬虫获取不到信息）    第二章 jQuery中的AJAX 2."><meta itemprop="datePublished" content="2022-03-10T15:21:00+08:00" />
+第一章： Ajax概述 1.1、Ajax简介 Ajax全称为Asynchronous Javascript And XML，即异步JS和XML 通过Ajax可以在浏览器中向服务器发送异步请求，最大的优势：无刷新获取数据 AJAX不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式 1.2 、XML简介 XML：可扩展标记语言
+XML：被设计用来传输和存储数据
+XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据
+比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ; 用XML 表示：
+&lt;student&gt; &lt;name&gt;孙悟空&lt;/name&gt; &lt;age&gt;18&lt;/age&gt; &lt;gender&gt;男&lt;/gender&gt; &lt;/student&gt; 现在已被JSON取代
+{&#34;name&#34;:&#34;孙悟空&#34;,&#34;age&#34;:18,&#34;gender&#34;:&#34;男&#34;} 1.3、 AJAX 的特点 Ⅰ、AJAX的优点 可以无刷新页面与服务端进行通信 允许你根据用户事件来更新部分页面内容 Ⅱ、AJAX 的缺点 没有浏览历史，不能回退 存在跨域问题（同源） SEO不友好（爬虫获取不到信息） 第二章 jQuery中的AJAX 2.1、MDN文档 https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview
+2.2、HTTP 请求交互的基本过程 前后应用从浏览器端向服务器发送HTTP 请求(请求报文) 后台服务器接收到请求后, 调度服务器应用处理请求, 向浏览器端返回HTTP响应(响应报文) 浏览器端接收到响应, 解析显示响应体/调用监视回调 2.3、HTTP请求报文 请求行
+method url GET /product_detail?id=2 POST /login 多个请求头"><meta itemprop="datePublished" content="2022-03-10T15:21:00+08:00" />
 <meta itemprop="dateModified" content="2022-03-10T15:21:00+08:00" />
 <meta itemprop="wordCount" content="1171">
 <meta itemprop="keywords" content="front-end," /><meta property="og:title" content="三小时AJAX从入门到精通" />
 <meta property="og:description" content="AJAX学习的笔记，主要环境为Node.js
 建议搭配视频食用：三小时AJAX从入门到精通
- 第一章： Ajax概述 1.1、Ajax简介   Ajax全称为Asynchronous Javascript And XML，即异步JS和XML 通过Ajax可以在浏览器中向服务器发送异步请求，最大的优势：无刷新获取数据 AJAX不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式   1.2 、XML简介    XML：可扩展标记语言
-  XML：被设计用来传输和存储数据
-  XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据
-  比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ; 用XML 表示：
-&lt;student&gt; &lt;name&gt;孙悟空&lt;/name&gt; &lt;age&gt;18&lt;/age&gt; &lt;gender&gt;男&lt;/gender&gt; &lt;/student&gt;     现在已被JSON取代
-{&#34;name&#34;:&#34;孙悟空&#34;,&#34;age&#34;:18,&#34;gender&#34;:&#34;男&#34;}    1.3、 AJAX 的特点 Ⅰ、AJAX的优点   可以无刷新页面与服务端进行通信 允许你根据用户事件来更新部分页面内容   Ⅱ、AJAX 的缺点   没有浏览历史，不能回退 存在跨域问题（同源） SEO不友好（爬虫获取不到信息）    第二章 jQuery中的AJAX 2." />
+第一章： Ajax概述 1.1、Ajax简介 Ajax全称为Asynchronous Javascript And XML，即异步JS和XML 通过Ajax可以在浏览器中向服务器发送异步请求，最大的优势：无刷新获取数据 AJAX不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式 1.2 、XML简介 XML：可扩展标记语言
+XML：被设计用来传输和存储数据
+XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据
+比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ; 用XML 表示：
+&lt;student&gt; &lt;name&gt;孙悟空&lt;/name&gt; &lt;age&gt;18&lt;/age&gt; &lt;gender&gt;男&lt;/gender&gt; &lt;/student&gt; 现在已被JSON取代
+{&#34;name&#34;:&#34;孙悟空&#34;,&#34;age&#34;:18,&#34;gender&#34;:&#34;男&#34;} 1.3、 AJAX 的特点 Ⅰ、AJAX的优点 可以无刷新页面与服务端进行通信 允许你根据用户事件来更新部分页面内容 Ⅱ、AJAX 的缺点 没有浏览历史，不能回退 存在跨域问题（同源） SEO不友好（爬虫获取不到信息） 第二章 jQuery中的AJAX 2.1、MDN文档 https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview
+2.2、HTTP 请求交互的基本过程 前后应用从浏览器端向服务器发送HTTP 请求(请求报文) 后台服务器接收到请求后, 调度服务器应用处理请求, 向浏览器端返回HTTP响应(响应报文) 浏览器端接收到响应, 解析显示响应体/调用监视回调 2.3、HTTP请求报文 请求行
+method url GET /product_detail?id=2 POST /login 多个请求头" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://LeiBuDao.github.io/posts/ajax_study/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-03-10T15:21:00+08:00" />
@@ -36,12 +40,14 @@
 <meta name="twitter:title" content="三小时AJAX从入门到精通"/>
 <meta name="twitter:description" content="AJAX学习的笔记，主要环境为Node.js
 建议搭配视频食用：三小时AJAX从入门到精通
- 第一章： Ajax概述 1.1、Ajax简介   Ajax全称为Asynchronous Javascript And XML，即异步JS和XML 通过Ajax可以在浏览器中向服务器发送异步请求，最大的优势：无刷新获取数据 AJAX不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式   1.2 、XML简介    XML：可扩展标记语言
-  XML：被设计用来传输和存储数据
-  XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据
-  比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ; 用XML 表示：
-&lt;student&gt; &lt;name&gt;孙悟空&lt;/name&gt; &lt;age&gt;18&lt;/age&gt; &lt;gender&gt;男&lt;/gender&gt; &lt;/student&gt;     现在已被JSON取代
-{&#34;name&#34;:&#34;孙悟空&#34;,&#34;age&#34;:18,&#34;gender&#34;:&#34;男&#34;}    1.3、 AJAX 的特点 Ⅰ、AJAX的优点   可以无刷新页面与服务端进行通信 允许你根据用户事件来更新部分页面内容   Ⅱ、AJAX 的缺点   没有浏览历史，不能回退 存在跨域问题（同源） SEO不友好（爬虫获取不到信息）    第二章 jQuery中的AJAX 2."/>
+第一章： Ajax概述 1.1、Ajax简介 Ajax全称为Asynchronous Javascript And XML，即异步JS和XML 通过Ajax可以在浏览器中向服务器发送异步请求，最大的优势：无刷新获取数据 AJAX不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式 1.2 、XML简介 XML：可扩展标记语言
+XML：被设计用来传输和存储数据
+XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据
+比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ; 用XML 表示：
+&lt;student&gt; &lt;name&gt;孙悟空&lt;/name&gt; &lt;age&gt;18&lt;/age&gt; &lt;gender&gt;男&lt;/gender&gt; &lt;/student&gt; 现在已被JSON取代
+{&#34;name&#34;:&#34;孙悟空&#34;,&#34;age&#34;:18,&#34;gender&#34;:&#34;男&#34;} 1.3、 AJAX 的特点 Ⅰ、AJAX的优点 可以无刷新页面与服务端进行通信 允许你根据用户事件来更新部分页面内容 Ⅱ、AJAX 的缺点 没有浏览历史，不能回退 存在跨域问题（同源） SEO不友好（爬虫获取不到信息） 第二章 jQuery中的AJAX 2.1、MDN文档 https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview
+2.2、HTTP 请求交互的基本过程 前后应用从浏览器端向服务器发送HTTP 请求(请求报文) 后台服务器接收到请求后, 调度服务器应用处理请求, 向浏览器端返回HTTP响应(响应报文) 浏览器端接收到响应, 解析显示响应体/调用监视回调 2.3、HTTP请求报文 请求行
+method url GET /product_detail?id=2 POST /login 多个请求头"/>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -171,18 +177,18 @@
 <li>
 <p>比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ;
 用XML 表示：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">student</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">name</span><span class="p">&gt;</span>孙悟空<span class="p">&lt;/</span><span class="nt">name</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">age</span><span class="p">&gt;</span>18<span class="p">&lt;/</span><span class="nt">age</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">gender</span><span class="p">&gt;</span>男<span class="p">&lt;/</span><span class="nt">gender</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">student</span><span class="p">&gt;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">student</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">name</span><span class="p">&gt;</span>孙悟空<span class="p">&lt;/</span><span class="nt">name</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">age</span><span class="p">&gt;</span>18<span class="p">&lt;/</span><span class="nt">age</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">gender</span><span class="p">&gt;</span>男<span class="p">&lt;/</span><span class="nt">gender</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">student</span><span class="p">&gt;</span>
+</span></span></code></pre></div></li>
 </ul>
 </li>
 <li>
 <p>现在已被JSON取代</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;孙悟空&#34;</span><span class="p">,</span><span class="nt">&#34;age&#34;</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span><span class="nt">&#34;gender&#34;</span><span class="p">:</span><span class="s2">&#34;男&#34;</span><span class="p">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;孙悟空&#34;</span><span class="p">,</span><span class="nt">&#34;age&#34;</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span><span class="nt">&#34;gender&#34;</span><span class="p">:</span><span class="s2">&#34;男&#34;</span><span class="p">}</span>
+</span></span></code></pre></div></li>
 </ul>
 </blockquote>
 <h3 id="13-ajax-的特点">1.3、 AJAX 的特点<a href="#13-ajax-的特点" class="anchor"
@@ -269,7 +275,7 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 <li>
 <p><strong>请求体</strong></p>
 <pre tabindex="0"><code>username=tom&amp;pwd=123
-{&quot;username&quot;: &quot;tom&quot;, &quot;pwd&quot;: 123}
+{&#34;username&#34;: &#34;tom&#34;, &#34;pwd&#34;: 123}
 </code></pre></li>
 </ul>
 </blockquote>
@@ -425,33 +431,33 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 <ol>
 <li>
 <p><strong>初始化环境</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">npm</span> <span class="n">init</span> <span class="o">--</span><span class="n">yes</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">npm</span> <span class="n">init</span> <span class="o">--</span><span class="n">yes</span>
+</span></span></code></pre></div></li>
 <li>
 <p><strong>下载express包</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">npm</span> <span class="n">install</span> <span class="n">express</span> <span class="o">--</span><span class="n">save</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">npm</span> <span class="n">install</span> <span class="n">express</span> <span class="o">--</span><span class="n">save</span>
+</span></span></code></pre></div></li>
 <li>
 <p><strong>编写js代码</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 1. 引入express
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
-
-<span class="c1">// 2. 创建应用对象
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
-
-<span class="c1">// 3. 创建路由规则
-</span><span class="c1">// request 是对请求报文的封装
-</span><span class="c1">// response 是对响应报文的封装
-</span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="c1">//  设置响应
-</span><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">&#34;Hello Express&#34;</span><span class="p">);</span>
-<span class="p">});</span>
-
-<span class="c1">// 4. 监听端口，启动服务
-</span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8000</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;服务已经启动, 8000 端口监听中...&#34;</span><span class="p">);</span>
- <span class="p">})</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 1. 引入express
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 2. 创建应用对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 3. 创建路由规则
+</span></span></span><span class="line"><span class="cl"><span class="c1">// request 是对请求报文的封装
+</span></span></span><span class="line"><span class="cl"><span class="c1">// response 是对响应报文的封装
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//  设置响应
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">&#34;Hello Express&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 4. 监听端口，启动服务
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8000</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;服务已经启动, 8000 端口监听中...&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> <span class="p">})</span>
+</span></span></code></pre></div></li>
 <li>
 <p><strong>运行js程序</strong></p>
 <pre tabindex="0"><code>node express.js
@@ -477,12 +483,12 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 <ul>
 <li>
 <p>安装:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">nodemon</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">nodemon</span>
+</span></span></code></pre></div></li>
 <li>
 <p>启动服务:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">ndoemon</span> <span class="n">server</span><span class="p">.</span><span class="n">js</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">ndoemon</span> <span class="n">server</span><span class="p">.</span><span class="n">js</span>
+</span></span></code></pre></div></li>
 </ul>
 <h3 id="31-理解">3.1、 理解<a href="#31-理解" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -509,40 +515,40 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-</code></pre></div><h4 id="322-设置请求信息请求方法和url">3.2.2 设置请求信息（请求方法和url）<a href="#322-设置请求信息请求方法和url" class="anchor"
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+</span></span></code></pre></div><h4 id="322-设置请求信息请求方法和url">3.2.2 设置请求信息（请求方法和url）<a href="#322-设置请求信息请求方法和url" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 请求方式
-</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">url</span><span class="p">);</span>
-<span class="c1">//可以设置请求头，一般不设置
-</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/x-www-form-urlencoded&#39;</span><span class="p">);</span>
-</code></pre></div><h4 id="323-发送请求">3.2.3 发送请求<a href="#323-发送请求" class="anchor"
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 请求方式
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//可以设置请求头，一般不设置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/x-www-form-urlencoded&#39;</span><span class="p">);</span>
+</span></span></code></pre></div><h4 id="323-发送请求">3.2.3 发送请求<a href="#323-发送请求" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span> <span class="c1">//get请求不传 body 参数，只有post请求使用
-</span></code></pre></div><h4 id="324-接收响应事件绑定处理服务端返回的结果">3.2.4 接收响应（事件绑定，处理服务端返回的结果）<a href="#324-接收响应事件绑定处理服务端返回的结果" class="anchor"
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span> <span class="c1">//get请求不传 body 参数，只有post请求使用
+</span></span></span></code></pre></div><h4 id="324-接收响应事件绑定处理服务端返回的结果">3.2.4 接收响应（事件绑定，处理服务端返回的结果）<a href="#324-接收响应事件绑定处理服务端返回的结果" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">//xhr.responseXML 接收 xml格式 的响应数据
-</span><span class="c1">//xhr.responseText 接收 文本格式 的响应数据
-</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(){</span>
-	<span class="c1">// readyState 是 xhr对象中的属性, 表示状态 0 1 2 3 4
-</span><span class="c1"></span>	<span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">==</span> <span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">){</span>
-		<span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
-		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><h3 id="33-使用案例">3.3 、使用案例<a href="#33-使用案例" class="anchor"
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//xhr.responseXML 接收 xml格式 的响应数据
+</span></span></span><span class="line"><span class="cl"><span class="c1">//xhr.responseText 接收 文本格式 的响应数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(){</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// readyState 是 xhr对象中的属性, 表示状态 0 1 2 3 4
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">==</span> <span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">		<span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="33-使用案例">3.3 、使用案例<a href="#33-使用案例" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
@@ -559,87 +565,85 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 </blockquote>
 <p><img src="../../image/AJAX_study/4.png" alt=""></p>
 <p><strong>服务器端 server.js</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 1. 引入express
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
-
-<span class="c1">// 2. 创建应用对象
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
-
-<span class="c1">// 3. 创建路由规则
-</span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/server&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="c1">// 设置响应头 设置允许跨域
-</span><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">);</span>
-  <span class="c1">// 设置响应体
-</span><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">&#34;Hello Ajax&#34;</span><span class="p">);</span>
-<span class="p">});</span>
-
-<span class="c1">// 4. 监听服务
-</span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8000</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;服务已经启动, 8000 端口监听中...&#34;</span><span class="p">);</span>
- <span class="p">})</span>
-
-</code></pre></div><p><strong>启动服务</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">node</span> <span class="n">server</span><span class="p">.</span><span class="n">js</span>
-</code></pre></div><p><strong>前端页面 html</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;X-UA-Compatible&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;IE=edge&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ajax GET 请求<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-    <span class="p">#</span><span class="nn">result</span> <span class="p">{</span>
-      <span class="k">width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
-      <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
-      <span class="k">border</span><span class="p">:</span> <span class="kc">solid</span> <span class="mi">1</span><span class="kt">px</span> <span class="mh">#90b</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>点击发送请求<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;result&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="c1">//获取button元素
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
-    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;result&#39;</span><span class="p">);</span>
-    <span class="c1">//绑定事件
-</span><span class="c1"></span>    <span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-      <span class="c1">// 1. 创建对象
-</span><span class="c1"></span>      <span class="kr">const</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-      <span class="c1">// 2. 初始化 设置请求方法和url
-</span><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;http://127.0.0.1:8000/server&#39;</span><span class="p">)</span>
-      <span class="c1">// 3. 发送
-</span><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
-      <span class="c1">// 4. 事件绑定 处理服务端返回的结果
-</span><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-        <span class="c1">// readyState 是 xhr 对象中的属性, 表示状态 0 1 2 3 4
-</span><span class="c1"></span>        <span class="c1">//判断 (服务端返回了所有的结果)
-</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span><span class="p">){</span>
-          <span class="c1">//判断响应状态码 200  404  403 401 500
-</span><span class="c1"></span>          <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">&gt;=</span> <span class="mi">200</span> <span class="o">&amp;&amp;</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">){</span>
-            <span class="c1">// 处理结果 行 头 空行 体
-</span><span class="c1"></span>            <span class="c1">// 响应
-</span><span class="c1"></span>            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;状态码&#39;</span><span class="p">,</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span><span class="p">);</span> <span class="c1">// 状态码
-</span><span class="c1"></span>            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;状态字符串&#39;</span><span class="p">,</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">statusText</span><span class="p">);</span> <span class="c1">// 状态字符串
-</span><span class="c1"></span>            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;所有响应头&#39;</span><span class="p">,</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">getAllResponseHeaders</span><span class="p">());</span> <span class="c1">// 所有响应头
-</span><span class="c1"></span>            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;响应体&#39;</span><span class="p">,</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">response</span><span class="p">);</span> <span class="c1">// 响应体
-</span><span class="c1"></span>
-            <span class="c1">//设置 result 的文本
-</span><span class="c1"></span>            <span class="nx">result</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">response</span><span class="p">;</span>
-          <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-          <span class="p">}</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-
-</code></pre></div><p><img src="../../image/AJAX_study/5.gif" alt=""></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 1. 引入express
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 2. 创建应用对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 3. 创建路由规则
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/server&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 设置响应头 设置允许跨域
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 设置响应体
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">&#34;Hello Ajax&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 4. 监听服务
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8000</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;服务已经启动, 8000 端口监听中...&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> <span class="p">})</span>
+</span></span></code></pre></div><p><strong>启动服务</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">node</span> <span class="n">server</span><span class="p">.</span><span class="n">js</span>
+</span></span></code></pre></div><p><strong>前端页面 html</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;X-UA-Compatible&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;IE=edge&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ajax GET 请求<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">#</span><span class="nn">result</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">border</span><span class="p">:</span> <span class="kc">solid</span> <span class="mi">1</span><span class="kt">px</span> <span class="mh">#90b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>点击发送请求<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;result&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//获取button元素
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;result&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//绑定事件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 1. 创建对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kr">const</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 2. 初始化 设置请求方法和url
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;http://127.0.0.1:8000/server&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 3. 发送
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 4. 事件绑定 处理服务端返回的结果
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// readyState 是 xhr 对象中的属性, 表示状态 0 1 2 3 4
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//判断 (服务端返回了所有的结果)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">          <span class="c1">//判断响应状态码 200  404  403 401 500
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">&gt;=</span> <span class="mi">200</span> <span class="o">&amp;&amp;</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 处理结果 行 头 空行 体
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">// 响应
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;状态码&#39;</span><span class="p">,</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span><span class="p">);</span> <span class="c1">// 状态码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;状态字符串&#39;</span><span class="p">,</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">statusText</span><span class="p">);</span> <span class="c1">// 状态字符串
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;所有响应头&#39;</span><span class="p">,</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">getAllResponseHeaders</span><span class="p">());</span> <span class="c1">// 所有响应头
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;响应体&#39;</span><span class="p">,</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">response</span><span class="p">);</span> <span class="c1">// 响应体
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">            <span class="c1">//设置 result 的文本
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">result</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">response</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p><img src="../../image/AJAX_study/5.gif" alt=""></p>
 <p><strong>设置url参数</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;http://127.0.0.1:8000/server?a=100&amp;b=200&amp;c=300&#39;</span><span class="p">);</span>
-</code></pre></div><p><img src="../../image/AJAX_study/6.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;http://127.0.0.1:8000/server?a=100&amp;b=200&amp;c=300&#39;</span><span class="p">);</span>
+</span></span></code></pre></div><p><img src="../../image/AJAX_study/6.png" alt=""></p>
 <h4 id="332-post请求">3.3.2 POST请求<a href="#332-post请求" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -650,156 +654,152 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 <p>鼠标放到div中，发post请求，将响应体放在div中呈现</p>
 </blockquote>
 <p><strong>server.js添加post</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/server&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="c1">// 设置响应头, 设置允许跨域
-</span><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">);</span>
-  <span class="c1">// 设置响应体
-</span><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">&#34;Hello Ajax POST&#34;</span><span class="p">);</span>
-<span class="p">});</span>
-
-</code></pre></div><p><strong>post.html</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;X-UA-Compatible&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;IE=edge&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ajax POST 请求<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-    <span class="p">#</span><span class="nn">result</span> <span class="p">{</span>
-      <span class="k">width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
-      <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
-      <span class="k">border</span><span class="p">:</span> <span class="kc">solid</span> <span class="mi">1</span><span class="kt">px</span> <span class="mh">#903</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;result&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="c1">// 获取元素对象
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;result&#39;</span><span class="p">);</span>
-    <span class="c1">// 绑定事件
-</span><span class="c1"></span>    <span class="nx">result</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;mouseover&#34;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
-      <span class="c1">// 1. 创建对象
-</span><span class="c1"></span>      <span class="kr">const</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-      <span class="c1">// 2. 初始化 设置类型（请求方式）与url
-</span><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="s1">&#39;http://127.0.0.1:8000/server&#39;</span><span class="p">);</span>
-      <span class="c1">// 3. 发送   设置请求参数（请求体）
-</span><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;a=100&amp;b=200&amp;c=300&#39;</span><span class="p">);</span>
-      <span class="c1">// 4. 事件绑定
-</span><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-        <span class="c1">// 判断
-</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span><span class="p">){</span>
-          <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">&gt;=</span><span class="mi">200</span> <span class="o">&amp;&amp;</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">){</span>
-            <span class="c1">// 处理服务端返回的结果
-</span><span class="c1"></span>            <span class="nx">result</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">response</span><span class="p">;</span>
-          <span class="p">}</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">});</span>
-  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 设置请求体内容的类型
-</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequesHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span><span class="s1">&#39;application/x-www-from-urlencoded&#39;</span><span class="p">);</span>
-<span class="c1">// 自定义头信息
-</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequesHeader</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;ykyk&#39;</span><span class="p">);</span>
-</code></pre></div><p>server.js中设置响应头允许自定义请求头 post改成all</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">response</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Header&#39;</span><span class="p">,</span><span class="s1">&#39;*&#39;</span><span class="p">);</span>
-</code></pre></div><h3 id="34-json数据请求">3.4 、json数据请求<a href="#34-json数据请求" class="anchor"
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/server&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 设置响应头, 设置允许跨域
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 设置响应体
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">&#34;Hello Ajax POST&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><p><strong>post.html</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;X-UA-Compatible&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;IE=edge&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ajax POST 请求<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">#</span><span class="nn">result</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">border</span><span class="p">:</span> <span class="kc">solid</span> <span class="mi">1</span><span class="kt">px</span> <span class="mh">#903</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;result&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 获取元素对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;result&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 绑定事件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">result</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;mouseover&#34;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 1. 创建对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kr">const</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 2. 初始化 设置类型（请求方式）与url
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="s1">&#39;http://127.0.0.1:8000/server&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 3. 发送   设置请求参数（请求体）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;a=100&amp;b=200&amp;c=300&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 4. 事件绑定
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 判断
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">          <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">&gt;=</span><span class="mi">200</span> <span class="o">&amp;&amp;</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 处理服务端返回的结果
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">result</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">response</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 设置请求体内容的类型
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequesHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span><span class="s1">&#39;application/x-www-from-urlencoded&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 自定义头信息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequesHeader</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;ykyk&#39;</span><span class="p">);</span>
+</span></span></code></pre></div><p>server.js中设置响应头允许自定义请求头 post改成all</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">response</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Header&#39;</span><span class="p">,</span><span class="s1">&#39;*&#39;</span><span class="p">);</span>
+</span></span></code></pre></div><h3 id="34-json数据请求">3.4 、json数据请求<a href="#34-json数据请求" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">app</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s1">&#39;/json-server&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="c1">// 设置响应头, 设置允许跨域
-</span><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">);</span>
-  <span class="c1">// 设置响应头, 设置允许自定义头信息
-</span><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Headers&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">);</span>
-  <span class="c1">// 响应一个数据
-</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;atguigu&#39;</span>
-  <span class="p">};</span>
-  <span class="c1">// 对 对象 进行 字符串 转换
-</span><span class="c1"></span>  <span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
-  <span class="c1">// 设置响应体
-</span><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
-<span class="p">});</span>
-
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;X-UA-Compatible&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;IE=edge&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>JSON<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-    <span class="p">#</span><span class="nn">result</span> <span class="p">{</span>
-      <span class="k">width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
-      <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
-      <span class="k">border</span><span class="p">:</span> <span class="kc">solid</span> <span class="mi">1</span><span class="kt">px</span> <span class="mh">#89b</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;result&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;result&#39;</span><span class="p">);</span>
-    <span class="c1">// 绑定键盘按下事件
-</span><span class="c1"></span>    <span class="nb">window</span><span class="p">.</span><span class="nx">onkeydown</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-      <span class="c1">// 发送请求
-</span><span class="c1"></span>      <span class="kr">const</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-      <span class="c1">// *2*.(自动转换) 设置响应体数据的类型(自动转换)
-</span><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">responseType</span> <span class="o">=</span> <span class="s1">&#39;json&#39;</span><span class="p">;</span>
-      <span class="c1">// 初始化
-</span><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;http://127.0.0.1:8000/json-server&#39;</span><span class="p">);</span>
-      <span class="c1">// 发送
-</span><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
-      <span class="c1">// 事件绑定
-</span><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-        <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span><span class="p">){</span>
-          <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">&gt;=</span> <span class="mi">200</span> <span class="o">&amp;&amp;</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">){</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">response</span><span class="p">);</span>
-            <span class="c1">// 1. 手动对数据转化 (字符串再转换成json)
-</span><span class="c1"></span>            <span class="c1">// let data = JSON.parse(xhr.response); //转换成json
-</span><span class="c1"></span>            <span class="c1">// result.innerHTML = data.name;
-</span><span class="c1"></span>            <span class="c1">// *2*. (自动转换)自动转换(自动转换)
-</span><span class="c1"></span>            <span class="nx">result</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span> <span class="c1">//已经自动变成json
-</span><span class="c1"></span>          <span class="p">}</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-
-</code></pre></div><h3 id="35-请求超时与网络异常">3.5 、请求超时与网络异常<a href="#35-请求超时与网络异常" class="anchor"
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s1">&#39;/json-server&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 设置响应头, 设置允许跨域
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 设置响应头, 设置允许自定义头信息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Headers&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 响应一个数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;atguigu&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 对 对象 进行 字符串 转换
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 设置响应体
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;X-UA-Compatible&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;IE=edge&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>JSON<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">#</span><span class="nn">result</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">border</span><span class="p">:</span> <span class="kc">solid</span> <span class="mi">1</span><span class="kt">px</span> <span class="mh">#89b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;result&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;result&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 绑定键盘按下事件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nb">window</span><span class="p">.</span><span class="nx">onkeydown</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 发送请求
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kr">const</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// *2*.(自动转换) 设置响应体数据的类型(自动转换)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">responseType</span> <span class="o">=</span> <span class="s1">&#39;json&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 初始化
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;http://127.0.0.1:8000/json-server&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 发送
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 事件绑定
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">          <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">&gt;=</span> <span class="mi">200</span> <span class="o">&amp;&amp;</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">response</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 1. 手动对数据转化 (字符串再转换成json)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">// let data = JSON.parse(xhr.response); //转换成json
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">// result.innerHTML = data.name;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">// *2*. (自动转换)自动转换(自动转换)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">result</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span> <span class="c1">//已经自动变成json
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="35-请求超时与网络异常">3.5 、请求超时与网络异常<a href="#35-请求超时与网络异常" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 超时设置 （2秒）
-</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">timeout</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span>
-<span class="c1">// 超时回调
-</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">ontimeout</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-	<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;网络超时，请稍后重试&#39;</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// 网络异常回调
-</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-	<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;网络异常，请稍后重试&#39;</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div><h3 id="36-取消请求">3.6 、取消请求<a href="#36-取消请求" class="anchor"
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 超时设置 （2秒）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">timeout</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 超时回调
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">ontimeout</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;网络超时，请稍后重试&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 网络异常回调
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;网络异常，请稍后重试&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="36-取消请求">3.6 、取消请求<a href="#36-取消请求" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 手动取消
-</span><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">abort</span><span class="p">()</span>
-</code></pre></div><h3 id="37-请求重复发送问题">3.7 、请求重复发送问题<a href="#37-请求重复发送问题" class="anchor"
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 手动取消
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">abort</span><span class="p">()</span>
+</span></span></code></pre></div><h3 id="37-请求重复发送问题">3.7 、请求重复发送问题<a href="#37-请求重复发送问题" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
@@ -817,8 +817,8 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 <p><strong>解决方式</strong>：</p>
 <p>浏览器的缓存是根据url 地址来记录的，所以我们只需要修改url 地址即可避免缓存问题.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&#34;get&#34;</span><span class="p">,</span><span class="s2">&#34;/testAJAX?t=&#34;</span><span class="o">+</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">());</span>
-</code></pre></div><h3 id="39-ajax-请求状态">3.9 、AJAX 请求状态<a href="#39-ajax-请求状态" class="anchor"
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&#34;get&#34;</span><span class="p">,</span><span class="s2">&#34;/testAJAX?t=&#34;</span><span class="o">+</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">());</span>
+</span></span></code></pre></div><h3 id="39-ajax-请求状态">3.9 、AJAX 请求状态<a href="#39-ajax-请求状态" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
@@ -875,8 +875,8 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
 <blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">[</span><span class="nx">data</span><span class="p">],</span> <span class="p">[</span><span class="nx">callback</span><span class="p">],</span> <span class="p">[</span><span class="nx">type</span><span class="p">])</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">[</span><span class="nx">data</span><span class="p">],</span> <span class="p">[</span><span class="nx">callback</span><span class="p">],</span> <span class="p">[</span><span class="nx">type</span><span class="p">])</span>
+</span></span></code></pre></div><ul>
 <li>url:请求的URL 地址</li>
 <li>data:请求携带的参数</li>
 <li>callback:载入成功时回调函数</li>
@@ -905,28 +905,28 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 						<line x1="8" y1="12" x2="16" y2="12"></line>
 					</svg></a></h3>
 <blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-	<span class="c1">// url
-</span><span class="c1"></span>	<span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://127.0.0.1:8000/jquery-server&#39;</span><span class="p">,</span>
-	<span class="c1">// 参数
-</span><span class="c1"></span>	<span class="nx">data</span><span class="o">:</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span><span class="mi">100</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span><span class="mi">200</span><span class="p">},</span>
-	<span class="c1">// 请求类型
-</span><span class="c1"></span>	<span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span>
-	<span class="c1">// 响应体结果
-</span><span class="c1"></span>	<span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span>
-	<span class="c1">// 成功的回调
-</span><span class="c1"></span>	<span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);},</span>
-	<span class="c1">// 超时时间
-</span><span class="c1"></span>	<span class="nx">timeout</span><span class="o">:</span> <span class="mi">2000</span><span class="p">,</span>
-	<span class="c1">// 失败的回调
-</span><span class="c1"></span>	<span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;出错拉~&#39;</span><span class="p">);},</span>
-	<span class="c1">// 头信息
-</span><span class="c1"></span>	<span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-		<span class="nx">c</span><span class="o">:</span> <span class="mi">300</span><span class="p">,</span>
-		<span class="nx">d</span><span class="o">:</span> <span class="mi">400</span>
-	<span class="p">}</span>
-<span class="p">})</span>
-</code></pre></div></blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// url
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://127.0.0.1:8000/jquery-server&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 参数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">data</span><span class="o">:</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span><span class="mi">100</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span><span class="mi">200</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 请求类型
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 响应体结果
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 成功的回调
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);},</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 超时时间
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">timeout</span><span class="o">:</span> <span class="mi">2000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 失败的回调
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;出错拉~&#39;</span><span class="p">);},</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 头信息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">c</span><span class="o">:</span> <span class="mi">300</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">d</span><span class="o">:</span> <span class="mi">400</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></div></blockquote>
 <hr>
 <h2 id="第五章-跨域">第五章 跨域<a href="#第五章-跨域" class="anchor"
 					aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -986,66 +986,65 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 <ul>
 <li>动态的创建一个script标签</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">script</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;script&#34;</span><span class="p">);</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">script</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;script&#34;</span><span class="p">);</span>
+</span></span></code></pre></div><ul>
 <li>设置script的src，设置回调函数</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">script</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s2">&#34;http://localhost:3000/testAJAX?callback=abc&#34;</span><span class="p">;</span>
-<span class="kd">function</span> <span class="nx">abc</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">alert</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-<span class="p">};</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">script</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s2">&#34;http://localhost:3000/testAJAX?callback=abc&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">abc</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">alert</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><ul>
 <li>将script 添加到body 中</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
+</span></span></code></pre></div><ul>
 <li>服务器中路由的处理</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;/testAJAX&#34;</span> <span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span> <span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;收到请求&#34;</span><span class="p">);</span>
-	<span class="kd">var</span> <span class="nx">callback</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">callback</span><span class="p">;</span>
-	<span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
-		<span class="nx">name</span><span class="o">:</span><span class="s2">&#34;孙悟空&#34;</span><span class="p">,</span>
-		<span class="nx">age</span><span class="o">:</span><span class="mi">18</span>
-	<span class="p">}</span>
-	<span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">callback</span><span class="o">+</span><span class="s2">&#34;(&#34;</span><span class="o">+</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span><span class="o">+</span><span class="s2">&#34;)&#34;</span><span class="p">);</span>
-<span class="p">});</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;/testAJAX&#34;</span> <span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span> <span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;收到请求&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">callback</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">callback</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">name</span><span class="o">:</span><span class="s2">&#34;孙悟空&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">age</span><span class="o">:</span><span class="mi">18</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">callback</span><span class="o">+</span><span class="s2">&#34;(&#34;</span><span class="o">+</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span><span class="o">+</span><span class="s2">&#34;)&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div></li>
 <li>
 <p><strong>jQuery 中的JSONP</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Title<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-	<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;btn&#34;</span><span class="p">&gt;</span>按钮<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;list&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;./jquery-1.12.3.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span><span class="p">&gt;</span>
-			<span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-				<span class="kd">var</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;btn&#39;</span><span class="p">)</span>
-				<span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-					<span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="s2">&#34;http://api.douban.com/v2/movie/in_theaters?callback=?&#34;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-						<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-						<span class="c1">//获取所有的电影的条目
-</span><span class="c1"></span>						<span class="kd">var</span> <span class="nx">subjects</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">subjects</span><span class="p">;</span>
-						<span class="c1">//遍历电影条目
-</span><span class="c1"></span>						<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">subjects</span><span class="p">.</span><span class="nx">length</span> <span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
-							<span class="nx">$</span><span class="p">(</span><span class="s2">&#34;#list&#34;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s2">&#34;&lt;li&gt;&#34;</span><span class="o">+</span>
-							<span class="nx">subjects</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">title</span><span class="o">+</span><span class="s2">&#34;&lt;br /&gt;&#34;</span><span class="o">+</span>
-							<span class="s2">&#34;&lt;img src=\&#34;&#34;</span><span class="o">+</span><span class="nx">subjects</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">images</span><span class="p">.</span><span class="nx">large</span><span class="o">+</span><span class="s2">&#34;\&#34; &gt;&#34;</span><span class="o">+</span>
-							<span class="s2">&#34;&lt;/li&gt;&#34;</span><span class="p">);</span>
-						<span class="p">}</span>
-					<span class="p">});</span>
-				<span class="p">}</span>
-			<span class="p">}</span>
-		<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Title<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;btn&#34;</span><span class="p">&gt;</span>按钮<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;list&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;./jquery-1.12.3.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="kd">var</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;btn&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">					<span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="s2">&#34;http://api.douban.com/v2/movie/in_theaters?callback=?&#34;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">						<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">						<span class="c1">//获取所有的电影的条目
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>						<span class="kd">var</span> <span class="nx">subjects</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">subjects</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">						<span class="c1">//遍历电影条目
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>						<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">subjects</span><span class="p">.</span><span class="nx">length</span> <span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">							<span class="nx">$</span><span class="p">(</span><span class="s2">&#34;#list&#34;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s2">&#34;&lt;li&gt;&#34;</span><span class="o">+</span>
+</span></span><span class="line"><span class="cl">							<span class="nx">subjects</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">title</span><span class="o">+</span><span class="s2">&#34;&lt;br /&gt;&#34;</span><span class="o">+</span>
+</span></span><span class="line"><span class="cl">							<span class="s2">&#34;&lt;img src=\&#34;&#34;</span><span class="o">+</span><span class="nx">subjects</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">images</span><span class="p">.</span><span class="nx">large</span><span class="o">+</span><span class="s2">&#34;\&#34; &gt;&#34;</span><span class="o">+</span>
+</span></span><span class="line"><span class="cl">							<span class="s2">&#34;&lt;/li&gt;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">						<span class="p">}</span>
+</span></span><span class="line"><span class="cl">					<span class="p">});</span>
+</span></span><span class="line"><span class="cl">				<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div></li>
 </ol>
 </blockquote>
 <h3 id="522-cors">5.2.2 CORS<a href="#522-cors" class="anchor"
@@ -1072,12 +1071,12 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 <li>
 <p><strong>CORS 的使用</strong></p>
 <p>主要是服务端的设置：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;/testAJAX&#34;</span> <span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span> <span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-	<span class="c1">//通过res 来设置响应头，来允许跨域请求
-</span><span class="c1"></span>	<span class="c1">//res.set(&#34;Access-Control-Allow-Origin&#34;,&#34;http://127.0.0.1:3000&#34;);
-</span><span class="c1"></span>	<span class="nx">res</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&#34;Access-Control-Allow-Origin&#34;</span><span class="p">,</span><span class="s2">&#34;*&#34;</span><span class="p">);</span>
-<span class="p">});</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;/testAJAX&#34;</span> <span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span> <span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//通过res 来设置响应头，来允许跨域请求
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//res.set(&#34;Access-Control-Allow-Origin&#34;,&#34;http://127.0.0.1:3000&#34;);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">res</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&#34;Access-Control-Allow-Origin&#34;</span><span class="p">,</span><span class="s2">&#34;*&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div></li>
 </ol>
 </blockquote>
 
@@ -1200,7 +1199,7 @@ Content-Type: application/x-www-form-urlencoded 或者application/json
 
 
 
-	<script src="https://LeiBuDao.github.io/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js" integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin="anonymous"></script>
+	<script src="https://LeiBuDao.github.io/js/bundle.min.580988ed2982bcbb74a1773c7abea97b43e4c43b9324e10cda0813ec6ec4bb67.js" integrity="sha256-WAmI7SmCvLt0oXc8er6pe0PkxDuTJOEM2ggT7G7Eu2c=" crossorigin="anonymous"></script>
 	
 
 </body>

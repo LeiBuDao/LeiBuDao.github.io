@@ -7,18 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sat, 12 Mar 2022 13:38:13 +0800</lastBuildDate><atom:link href="https://LeiBuDao.github.io/tags/front-end/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Jul 2022 15:00:12 +0800</lastBuildDate><atom:link href="https://LeiBuDao.github.io/tags/front-end/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Angular_study</title>
+      <link>https://LeiBuDao.github.io/posts/angular_study/</link>
+      <pubDate>Fri, 22 Jul 2022 15:00:12 +0800</pubDate>
+      
+      <guid>https://LeiBuDao.github.io/posts/angular_study/</guid>
+      <description>一、Angular创建项目 0、准备工作 使用npm命令安装angular/cli npm uninstall -g @angular/cli //删除旧版本 cnpm install -g @angular/cli //安装 cnpm install -g @angular/cli@7.0.6 //指定安装版本 验证angular/cli ng v 1、打开命令行进入你要创建项目的目录 2、创建项目 ng new 【项目名】
+①直接安装 ng new demo1 ②跳过npm i安装 ng new demo1 --skip-install 3、安装依赖 cnpm install 4、运行项目 ng serve --open 二、Angular介绍 1、目录结构分析 e2e //端到端测试 ng new demo1 //安装的第三方模块 src //项目的所有文件都在里面 app //组件，以及app.module.ts定义根模块 assets //静态资源 enviroments//包含为各个目标环境准备的文件 favicon.ico index.html // 主页面 main.ts //应用的主要入口 polyfills.ts // 填充库能帮我们把这些不同点进行标准化 style.css //全局样式 test.ts //单元测试的主要入口点 package.</description>
+    </item>
+    
     <item>
       <title>Promise学习笔记</title>
       <link>https://LeiBuDao.github.io/posts/promise_study/</link>
       <pubDate>Sat, 12 Mar 2022 13:38:13 +0800</pubDate>
       
       <guid>https://LeiBuDao.github.io/posts/promise_study/</guid>
-      <description>#目录  [TOC]
- 一、Promise的理解与使用  1、概念:
+      <description>#目录 [TOC]
+一、Promise的理解与使用 1、概念:
 ​	Promise是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。
 通俗讲，Promise是一个许诺、承诺,是对未来事情的承诺，承诺不一定能完成，但是无论是否能完成都会有一个结果。
- Pending 正在做。。。 Resolved 完成这个承诺 Rejected 这个承诺没有完成，失败了  ​	Promise 用来预定一个不一定能完成的任务，要么成功，要么失败
+Pending 正在做。。。 Resolved 完成这个承诺 Rejected 这个承诺没有完成，失败了 ​	Promise 用来预定一个不一定能完成的任务，要么成功，要么失败
 ​	在具体的程序中具体的体现，通常用来封装一个异步任务，提供承诺结果
 Promise 是异步编程的一种解决方案，主要用来解决回调地狱的问题，可以有效的减少回调嵌套。真正解决需要配合async/await
 2、特点:
@@ -28,11 +38,13 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
 ​	(1)无法取消Promise，一旦新建它就会立即执行，无法中途取消。和一般的对象不一样，无需调用。
 ​	(2)如果不设置回调函数，Promise内部抛出的错误，不会反应到外部。
 ​	(3)当处于Pending状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）
-  1、Promise是什么? Ⅰ-理解   抽象表达:  ​	1) Promise 是一门新的技术(ES6 规范)
+1、Promise是什么? Ⅰ-理解 抽象表达: ​	1) Promise 是一门新的技术(ES6 规范)
 ​	2)Promise 是 JS 中进行异步编程的新解决方案
 ​	备注：旧方案是单纯使用回调函数
-具体表达:    从语法上来说: Promise 是一个构造函数
-  从功能上来说: promise 对象用来封装一个异步操作并可以获取其成功/ 失败的结果值</description>
+具体表达: 从语法上来说: Promise 是一个构造函数
+从功能上来说: promise 对象用来封装一个异步操作并可以获取其成功/ 失败的结果值
+Ⅱ-promise 的状态 a) promise 的状态 实例对象中的一个属性 『PromiseState』
+pending 未决定的 resolved / fullfilled 成功 rejected 失败 b) promise 的状态改变 pending 变为 resolved</description>
     </item>
     
     <item>
@@ -43,12 +55,14 @@ Promise 是异步编程的一种解决方案，主要用来解决回调地狱的
       <guid>https://LeiBuDao.github.io/posts/ajax_study/</guid>
       <description>AJAX学习的笔记，主要环境为Node.js
 建议搭配视频食用：三小时AJAX从入门到精通
- 第一章： Ajax概述 1.1、Ajax简介   Ajax全称为Asynchronous Javascript And XML，即异步JS和XML 通过Ajax可以在浏览器中向服务器发送异步请求，最大的优势：无刷新获取数据 AJAX不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式   1.2 、XML简介    XML：可扩展标记语言
-  XML：被设计用来传输和存储数据
-  XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据
-  比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ; 用XML 表示：
-&amp;lt;student&amp;gt; &amp;lt;name&amp;gt;孙悟空&amp;lt;/name&amp;gt; &amp;lt;age&amp;gt;18&amp;lt;/age&amp;gt; &amp;lt;gender&amp;gt;男&amp;lt;/gender&amp;gt; &amp;lt;/student&amp;gt;     现在已被JSON取代
-{&amp;#34;name&amp;#34;:&amp;#34;孙悟空&amp;#34;,&amp;#34;age&amp;#34;:18,&amp;#34;gender&amp;#34;:&amp;#34;男&amp;#34;}    1.3、 AJAX 的特点 Ⅰ、AJAX的优点   可以无刷新页面与服务端进行通信 允许你根据用户事件来更新部分页面内容   Ⅱ、AJAX 的缺点   没有浏览历史，不能回退 存在跨域问题（同源） SEO不友好（爬虫获取不到信息）    第二章 jQuery中的AJAX 2.</description>
+第一章： Ajax概述 1.1、Ajax简介 Ajax全称为Asynchronous Javascript And XML，即异步JS和XML 通过Ajax可以在浏览器中向服务器发送异步请求，最大的优势：无刷新获取数据 AJAX不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式 1.2 、XML简介 XML：可扩展标记语言
+XML：被设计用来传输和存储数据
+XML和HTML类似，不同点：HTML中都是预定义标签，XML中没有预定义标签，全是自定义标签，用来表示一些数据
+比如说我有一个学生数据：name = “孙悟空” ; age = 18 ; gender = “男” ; 用XML 表示：
+&amp;lt;student&amp;gt; &amp;lt;name&amp;gt;孙悟空&amp;lt;/name&amp;gt; &amp;lt;age&amp;gt;18&amp;lt;/age&amp;gt; &amp;lt;gender&amp;gt;男&amp;lt;/gender&amp;gt; &amp;lt;/student&amp;gt; 现在已被JSON取代
+{&amp;#34;name&amp;#34;:&amp;#34;孙悟空&amp;#34;,&amp;#34;age&amp;#34;:18,&amp;#34;gender&amp;#34;:&amp;#34;男&amp;#34;} 1.3、 AJAX 的特点 Ⅰ、AJAX的优点 可以无刷新页面与服务端进行通信 允许你根据用户事件来更新部分页面内容 Ⅱ、AJAX 的缺点 没有浏览历史，不能回退 存在跨域问题（同源） SEO不友好（爬虫获取不到信息） 第二章 jQuery中的AJAX 2.1、MDN文档 https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview
+2.2、HTTP 请求交互的基本过程 前后应用从浏览器端向服务器发送HTTP 请求(请求报文) 后台服务器接收到请求后, 调度服务器应用处理请求, 向浏览器端返回HTTP响应(响应报文) 浏览器端接收到响应, 解析显示响应体/调用监视回调 2.3、HTTP请求报文 请求行
+method url GET /product_detail?id=2 POST /login 多个请求头</description>
     </item>
     
   </channel>
