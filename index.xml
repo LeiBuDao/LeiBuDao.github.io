@@ -7,7 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Fri, 22 Jul 2022 15:00:12 +0800</lastBuildDate><atom:link href="https://LeiBuDao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Jul 2022 23:38:40 +0800</lastBuildDate><atom:link href="https://LeiBuDao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Angular通过ControlValueAccessor自定义组件中实现双向绑定</title>
+      <link>https://LeiBuDao.github.io/posts/angular_controlvalueaccessor/</link>
+      <pubDate>Tue, 26 Jul 2022 23:38:40 +0800</pubDate>
+      
+      <guid>https://LeiBuDao.github.io/posts/angular_controlvalueaccessor/</guid>
+      <description>今天俺滴前端mentor布置了一个小任务：利用ControlValueAccessor将组件改为双向绑定的自定义组件。起初以为a piece of cake，真正实现的时候却由于理解不透彻出现了大问题。经过婷姐答疑解惑，也算照葫芦画瓢做出来了，但事后也模棱两可。晚上加班加点查阅大量博客，总算弄懂一些皮毛，以下是笔者的学习笔记。
+1、表单与控件介绍 在大部分Web应用中，用表单来处理输入是非常基础的功能，通常会在控件类中定义一个FormControl属性，然后在模板中通过[formControl]将DOM与数据进行双向绑定，如下所示：
+import { Component } from &amp;#39;@angular/core&amp;#39;; import { FormControl } from &amp;#39;@angular/forms&amp;#39;; @Component({ selector: &amp;#39;app-my-control&amp;#39;, template: ` &amp;lt;input type=&amp;#34;text&amp;#34; [formControl]=&amp;#34;myControl&amp;#34;&amp;gt; ` }) export class MyControlComponent { myrControl = new FormControl(&amp;#39;&amp;#39;); } 在一些复杂场景中，考虑到代码复用以及安全性，难免需要自定义一些表单组件，也就不可避免的会涉及到数据的双向绑定问题。
+一个简单粗暴的方法就是通过@Input来将父组件的表单数据传到子组件（自定义表单组件），然后在控件中写入对应的逻辑。其本质原理其实就是父子组件的事件绑定机制。假设我们现在有一个控件my-component，具体的调用可能长成这样：
+&amp;lt;my-component [(myModel)]=&amp;#34;inputValue&amp;#34; (myModelChange)=&amp;#34;onInputValueChange($event)&amp;#34;&amp;gt; &amp;lt;/my-component&amp;gt; 又臭又烂，对吧？显然不够简洁与优雅。我们希望它能够像其他的表单类元素一样，直接通过 formControlName 来绑定数据：
+&amp;lt;form [formGroup]=&amp;#34;form&amp;#34;&amp;gt; &amp;lt;input formControlName=&amp;#34;&amp;#34; /&amp;gt; &amp;lt;my-component type=&amp;#34;text&amp;#34; formControlName=&amp;#34;myFormConotrol&amp;#34;&amp;gt;&amp;lt;/my-component&amp;gt; &amp;lt;/form&amp;gt; 这时候我们就需要ControlValueAccessor来实现，下面步入正题！！
+2、ControlValueAccessor API 介绍 ControlValueAccessor的官方定义是
+Implement this interface to create a custom form control directive that integrates with Angular forms.</description>
+    </item>
+    
     <item>
       <title>Angular_study</title>
       <link>https://LeiBuDao.github.io/posts/angular_study/</link>
